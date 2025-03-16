@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         tiempoEntreEnemigos = GenerarTiempoDivisiblePor02(tiempoMin, tiempoMax);
 
         // Calcular la cantidad de enemigos para la oleada actual usando la fórmula
-        enemigosGenerados = Mathf.CeilToInt(3 * Mathf.Pow(1.5f, oleadaActual - 1));
+        enemigosGenerados = Mathf.CeilToInt(2 * Mathf.Pow(1.3f, oleadaActual - 1)) + 4;
 
         // Reiniciar el contador de enemigos destruidos
         enemigosDestruidos = 0; 

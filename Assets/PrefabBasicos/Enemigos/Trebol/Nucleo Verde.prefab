@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: -166.337}
+  m_AnchoredPosition: {x: -297.097, y: -166.337}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6136433699066005926
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
   m_Layer: 0
-  m_Name: Jefe Verde
+  m_Name: Nucleo Verde
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 2, z: 31}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1262359380971300814}
   m_Father: {fileID: 0}
@@ -211,18 +211,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.8
-  tiempoDeEspera: 1.2
-  vidaMaxima: 0
+  velocidad: 1.2
+  tiempoDeEspera: 0.7
+  vidaMaxima: 25
   incrementoVidaPorOleada: 3
-  "da\xF1oATorreRey": 10
+  "da\xF1oATorreRey": 20
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
-  esJefe: 1
-  vidaExtraJefe: 50
-  puntuacionMinima: 10
-  puntuacionMaxima: 50
-  idEnemigo: VerdeJefe
+  esJefe: 0
+  vidaExtraJefe: 200
+  puntuacionMinima: 80
+  puntuacionMaxima: 100
+  regeneraVida: 1
+  vidaPorSegundo: 3
+  "tiempoDeRegeneraci\xF3n": 3
+  aumentoDeRegeneracionPorOleada: 2
+  invencible: 0
+  tiempoInvencibilidad: 1
+  cooldownInvencibilidad: 4
+  invencibleAlSpawn: 1
+  tiempoInvencibilidadSpawn: 2
+  tieneAuraVelocidad: 1
+  radioAura: 8
+  porcentajeBoostVelocidad: 15
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 1
+  rangoCuracion: 4
+  curacion: 50
+  idEnemigo: VerdeNucleo
 --- !u!1 &2656925346134091839
 GameObject:
   m_ObjectHideFlags: 0

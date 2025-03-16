@@ -779,9 +779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b845a5f1d9e9924f866de9618c057af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pitchInicial: 0.5
-  pitchNormal: 1
-  velocidadTransicionPitch: 2
 --- !u!82 &304566285
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1133,9 +1130,9 @@ MonoBehaviour:
   - {fileID: 1275243053}
   - {fileID: 994452340}
   oleadaActual: 1
-  activarPortal: 2
+  activarPortal: 50
   curarRey: 3
-  oleadasParaJefe: 2
+  oleadasParaJefe: 6
   tiempoMin: 2
   tiempoMax: 5
   panelGameOver: {fileID: 1146235157}
@@ -2752,12 +2749,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: caminosPrefabs.Array.size
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 6748951174082913580, guid: cd6a9154c0c0d1a49899f480f043ffe7, type: 3}
+      objectReference: {fileID: 8803264304226571617, guid: 0651d774695fc454d89a98212711b2b2, type: 3}
     - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[1]'
       value: 
@@ -2765,7 +2766,43 @@ PrefabInstance:
     - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 8803264304226571617, guid: 0651d774695fc454d89a98212711b2b2, type: 3}
+      objectReference: {fileID: 6748951174082913580, guid: cd6a9154c0c0d1a49899f480f043ffe7, type: 3}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4033611444847258962, guid: 3b816c5c8f528304f9e207f9a22a10e7, type: 3}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 4807712113130855116, guid: dcefb53c2e422a54e993839d03744306, type: 3}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: aa7cd03a1434e2d4abe06283fbbe8666, type: 3}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 39ee33faf3c7a79488de60c21ed5635d, type: 3}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[0].probabilidad
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[1].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[2].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].probabilidad
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001105039625592590, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].probabilidad
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3126,16 +3163,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: caminosPrefabs.Array.size
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 2933118412464913340, guid: ded639e0cd9843e428cdf626a6e6449a, type: 3}
+      objectReference: {fileID: 116099751653953929, guid: aef88ee7fa5c7da4ea2673abda01b114, type: 3}
     - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 116099751653953929, guid: aef88ee7fa5c7da4ea2673abda01b114, type: 3}
+      objectReference: {fileID: 2933118412464913340, guid: ded639e0cd9843e428cdf626a6e6449a, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1239541361362267369, guid: caf60bdd4784b1c4daed56a17c07d730, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 6064238934214490839, guid: 9d33bba21db18f349b47c59135151356, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 0827345133206484b971fa5de47490de, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 2108d2168ff702c4ba2d12fda98a36fe, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[0].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[1].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3613,20 +3686,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
       propertyPath: caminosPrefabs.Array.size
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 6488237413990467670, guid: 02b1d3df8dcae7c44a74ab55ddf44c19, type: 3}
+      objectReference: {fileID: 1612452617857828679, guid: 85ab207264c726f4ca35c25b6c3cbaf5, type: 3}
     - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 629606239543900695, guid: 54d27e66bffa9954d9043b53066844f7, type: 3}
+      objectReference: {fileID: 6488237413990467670, guid: 02b1d3df8dcae7c44a74ab55ddf44c19, type: 3}
     - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 1612452617857828679, guid: 85ab207264c726f4ca35c25b6c3cbaf5, type: 3}
+      objectReference: {fileID: 629606239543900695, guid: 54d27e66bffa9954d9043b53066844f7, type: 3}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 7028235101703153962, guid: acdaa94d541817b4abdd686ac2fdb2a1, type: 3}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1207475072900147479, guid: a35bc394361922241a0f7876c733ffed, type: 3}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 784205b00299d2048b390cf2282ab201, type: 3}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 8e9dc9c9ce1160e409b9ca86aa253595, type: 3}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[0].probabilidad
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[1].probabilidad
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[2].probabilidad
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].probabilidad
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520784048150947672, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].probabilidad
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4594,6 +4707,23 @@ MonoBehaviour:
   vidaExtraJefe: 200
   puntuacionMinima: 10
   puntuacionMaxima: 50
+  regeneraVida: 0
+  vidaPorSegundo: 5
+  "tiempoDeRegeneraci\xF3n": 2
+  aumentoDeRegeneracionPorOleada: 2
+  invencible: 0
+  tiempoInvencibilidad: 3
+  cooldownInvencibilidad: 10
+  invencibleAlSpawn: 0
+  tiempoInvencibilidadSpawn: 3
+  tieneAuraVelocidad: 0
+  radioAura: 5
+  porcentajeBoostVelocidad: 20
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 0
+  rangoCuracion: 5
+  curacion: 100
   idEnemigo: 
 --- !u!1001 &1716989756
 PrefabInstance:
@@ -4605,20 +4735,56 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: caminosPrefabs.Array.size
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 8743903174686857684, guid: 064f1abcf54d1a240bb47b19d3a16697, type: 3}
+      objectReference: {fileID: 5007258771053028958, guid: a0bbe0cd43b9631458ba27d2620c886c, type: 3}
     - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 5007258771053028958, guid: a0bbe0cd43b9631458ba27d2620c886c, type: 3}
+      objectReference: {fileID: 8743903174686857684, guid: 064f1abcf54d1a240bb47b19d3a16697, type: 3}
     - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[2]'
       value: 
       objectReference: {fileID: 8194524362104359059, guid: 42d6eee0bd3645747b88ac4ccee50bca, type: 3}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8312635908007287019, guid: 6b1d74602159c314a96f03718a08bde3, type: 3}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1116062181131935358, guid: 1f0e599eb6bdca147b496023ad23c03b, type: 3}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: edd15b3a8f880fb4d88bad8184754a50, type: 3}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 2431344980631736960, guid: 8abe139cf0e1bfc48aefe2392a637419, type: 3}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[0].probabilidad
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[2].probabilidad
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[3].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 118293834942907535, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: enemigosConfig.Array.data[4].probabilidad
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2025340940134503093, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

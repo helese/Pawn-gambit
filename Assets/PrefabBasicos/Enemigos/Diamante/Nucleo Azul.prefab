@@ -137,7 +137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 60, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.097, y: -166.337}
+  m_AnchoredPosition: {x: -297, y: -166.337}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677713469168941800
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
   m_Layer: 0
-  m_Name: Veloz Azul
+  m_Name: Nucleo Azul
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,18 +313,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 3.2
-  tiempoDeEspera: 0.1
-  vidaMaxima: 1
-  incrementoVidaPorOleada: 1
-  "da\xF1oATorreRey": 2
+  velocidad: 4
+  tiempoDeEspera: 1
+  vidaMaxima: 55
+  incrementoVidaPorOleada: 3
+  "da\xF1oATorreRey": 30
   sliderVida: {fileID: 1677713469168941800}
   CasillaASeguir: CasillaAzul
   esJefe: 0
   vidaExtraJefe: 200
-  puntuacionMinima: 10
-  puntuacionMaxima: 50
-  idEnemigo: AzulVeloz
+  puntuacionMinima: 100
+  puntuacionMaxima: 150
+  regeneraVida: 1
+  vidaPorSegundo: 5
+  "tiempoDeRegeneraci\xF3n": 2
+  invencible: 1
+  tiempoInvencibilidad: 4
+  cooldownInvencibilidad: 10
+  invencibleAlSpawn: 1
+  tiempoInvencibilidadSpawn: 5
+  tieneAuraVelocidad: 0
+  radioAura: 5
+  porcentajeBoostVelocidad: 20
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 0
+  rangoCuracion: 5
+  curacion: 100
+  idEnemigo: AzulNucleo
 --- !u!1 &4633440367055322758
 GameObject:
   m_ObjectHideFlags: 0

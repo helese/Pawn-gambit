@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
   m_Layer: 0
-  m_Name: Normal Amarillo
+  m_Name: Fuerte Amarillo
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: 2, z: 31}
   m_LocalScale: {x: 1, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2783367647084871294}
   m_Father: {fileID: 0}
@@ -233,18 +233,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 2.2
-  tiempoDeEspera: 0.2
-  vidaMaxima: 2
-  incrementoVidaPorOleada: 2
-  "da\xF1oATorreRey": 2
+  velocidad: 1.5
+  tiempoDeEspera: 0.3
+  vidaMaxima: 35
+  incrementoVidaPorOleada: 4
+  "da\xF1oATorreRey": 60
   sliderVida: {fileID: 8847433779679202692}
   CasillaASeguir: CasillaAmarilla
   esJefe: 0
   vidaExtraJefe: 200
-  puntuacionMinima: 10
-  puntuacionMaxima: 50
-  idEnemigo: AmarilloNormal
+  puntuacionMinima: 90
+  puntuacionMaxima: 120
+  regeneraVida: 0
+  vidaPorSegundo: 5
+  "tiempoDeRegeneraci\xF3n": 2
+  aumentoDeRegeneracionPorOleada: 2
+  invencible: 1
+  tiempoInvencibilidad: 2
+  cooldownInvencibilidad: 12
+  invencibleAlSpawn: 1
+  tiempoInvencibilidadSpawn: 2
+  tieneAuraVelocidad: 0
+  radioAura: 5
+  porcentajeBoostVelocidad: 20
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 0
+  rangoCuracion: 5
+  curacion: 100
+  idEnemigo: AmarilloFuerte
 --- !u!1 &4197034270054291612
 GameObject:
   m_ObjectHideFlags: 0

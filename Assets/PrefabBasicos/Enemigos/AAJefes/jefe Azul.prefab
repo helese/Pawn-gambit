@@ -313,17 +313,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.8
-  tiempoDeEspera: 1.2
+  velocidad: 2
+  tiempoDeEspera: 1
   vidaMaxima: 0
-  incrementoVidaPorOleada: 3
+  incrementoVidaPorOleada: 19
   "da\xF1oATorreRey": 10
   sliderVida: {fileID: 1677713469168941800}
   CasillaASeguir: CasillaAzul
   esJefe: 1
   vidaExtraJefe: 50
-  puntuacionMinima: 10
-  puntuacionMaxima: 50
+  puntuacionMinima: 200
+  puntuacionMaxima: 300
+  regeneraVida: 0
+  vidaPorSegundo: 5
+  "tiempoDeRegeneraci\xF3n": 2
+  aumentoDeRegeneracionPorOleada: 2
+  invencible: 1
+  tiempoInvencibilidad: 2
+  cooldownInvencibilidad: 8
+  invencibleAlSpawn: 1
+  tiempoInvencibilidadSpawn: 5
+  tieneAuraVelocidad: 0
+  radioAura: 5
+  porcentajeBoostVelocidad: 20
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 0
+  rangoCuracion: 5
+  curacion: 100
   idEnemigo: AzulJefe
 --- !u!1 &4633440367055322758
 GameObject:
