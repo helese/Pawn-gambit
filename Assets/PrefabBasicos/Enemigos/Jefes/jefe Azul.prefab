@@ -322,6 +322,9 @@ MonoBehaviour:
   CasillaASeguir: CasillaAzul
   esJefe: 1
   vidaExtraJefe: 50
+  puntuacionMinima: 10
+  puntuacionMaxima: 50
+  idEnemigo: AzulJefe
 --- !u!1 &4633440367055322758
 GameObject:
   m_ObjectHideFlags: 0

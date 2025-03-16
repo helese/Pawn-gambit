@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public CambiarTransparenciaImagen cambiarTransparencia1;
     public CambiarTransparenciaImagen cambiarTransparencia2;
 
-    private bool juegoActivo = true;
+    public bool juegoActivo = true;
     public delegate void TorreReyDestruidaHandler();
     public static event TorreReyDestruidaHandler OnTorreReyDestruida;
 

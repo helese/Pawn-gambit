@@ -233,11 +233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigosConfig:
   - prefab: {fileID: 2431344980631736960, guid: ede88ebb66b4b4a45884dee589bbac2f, type: 3}
-    probabilidad: 60
+    probabilidad: 0
   - prefab: {fileID: 2431344980631736960, guid: cee3b0fe7743c5a4a8fcfdd71afb6c99, type: 3}
-    probabilidad: 20
+    probabilidad: 100
   - prefab: {fileID: 2431344980631736960, guid: 8953089fef1f2b74588f4df411b4ab00, type: 3}
-    probabilidad: 20
+    probabilidad: 0
   jefes:
   - {fileID: 2431344980631736960, guid: 67787d09ece0ccd4bb07f7f6755d0a85, type: 3}
   caminosPrefabs:

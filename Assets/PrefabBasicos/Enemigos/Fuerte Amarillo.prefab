@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1915130549026824427
 Transform:
   m_ObjectHideFlags: 0
@@ -240,6 +240,11 @@ MonoBehaviour:
   "da\xF1oATorreRey": 1
   sliderVida: {fileID: 8847433779679202692}
   CasillaASeguir: CasillaAmarilla
+  esJefe: 0
+  vidaExtraJefe: 200
+  puntuacionMinima: 10
+  puntuacionMaxima: 50
+  idEnemigo: AmarilloFuerte
 --- !u!1 &4197034270054291612
 GameObject:
   m_ObjectHideFlags: 0

@@ -220,6 +220,9 @@ MonoBehaviour:
   CasillaASeguir: CasillaVerde
   esJefe: 1
   vidaExtraJefe: 50
+  puntuacionMinima: 10
+  puntuacionMaxima: 50
+  idEnemigo: VerdeJefe
 --- !u!1 &2656925346134091839
 GameObject:
   m_ObjectHideFlags: 0

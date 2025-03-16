@@ -218,6 +218,11 @@ MonoBehaviour:
   "da\xF1oATorreRey": 2
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
+  esJefe: 0
+  vidaExtraJefe: 200
+  puntuacionMinima: 10
+  puntuacionMaxima: 50
+  idEnemigo: VerdeVeloz
 --- !u!1 &2656925346134091839
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,11 +14,13 @@ public class TorreRey : MonoBehaviour
 
     // Referencia al GameManager
     private GameManager gameManager;
+    private Pausa pausa;
 
     void Start()
     {
         // Obtener la referencia al GameManager
         gameManager = FindFirstObjectByType<GameManager>();
+        pausa = FindFirstObjectByType<Pausa>();
 
         // Inicializar la vida de la TorreRey
         vidaActual = vidaMaxima;
@@ -80,6 +82,7 @@ public class TorreRey : MonoBehaviour
         if (gameManager != null && estaVivo == false)
         {
             gameManager.NotificarTorreReyDestruida();
+            pausa.TorreDestruida();
         }
 
         // Destruir todos los objetos con el tag "Enemigo"

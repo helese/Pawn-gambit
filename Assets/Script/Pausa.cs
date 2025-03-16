@@ -5,7 +5,8 @@ public class Pausa : MonoBehaviour
     [Header("Configuración de Pausa")]
     public GameObject panelPausa;
 
-    private bool juegoPausado = false; 
+    private bool juegoPausado = false;
+    private bool seDestruyo = false;
     private void Start()
     {
         panelPausa.SetActive(false);
@@ -13,7 +14,7 @@ public class Pausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !seDestruyo)
         {
             if (juegoPausado)
             {
@@ -61,5 +62,9 @@ public class Pausa : MonoBehaviour
         {
             ReanudarJuego();
         }
+    }
+    public void TorreDestruida()
+    {
+        seDestruyo = true;
     }
 }

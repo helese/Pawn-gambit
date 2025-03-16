@@ -1,30 +1,36 @@
-using System.Collections; // Necesario para IEnumerator
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UI; // Necesario para trabajar con UI
+using UnityEngine.UI;
 
 public class Enemigo : MonoBehaviour
 {
     [Header("Configuración básica")]
-    public float velocidad = 2f; // Velocidad de movimiento (unidades por segundo)
-    public float tiempoDeEspera = 0.4f; // Tiempo de espera después de cada unidad de movimiento
-    public int vidaMaxima = 100; // Vida máxima del enemigo (ajustable desde el Inspector)
-    public int incrementoVidaPorOleada = 10; // Incremento de vida por oleada (ajustable desde el Inspector)
-    public int dañoATorreRey = 5; // Daño que el enemigo inflige a la TorreRey (ajustable desde el Inspector)
-    public Slider sliderVida; // Referencia al Slider de vida (ajustable desde el Inspector)
-    public string CasillaASeguir; // Tag de las casillas a seguir
+    public float velocidad = 2f;
+    public float tiempoDeEspera = 0.4f;
+    public int vidaMaxima = 100;
+    public int incrementoVidaPorOleada = 10;
+    public int dañoATorreRey = 5;
+    public Slider sliderVida;
+    public string CasillaASeguir;
 
     [Header("Configuración del jefe")]
-    public bool esJefe = false; // Marca si este enemigo es un jefe (ajustable desde el Inspector)
-    public int vidaExtraJefe = 200; // Vida adicional si es un jefe (ajustable desde el Inspector)
+    public bool esJefe = false;
+    public int vidaExtraJefe = 200;
 
     [Header("Puntuación")]
-    public int puntuacionMinima = 10; // Puntuación mínima al ser destruido
-    public int puntuacionMaxima = 50; // Puntuación máxima al ser destruido
+    public int puntuacionMinima = 10;
+    public int puntuacionMaxima = 50;
 
-    private int vidaActual; // Vida actual del enemigo
-    private Transform[] waypoints; // Array de waypoints (casillas rojas)
-    private int indiceWaypointActual = 0; // Índice del waypoint actual
+    [Header("Bestiario")]
+    public string idEnemigo; // ID único (ej: "Goblin_01")
+
+    private int vidaActual;
+    private Transform[] waypoints;
+    private int indiceWaypointActual = 0;
+
+    // Evento para notificar la destrucción del enemigo
+    public delegate void EnemigoDestruidoHandler(string idEnemigo);
+    public static event EnemigoDestruidoHandler OnEnemigoDestruido;
 
     void Start()
     {
@@ -32,30 +38,23 @@ public class Enemigo : MonoBehaviour
         GameManager gameManager = FindAnyObjectByType<GameManager>();
         if (gameManager != null)
         {
-            // Aumentar la vida máxima según la oleada actual
             vidaMaxima += incrementoVidaPorOleada * (gameManager.oleadaActual - 1);
 
-            // Si es un jefe, añadir vida adicional
             if (esJefe)
             {
                 vidaMaxima += vidaExtraJefe;
             }
         }
 
-        // Inicializar la vida del enemigo
         vidaActual = vidaMaxima;
 
-        // Configurar el Slider de vida
         if (sliderVida != null)
         {
             sliderVida.maxValue = vidaMaxima;
             sliderVida.value = vidaActual;
         }
 
-        // Buscar y asignar la cámara principal al Canvas
         AsignarCamaraAlCanvas();
-
-        // Buscar todas las casillas rojas en la escena
         BuscarCasillasRojas();
 
         // Iniciar la corrutina de movimiento
@@ -142,8 +141,6 @@ public class Enemigo : MonoBehaviour
                 // Esperar el tiempo definido después de cada unidad de movimiento
                 yield return new WaitForSeconds(tiempoDeEspera);
             }
-
-            // Avanzar al siguiente waypoint
             indiceWaypointActual = (indiceWaypointActual + 1) % waypoints.Length;
         }
     }
@@ -188,6 +185,8 @@ public class Enemigo : MonoBehaviour
             int score = Random.Range(puntuacionMinima, puntuacionMaxima + 1);
             ScoreManager.Instance.AddScore(score);
         }
+
+        BestiarioManager.Instance.RegistrarEnemigoDerrotado(idEnemigo);
 
         // Destruir el objeto enemigo
         Destroy(gameObject);
