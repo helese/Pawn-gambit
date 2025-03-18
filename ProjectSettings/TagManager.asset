@@ -12,6 +12,12 @@ TagManager:
   - TorreDelRey
   - CanvasGameOver
   - ObjMusica
+  - CanvasConstruccion
+  - ObjetoInteractuable
+  - Casilla
+  - ObjetoInteractuado
+  - Torreta
+  - CanvasDestruccion
   layers:
   - Default
   - TransparentFX

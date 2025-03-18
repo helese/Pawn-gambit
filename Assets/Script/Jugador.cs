@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
@@ -10,26 +11,81 @@ public class Jugador : MonoBehaviour
     public float cooldownDash = 1f; // Tiempo de espera entre dashes
     public float velocidadRotacion = 10f; // Velocidad de rotación del jugador
 
+    [Header("Interacción")]
+    public float radioInteraccion = 3f; // Radio de detección de objetos interactuables
+
     private Rigidbody rb; // Referencia al Rigidbody
     private Vector3 direccionMovimiento; // Dirección de movimiento
     private bool puedeDash = true; // Indica si el jugador puede hacer dash
     private bool estaDashing = false; // Indica si el jugador está haciendo dash
     private Transform camara; // Referencia a la cámara
     private bool puedeMoverse = true; // Indica si el jugador puede moverse
+    private GameObject canvasConstruccion; // Referencia al canvas de construcción
+    private bool canvasActivo = false; // Indica si el canvas está activo
+
+    public Button[] botonesConstruccion; // Array de botones del panel
+    public GameObject[] prefabsConstruccion; // Array de prefabs para instanciar
+
+    private Vector3 posicionCasillaSeleccionada; // Posición de la casilla seleccionada
+
+    [Header("Destrucción de Torres")]
+    public GameObject canvasDestruccion; // Referencia al canvas de destrucción
+    private GameObject torreSeleccionada; // Referencia a la torre seleccionada
+
     void Start()
     {
         rb = GetComponent<Rigidbody>(); // Obtener el componente Rigidbody
         camara = Camera.main.transform; // Obtener la referencia a la cámara principal
 
+        // Buscar el canvas de construcción por tag
+        canvasConstruccion = GameObject.FindGameObjectWithTag("CanvasConstruccion");
+        if (canvasConstruccion != null)
+        {
+            canvasConstruccion.SetActive(false); // Desactivar el canvas al inicio
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró un objeto con el tag 'CanvasConstruccion'.");
+        }
+
+        // Buscar el canvas de destrucción por tag
+        canvasDestruccion = GameObject.FindGameObjectWithTag("CanvasDestruccion");
+        if (canvasDestruccion != null)
+        {
+            canvasDestruccion.SetActive(false); // Desactivar el canvas al inicio
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró un objeto con el tag 'CanvasDestruccion'.");
+        }
+
+                // Asignar evento al botón de destrucción
+        Button botonDestruir = canvasDestruccion.GetComponentInChildren<Button>();
+        if (botonDestruir != null)
+        {
+            botonDestruir.onClick.AddListener(DestruirTorre);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró un botón en el canvas de destrucción.");
+        }
+
         // Suscribirse al evento de destrucción de la TorreRey
         GameManager gameManager = FindFirstObjectByType<GameManager>();
-
         if (gameManager != null)
         {
-            // Usar el nombre de la clase para acceder al evento estático
             GameManager.OnTorreReyDestruida += DesactivarMovimiento;
         }
+
+
+        // Asignar eventos a los botones
+        for (int i = 0; i < botonesConstruccion.Length; i++)
+        {
+            int index = i; // Capturar el índice para el evento
+            botonesConstruccion[i].onClick.AddListener(() => OnBotonConstruccionClic(index));
+        }
     }
+    private GameObject objetoInteractuableActual; // Referencia al objeto interactuable actual
 
     void Update()
     {
@@ -48,6 +104,30 @@ public class Jugador : MonoBehaviour
             if (Input.GetMouseButtonDown(1) && puedeDash)
             {
                 StartCoroutine(Dash());
+            }
+
+            // Verificar si el jugador hace clic izquierdo
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (!canvasActivo && !canvasDestruccion.activeSelf)
+                {
+                    VerificarInteraccion(); // Verificar interacción solo si el canvas no está activo
+                    VerificarInteraccionTorre();
+                }
+                //else
+                //{
+                //    DesactivarCanvas(); // Desactivar el canvas si ya está activo
+                //}
+            }
+
+            // Verificar si el objeto interactuable actual está fuera del radio de interacción
+            if (canvasActivo && objetoInteractuableActual != null)
+            {
+                float distancia = Vector3.Distance(transform.position, objetoInteractuableActual.transform.position);
+                if (distancia > radioInteraccion)
+                {
+                    DesactivarCanvas(); // Desactivar el canvas si el objeto está fuera del radio
+                }
             }
         }
     }
@@ -99,8 +179,140 @@ public class Jugador : MonoBehaviour
     }
 
     // Método para desactivar el movimiento del jugador
-    private void DesactivarMovimiento()
+    public void DesactivarMovimiento()
     {
         puedeMoverse = false;
+
+    }
+
+    // Método para activar el movimiento del jugador
+    public void ActivarMovimiento()
+    {
+
+        puedeMoverse = true;
+    }
+
+    // Método para verificar la interacción con objetos interactuables
+    private void VerificarInteraccion()
+    {
+        // Lanzar un rayo desde la cámara hacia el punto donde el jugador hizo clic
+        Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        // Verificar si el rayo golpea un objeto
+        if (Physics.Raycast(rayo, out hit))
+        {
+            // Verificar si el objeto golpeado tiene el tag "ObjetoInteractuable"
+            if (hit.collider.CompareTag("ObjetoInteractuable"))
+            {
+                // Verificar si el objeto está dentro del radio de interacción
+                float distancia = Vector3.Distance(transform.position, hit.transform.position);
+                if (distancia <= radioInteraccion)
+                {
+                    // Guardar referencia al objeto interactuable actual
+                    objetoInteractuableActual = hit.collider.gameObject;
+
+                    // Buscar el objeto hijo "PuntoDeInstancia" en la jerarquía de la casilla
+                    Transform puntoDeInstancia = hit.collider.transform.Find("PuntoDeInstancia");
+                    if (puntoDeInstancia != null)
+                    {
+                        // Guardar la posición del objeto hijo
+                        posicionCasillaSeleccionada = puntoDeInstancia.position;
+                    }
+                    else
+                    {
+                        // Si no se encuentra el objeto hijo, usar la posición de la casilla
+                        Debug.LogWarning("No se encontró el objeto hijo 'PuntoDeInstancia' en la casilla.");
+                        posicionCasillaSeleccionada = hit.point;
+                    }
+
+                    // Activar el canvas de construcción
+                    if (canvasConstruccion != null)
+                    {
+                        canvasConstruccion.SetActive(true);
+                        canvasActivo = true; // Marcar el canvas como activo
+                    }
+                }
+            }
+        }
+    }
+
+    private void OnBotonConstruccionClic(int index)
+    {
+        // Verificar si el índice es válido
+        if (index >= 0 && index < prefabsConstruccion.Length)
+        {
+            // Instanciar el objeto correspondiente como hijo de la casilla
+            GameObject objetoInstanciado = Instantiate(
+                prefabsConstruccion[index], // Prefab a instanciar
+                posicionCasillaSeleccionada, // Posición del objeto hijo
+                Quaternion.identity, // Rotación
+                objetoInteractuableActual.transform // Parent (la casilla)
+            );
+
+            // Ocultar el panel después de instanciar el objeto
+            if (canvasConstruccion != null)
+            {
+                canvasConstruccion.SetActive(false);
+                canvasActivo = false;
+            }
+        }
+    }
+
+    private void DesactivarCanvas()
+    {
+        if (canvasConstruccion != null)
+        {
+            canvasConstruccion.SetActive(false);
+            canvasActivo = false; // Marcar el canvas como inactivo
+            objetoInteractuableActual = null; // Limpiar la referencia al objeto interactuable
+        }
+    }
+
+    private void VerificarInteraccionTorre()
+    {
+        // Lanzar un rayo desde la cámara hacia el punto donde el jugador hizo clic
+        Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        // Verificar si el rayo golpea un objeto
+        if (Physics.Raycast(rayo, out hit))
+        {
+            // Verificar si el objeto golpeado tiene el tag "Torre"
+            if (hit.collider.CompareTag("Torreta"))
+            {
+                // Guardar referencia a la torre seleccionada
+                torreSeleccionada = hit.collider.gameObject;
+
+                // Activar el canvas de destrucción
+                if (canvasDestruccion != null)
+                {
+                    canvasDestruccion.SetActive(true);
+                }
+            }
+        }
+    }
+
+    // Método para destruir la torre seleccionada
+    private void DestruirTorre()
+    {
+        if (torreSeleccionada != null)
+        {
+            Destroy(torreSeleccionada); // Destruir la torre
+            torreSeleccionada = null; // Limpiar la referencia
+        }
+
+        // Ocultar el canvas de destrucción
+        if (canvasDestruccion != null)
+        {
+            canvasDestruccion.SetActive(false);
+        }
+    }
+
+    // Dibujar gizmo para visualizar el radio de interacción
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, radioInteraccion);
     }
 }
