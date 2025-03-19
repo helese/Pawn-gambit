@@ -18,6 +18,7 @@ TagManager:
   - ObjetoInteractuado
   - Torreta
   - CanvasDestruccion
+  - Proyectil
   layers:
   - Default
   - TransparentFX

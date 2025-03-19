@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestruirEnemigoAlDetectar : MonoBehaviour
+public class DestruirEnemigoAlColisionar : MonoBehaviour
 {
     public int daño = 10; // Cantidad de daño que se aplica al enemigo (ajustable desde el Inspector)
 

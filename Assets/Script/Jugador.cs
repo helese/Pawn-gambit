@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Jugador : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class Jugador : MonoBehaviour
     [Header("Destrucción de Torres")]
     public GameObject canvasDestruccion; // Referencia al canvas de destrucción
     private GameObject torreSeleccionada; // Referencia a la torre seleccionada
+
+    [Header("Previsualización")]
+    public Material materialPreview; // Material semitransparente para la previsualización
+    private GameObject previewActual; // Objeto de previsualización actual
+
 
     void Start()
     {
@@ -83,6 +89,11 @@ public class Jugador : MonoBehaviour
         {
             int index = i; // Capturar el índice para el evento
             botonesConstruccion[i].onClick.AddListener(() => OnBotonConstruccionClic(index));
+        }
+
+        foreach (Button boton in botonesConstruccion)
+        {
+            AddHoverEvents(boton);
         }
     }
     private GameObject objetoInteractuableActual; // Referencia al objeto interactuable actual
@@ -239,23 +250,21 @@ public class Jugador : MonoBehaviour
 
     private void OnBotonConstruccionClic(int index)
     {
-        // Verificar si el índice es válido
-        if (index >= 0 && index < prefabsConstruccion.Length)
+        if (previewActual != null)
         {
-            // Instanciar el objeto correspondiente como hijo de la casilla
-            GameObject objetoInstanciado = Instantiate(
-                prefabsConstruccion[index], // Prefab a instanciar
-                posicionCasillaSeleccionada, // Posición del objeto hijo
-                Quaternion.identity, // Rotación
-                objetoInteractuableActual.transform // Parent (la casilla)
+            // Instanciar versión final
+            GameObject construccion = Instantiate(
+                prefabsConstruccion[index],
+                previewActual.transform.position,
+                previewActual.transform.rotation,
+                objetoInteractuableActual.transform
             );
 
-            // Ocultar el panel después de instanciar el objeto
-            if (canvasConstruccion != null)
-            {
-                canvasConstruccion.SetActive(false);
-                canvasActivo = false;
-            }
+            // Aplicar materiales originales
+            ResetMaterials(construccion, prefabsConstruccion[index]);
+
+            Destroy(previewActual);
+            DesactivarCanvas();
         }
     }
 
@@ -314,5 +323,86 @@ public class Jugador : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, radioInteraccion);
+    }
+    private void AddHoverEvents(Button boton)
+    {
+        EventTrigger trigger = boton.gameObject.GetComponent<EventTrigger>();
+        if (trigger == null) trigger = boton.gameObject.AddComponent<EventTrigger>();
+
+        // Evento Pointer Enter
+        EventTrigger.Entry entryEnter = new EventTrigger.Entry();
+        entryEnter.eventID = EventTriggerType.PointerEnter;
+        entryEnter.callback.AddListener((data) => { OnBotonHover(boton); });
+        trigger.triggers.Add(entryEnter);
+
+        // Evento Pointer Exit
+        EventTrigger.Entry entryExit = new EventTrigger.Entry();
+        entryExit.eventID = EventTriggerType.PointerExit;
+        entryExit.callback.AddListener((data) => { OnBotonHoverExit(); });
+        trigger.triggers.Add(entryExit);
+    }
+
+    // Cuando el puntero entra en el botón
+    private void OnBotonHover(Button botonHover)
+    {
+        int index = System.Array.IndexOf(botonesConstruccion, botonHover);
+        if (index != -1 && index < prefabsConstruccion.Length)
+        {
+            // Destruir preview anterior
+            if (previewActual != null) Destroy(previewActual);
+
+            // Instanciar preview
+            previewActual = Instantiate(
+                prefabsConstruccion[index],
+                posicionCasillaSeleccionada,
+                Quaternion.identity,
+                objetoInteractuableActual.transform
+            );
+
+            // Aplicar material de preview
+            SetPreviewMaterial(previewActual);
+        }
+    }
+
+    // Cuando el puntero sale del botón
+    private void OnBotonHoverExit()
+    {
+        if (previewActual != null)
+        {
+            Destroy(previewActual);
+            previewActual = null;
+        }
+    }
+
+    // Aplicar material de previsualización
+    private void SetPreviewMaterial(GameObject preview)
+    {
+        Renderer[] renderers = preview.GetComponentsInChildren<Renderer>();
+        foreach (Renderer renderer in renderers)
+        {
+            // Copiar material y hacerlo semitransparente
+            Material[] materials = renderer.materials;
+            for (int i = 0; i < materials.Length; i++)
+            {
+                materials[i] = new Material(materialPreview);
+                materials[i].color = new Color(1, 1, 1, 0.5f);
+            }
+            renderer.materials = materials;
+        }
+    }
+
+    // Método de clic modificado
+
+
+    // Restaurar materiales originales
+    private void ResetMaterials(GameObject target, GameObject originalPrefab)
+    {
+        Renderer[] originalRenderers = originalPrefab.GetComponentsInChildren<Renderer>();
+        Renderer[] targetRenderers = target.GetComponentsInChildren<Renderer>();
+
+        for (int i = 0; i < Mathf.Min(originalRenderers.Length, targetRenderers.Length); i++)
+        {
+            targetRenderers[i].materials = originalRenderers[i].sharedMaterials;
+        }
     }
 }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2915564301965256573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094520064691570736}
+  m_Layer: 0
+  m_Name: lugar de disparo (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094520064691570736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915564301965256573}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.92387956, z: -0, w: -0.38268355}
+  m_LocalPosition: {x: 0.7071065, y: 0, z: -0.70710707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7940955029035306963}
+  m_LocalEulerAnglesHint: {x: 0, y: -225, z: 0}
 --- !u!1 &3642633123974574430
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +43,7 @@ GameObject:
   - component: {fileID: 8649727403243964128}
   - component: {fileID: 5447076177397700250}
   - component: {fileID: 4819881968046133542}
+  - component: {fileID: 4393229219224926246}
   m_Layer: 0
   m_Name: Alfil
   m_TagString: Torreta
@@ -31,7 +63,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2082980295464285492}
+  - {fileID: 7691812318295846900}
+  - {fileID: 1094520064691570736}
+  - {fileID: 2464394113351536371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8649727403243964128
@@ -110,3 +146,120 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &4393229219224926246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642633123974574430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401b54ed5e65ce0438913fa7e9e2265d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cadenciaDisparo: 1
+  proyectilPrefab: {fileID: 1838538665647916640, guid: 3b290fda137426f44a9dfddf8bede47c, type: 3}
+  puntosDeDisparo:
+  - {fileID: 2082980295464285492}
+  - {fileID: 7691812318295846900}
+  - {fileID: 1094520064691570736}
+  - {fileID: 2464394113351536371}
+  tamanoCaja1: {x: 7, y: 3, z: 2}
+  rotacionCaja1: {x: 0, y: 45, z: 0}
+  tamanoCaja2: {x: 2, y: 3, z: 7}
+  rotacionCaja2: {x: 0, y: 45, z: 0}
+  tagEnemigo: Enemigo
+--- !u!1 &5016369668780236140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7691812318295846900}
+  m_Layer: 0
+  m_Name: lugar de disparo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7691812318295846900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016369668780236140}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9238794, z: -0, w: 0.38268366}
+  m_LocalPosition: {x: -0.70710707, y: 0, z: -0.7071065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7940955029035306963}
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+--- !u!1 &5163890302431431738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082980295464285492}
+  m_Layer: 0
+  m_Name: lugar de disparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082980295464285492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163890302431431738}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268322, z: -0, w: 0.9238797}
+  m_LocalPosition: {x: -0.7071065, y: 0, z: 0.70710707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7940955029035306963}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+--- !u!1 &6780952539521921800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2464394113351536371}
+  m_Layer: 0
+  m_Name: lugar de disparo (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2464394113351536371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780952539521921800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.38268247, z: -0, w: -0.9238799}
+  m_LocalPosition: {x: 0.70710707, y: 0, z: 0.7071065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7940955029035306963}
+  m_LocalEulerAnglesHint: {x: 0, y: -315, z: 0}

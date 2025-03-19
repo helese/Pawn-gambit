@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 252647082}
   - component: {fileID: 252647081}
   - component: {fileID: 252647080}
+  - component: {fileID: 252647086}
   m_Layer: 0
   m_Name: "Colision de da\xF1o (5)"
   m_TagString: Untagged
@@ -737,6 +738,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252647086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252647079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0db94b25e2c1f4d8923a112d807be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "da\xF1o": 10
 --- !u!1 &269530122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,7 +2874,7 @@ GameObject:
   - component: {fileID: 667993355}
   - component: {fileID: 667993354}
   - component: {fileID: 667993359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Personaje
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2938,7 +2952,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f3ea2e0eda32b804a9c8e5ccc27162ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3012,6 +3026,7 @@ MonoBehaviour:
   - {fileID: 3642633123974574430, guid: 85e3b075e53b01b44b16aa5e4d1da134, type: 3}
   - {fileID: 3642633123974574430, guid: 13fa25f5acd9e4b49a307ce4854aa386, type: 3}
   canvasDestruccion: {fileID: 1910575433}
+  materialPreview: {fileID: 2100000, guid: f3649f05cfeb98b4f8b9ec8b884e6582, type: 2}
 --- !u!1 &685841556
 GameObject:
   m_ObjectHideFlags: 0
