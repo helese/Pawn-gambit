@@ -4337,10 +4337,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Amarillo
       objectReference: {fileID: 0}
+    - target: {fileID: 377173948312530280, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 500141162898967527, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 667993358}
+    - target: {fileID: 1248626389058183907, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166149218816458030, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9071570270437691031, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -4390,9 +4402,13 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: 'caminosPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4949006679798607845, guid: 52c06cd477687854b894587d9ff22c69, type: 3}
+    - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 116099751653953929, guid: aef88ee7fa5c7da4ea2673abda01b114, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 9123842708593777996, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: 'caminosPrefabs.Array.data[2]'
       value: 

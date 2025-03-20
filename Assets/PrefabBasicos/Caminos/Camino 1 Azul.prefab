@@ -311,6 +311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9203644
@@ -350,6 +354,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -413,6 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -434,6 +446,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,6 +491,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -493,9 +513,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,9 +583,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,9 +653,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -679,9 +723,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -745,6 +797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.079636
@@ -785,6 +841,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -806,6 +866,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,6 +911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -868,6 +936,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -909,6 +981,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -927,9 +1003,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,6 +1077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.920362
@@ -1033,6 +1121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1054,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1095,6 +1191,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1113,9 +1213,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1175,9 +1283,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1241,6 +1357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.079636
@@ -1280,6 +1400,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1343,6 +1467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1364,6 +1492,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1423,9 +1555,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1489,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.920362
@@ -1529,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1547,9 +1695,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1613,6 +1769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.079636
@@ -1653,6 +1813,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1674,6 +1838,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1715,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1733,9 +1905,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1799,6 +1979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.0796356
@@ -1839,6 +2023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1857,9 +2045,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1963,6 +2159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1981,9 +2181,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2087,6 +2295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2149,6 +2361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2167,9 +2383,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2233,6 +2457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.079636
@@ -2273,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2294,6 +2526,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2335,6 +2571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2353,9 +2593,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2419,6 +2667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.667119
@@ -2481,6 +2733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.667119
@@ -2539,9 +2795,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2601,9 +2865,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2663,9 +2935,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2725,9 +3005,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2787,9 +3075,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2853,6 +3149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.0796356
@@ -2893,6 +3193,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2911,9 +3215,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2977,6 +3289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0796356
@@ -3017,6 +3333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3038,6 +3358,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3079,6 +3403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3100,6 +3428,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3140,6 +3472,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3203,6 +3539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3224,6 +3564,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3265,6 +3609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3286,6 +3634,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3349,6 +3701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.0796356
@@ -3389,6 +3745,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3407,9 +3767,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3473,6 +3841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.667119
@@ -3535,6 +3907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.920362
@@ -3575,6 +3951,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3596,6 +3976,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3637,6 +4021,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3655,9 +4043,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3721,6 +4117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.9203644
@@ -3761,6 +4161,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3782,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3823,6 +4231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3844,6 +4256,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3885,6 +4301,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3903,9 +4323,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3969,6 +4397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.920362
@@ -4009,6 +4441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4030,6 +4466,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4071,6 +4511,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4089,9 +4533,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4155,6 +4607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.0796366
@@ -4195,6 +4651,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4216,6 +4676,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4256,6 +4720,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4319,6 +4787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4340,6 +4812,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4381,6 +4857,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4399,9 +4879,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4465,6 +4953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.079636
@@ -4505,6 +4997,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4526,6 +5022,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4567,6 +5067,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4588,6 +5092,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4691,6 +5199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4712,6 +5224,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4753,6 +5269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4771,9 +5291,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4833,9 +5361,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4899,6 +5435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.667119
@@ -4961,6 +5501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.0796356
@@ -5001,6 +5545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5022,6 +5570,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5125,6 +5677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5143,9 +5699,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5209,6 +5773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07963562
@@ -5249,6 +5817,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5267,9 +5839,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5333,6 +5913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.920362
@@ -5373,6 +5957,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5394,6 +5982,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5435,6 +6027,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5453,9 +6049,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5515,9 +6119,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5581,6 +6193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9203634
@@ -5621,6 +6237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5639,9 +6259,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5745,6 +6373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5763,9 +6395,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5829,6 +6469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0796356
@@ -5869,6 +6513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5887,9 +6535,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5949,9 +6605,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6011,9 +6675,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6077,6 +6749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9203634
@@ -6117,6 +6793,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6138,6 +6818,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6197,9 +6881,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6263,6 +6955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0796366
@@ -6303,6 +6999,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6321,9 +7021,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6383,9 +7091,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6445,9 +7161,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6511,6 +7235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.079636
@@ -6550,6 +7278,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6613,6 +7345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6634,6 +7370,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6675,6 +7415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6696,6 +7440,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6737,6 +7485,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6755,9 +7507,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6821,6 +7581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.920362
@@ -6861,6 +7625,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6882,6 +7650,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6941,9 +7713,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7003,9 +7783,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7109,6 +7897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7171,6 +7963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7192,6 +7988,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7233,6 +8033,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7251,9 +8055,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7317,6 +8129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.920362
@@ -7357,6 +8173,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7375,9 +8195,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (50)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7437,9 +8265,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7503,6 +8339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07963562
@@ -7543,6 +8383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7561,9 +8405,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7627,6 +8479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0796356
@@ -7667,6 +8523,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7685,9 +8545,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7747,9 +8615,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7813,6 +8689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.6671193
@@ -7875,6 +8755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0796356
@@ -7915,6 +8799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7933,9 +8821,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8039,6 +8935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8057,9 +8957,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8123,6 +9031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9203644
@@ -8163,6 +9075,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8181,9 +9097,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8243,9 +9167,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8305,9 +9237,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8367,9 +9307,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8429,9 +9377,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8495,6 +9451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9203634
@@ -8535,6 +9495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8553,9 +9517,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8619,6 +9591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9203615
@@ -8659,6 +9635,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8680,6 +9660,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8720,6 +9704,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8783,6 +9771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8845,6 +9837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8863,9 +9859,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8969,6 +9973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9031,6 +10039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9052,6 +10064,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9093,6 +10109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9111,9 +10131,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9173,9 +10201,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9235,9 +10271,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9301,6 +10345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.920362
@@ -9341,6 +10389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9359,9 +10411,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9421,9 +10481,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9483,9 +10551,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9545,9 +10621,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9651,6 +10735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9669,9 +10757,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9731,9 +10827,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9793,9 +10897,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9855,9 +10967,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9917,9 +11037,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9983,6 +11111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.079636574
@@ -10023,6 +11155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10041,9 +11177,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10107,6 +11251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.9203615
@@ -10147,6 +11295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10168,6 +11320,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10209,6 +11365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10227,9 +11387,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10293,6 +11461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.0796356
@@ -10333,6 +11505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10354,6 +11530,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10395,6 +11575,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10416,6 +11600,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10457,6 +11645,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10475,9 +11667,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10541,6 +11741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9203634
@@ -10580,6 +11784,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10643,6 +11851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10664,6 +11876,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10727,6 +11943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.9203615
@@ -10767,6 +11987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10785,9 +12009,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10851,6 +12083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0796356
@@ -10891,6 +12127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10912,6 +12152,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10975,6 +12219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9203625
@@ -11015,6 +12263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11033,9 +12285,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11095,9 +12355,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11161,6 +12429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.667118
@@ -11222,6 +12494,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11285,6 +12561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9203634
@@ -11325,6 +12605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11346,6 +12630,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11387,6 +12675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11408,6 +12700,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11449,6 +12745,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11470,6 +12770,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11511,6 +12815,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11529,9 +12837,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11595,6 +12911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.9203615
@@ -11634,6 +12954,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11697,6 +13021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11718,6 +13046,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11759,6 +13091,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11780,6 +13116,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11821,6 +13161,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11839,9 +13183,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11945,6 +13297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11966,6 +13322,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12007,6 +13367,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12028,6 +13392,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12069,6 +13437,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12090,6 +13462,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12130,6 +13506,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12193,6 +13573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12211,9 +13595,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12273,9 +13665,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12339,6 +13739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9203634
@@ -12379,6 +13783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12400,6 +13808,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12503,6 +13915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12521,9 +13937,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12583,9 +14007,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12645,9 +14077,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12751,6 +14191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12772,6 +14216,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12835,6 +14283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla blanca (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.667119
@@ -12893,9 +14345,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12959,6 +14419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.0796366
@@ -12998,6 +14462,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13061,6 +14529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13123,6 +14595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13144,6 +14620,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13203,9 +14683,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13265,9 +14753,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13331,6 +14827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07963562
@@ -13371,6 +14871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13392,6 +14896,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13433,6 +14941,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13451,9 +14963,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13513,9 +15033,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13619,6 +15147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Azul (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13637,9 +15169,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13703,6 +15243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0796356
@@ -13743,6 +15287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13764,6 +15312,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_Name
       value: Casilla blanca (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 2b1497d4c7e55054d858f94955774da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13827,6 +15379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9203634
@@ -13867,6 +15423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13885,9 +15445,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13951,6 +15519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0796356
@@ -13991,6 +15563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14012,6 +15588,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14052,6 +15632,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14115,6 +15699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14136,6 +15724,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14177,6 +15769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14195,9 +15791,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14301,6 +15905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla negra (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6217426978219944813, guid: 25b8dc317327dfa4888f725320745837, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14322,6 +15930,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14363,6 +15975,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14384,6 +16000,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14425,6 +16045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14443,9 +16067,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14509,6 +16141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9203615
@@ -14549,6 +16185,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14570,6 +16210,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14611,6 +16255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14632,6 +16280,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14673,6 +16325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14691,9 +16347,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4888255607467584864}
     m_Modifications:
+    - target: {fileID: 6453931542211280536, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_Name
       value: Casilla Blanca (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 29b2181b530fd884989eed1b2e96555a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14757,6 +16421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Casilla Negra (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.920362
@@ -14797,6 +16465,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14818,6 +16490,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14859,6 +16535,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14880,6 +16560,10 @@ PrefabInstance:
     - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_Name
       value: Casilla Negra (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543077421906220379, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14920,6 +16604,10 @@ PrefabInstance:
     - target: {fileID: 8533400840222473498, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603458021123883329, guid: 8e1119c9588ca5f4a8efe706240074df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8135818479875196721
 Transform:
@@ -46,11 +46,11 @@ GameObject:
   - component: {fileID: 1775248404181546976}
   - component: {fileID: -2621343075826039890}
   m_Layer: 0
-  m_Name: Casilla Blanca
+  m_Name: Casilla blanca
   m_TagString: ObjetoInteractuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8533400840222473498
 Transform:
