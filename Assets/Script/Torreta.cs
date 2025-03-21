@@ -16,20 +16,37 @@ public class Torreta : MonoBehaviour
     public Vector3 rotacionCaja2 = Vector3.zero; // Rotación de la segunda caja
     public string tagEnemigo = "Enemigo"; // Tag del enemigo
 
+    [Header("Material Requerido")]
+    public Material materialRequerido; // Material que debe tener la torreta para disparar
+
     private float tiempoUltimoDisparo; // Tiempo del último disparo
     private bool enemigoEnRango = false; // Indica si hay un enemigo dentro del área de detección
 
     void Update()
     {
-        // Verificar si hay enemigos dentro de las áreas de detección
-        VerificarEnemigosEnRango();
-
-        // Disparar solo si hay un enemigo en rango y es momento de disparar
-        if (enemigoEnRango && Time.time >= tiempoUltimoDisparo + cadenciaDisparo)
+        // Verificar si el material de la torreta es el correcto
+        if (TieneMaterialCorrecto())
         {
-            Disparar();
-            tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
+            // Verificar si hay enemigos dentro de las áreas de detección
+            VerificarEnemigosEnRango();
+
+            // Disparar solo si hay un enemigo en rango y es momento de disparar
+            if (enemigoEnRango && Time.time >= tiempoUltimoDisparo + cadenciaDisparo)
+            {
+                Disparar();
+                tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
+            }
         }
+    }
+
+    private bool TieneMaterialCorrecto()
+    {
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            return renderer.material.name.Replace(" (Instance)", "") == materialRequerido.name;
+        }
+        return false;
     }
 
     private void VerificarEnemigosEnRango()

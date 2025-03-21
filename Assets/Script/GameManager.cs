@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +39,18 @@ public class GameManager : MonoBehaviour
     public delegate void TorreReyDestruidaHandler();
     public static event TorreReyDestruidaHandler OnTorreReyDestruida;
 
+    [Header("Sistema de Slider y TMP")]
+    public Slider sliderOleada; // Slider que se llenará durante la oleada
+    public TMP_Text textoContador; // Texto que muestra el valor actual
+    public float tiempoLlenadoSlider = 10f; // Tiempo en segundos para llenar el slider
+    public int valorMaximoPorOleada = 5; // Valor máximo que puede alcanzar el contador por oleada
+
+    public int valorInicial = 9; // Valor inicial del contador al comenzar la oleada
+
+    private int valorActual = 0; // Valor actual del contador
+    private bool llenandoSlider = false; // Indica si el slider se está llenando
+    private float tiempoInicioLlenado; // Tiempo en que comenzó a llenarse el slider
+
     void Start()
     {
         torreRey = FindFirstObjectByType<TorreRey>();
@@ -58,6 +72,10 @@ public class GameManager : MonoBehaviour
         panelGameOver.SetActive(false);
         juegoActivo = true;
         oleadaEnCurso = false;
+
+        valorActual = valorInicial;
+        textoContador.text = valorActual.ToString();
+        sliderOleada.value = 0f; // Reiniciar el slider visualmente
     }
 
     void Update()
@@ -66,7 +84,23 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && !oleadaEnCurso && juegoActivo)
         {
             IniciarOleada();
+        }
 
+        // Llenar el slider si está en proceso
+        if (llenandoSlider && oleadaEnCurso)
+        {
+            float tiempoTranscurrido = Time.time - tiempoInicioLlenado;
+            float progreso = Mathf.Clamp01(tiempoTranscurrido / tiempoLlenadoSlider);
+
+            // Actualizar el valor del slider
+            sliderOleada.value = progreso;
+
+            // Si el slider llega al máximo, incrementar el contador
+            if (progreso >= 1f)
+            {
+                IncrementarContador();
+                tiempoInicioLlenado = Time.time; // Reiniciar el tiempo de llenado
+            }
         }
     }
 
@@ -128,6 +162,42 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log($"Iniciando oleada {oleadaActual} con {enemigosGenerados} enemigos y un tiempo entre enemigos de {tiempoEntreEnemigos} segundos.");
+
+        sliderOleada.value = 0f;
+
+        // Iniciar el llenado del slider
+        llenandoSlider = true;
+        tiempoInicioLlenado = Time.time;
+    }
+
+    // Método para incrementar el contador
+    private void IncrementarContador()
+    {
+        valorActual++; // Aumentar el contador indefinidamente
+        textoContador.text = valorActual.ToString();
+
+        // Reiniciar el Slider para que siga llenándose
+        sliderOleada.value = 0f;
+        tiempoInicioLlenado = Time.time;
+    }
+
+    // Método público para restar unidades al contador
+    public void RestarUnidades(int cantidad)
+    {
+        valorActual = Mathf.Max(0, valorActual - cantidad); // Asegurarse de que no sea negativo
+        textoContador.text = valorActual.ToString();
+
+        // Si el contador es menor que el máximo, reanudar el llenado del slider
+        if (valorActual < valorMaximoPorOleada && !llenandoSlider)
+        {
+            llenandoSlider = true;
+            tiempoInicioLlenado = Time.time;
+        }
+    }
+
+    public int ObtenerValorSlider()
+    {
+        return valorActual; // Devuelve el valor actual del contador
     }
 
     public void NotificarTorreReyDestruida()
