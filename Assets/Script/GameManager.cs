@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public int valorInicial = 9; // Valor inicial del contador al comenzar la oleada
 
-    private int valorActual = 0; // Valor actual del contador
+    public int valorActual = 0; // Valor actual del contador
     private bool llenandoSlider = false; // Indica si el slider se está llenando
     private float tiempoInicioLlenado; // Tiempo en que comenzó a llenarse el slider
 
@@ -184,7 +184,21 @@ public class GameManager : MonoBehaviour
     // Método público para restar unidades al contador
     public void RestarUnidades(int cantidad)
     {
-        valorActual = Mathf.Max(0, valorActual - cantidad); // Asegurarse de que no sea negativo
+        valorActual = valorActual - cantidad; // Asegurarse de que no sea negativo
+        textoContador.text = valorActual.ToString();
+
+        // Si el contador es menor que el máximo, reanudar el llenado del slider
+        if (valorActual < valorMaximoPorOleada && !llenandoSlider)
+        {
+            llenandoSlider = true;
+            tiempoInicioLlenado = Time.time;
+        }
+    }
+
+    // Método público para sumar unidades al contador
+    public void SumarUnidades(int cantidad)
+    {
+        valorActual = valorActual + cantidad; 
         textoContador.text = valorActual.ToString();
 
         // Si el contador es menor que el máximo, reanudar el llenado del slider

@@ -101,7 +101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8ca30b4ec44d2543a6b157cc80258a7, type: 2}
+  - {fileID: 2100000, guid: 76c21dcac3d5c5843bf733d68be29d7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,7 +170,8 @@ MonoBehaviour:
   tamanoCaja2: {x: 2, y: 3, z: 7}
   rotacionCaja2: {x: 0, y: 45, z: 0}
   tagEnemigo: Enemigo
-  materialRequerido: {fileID: 2100000, guid: b8ca30b4ec44d2543a6b157cc80258a7, type: 2}
+  materialRequerido: {fileID: 2100000, guid: 76c21dcac3d5c5843bf733d68be29d7f, type: 2}
+  puntosARecuperar: 3
 --- !u!1 &5016369668780236140
 GameObject:
   m_ObjectHideFlags: 0

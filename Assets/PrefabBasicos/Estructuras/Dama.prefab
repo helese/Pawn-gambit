@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8649727403243964128}
   - component: {fileID: 5447076177397700250}
   - component: {fileID: 4819881968046133542}
+  - component: {fileID: 1492928044980884209}
   m_Layer: 0
   m_Name: Dama
   m_TagString: Torreta
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8ca30b4ec44d2543a6b157cc80258a7, type: 2}
+  - {fileID: 2100000, guid: 1bead1bb0a1f2c248a70faa2bc1bfec5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,3 +111,25 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1492928044980884209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642633123974574430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401b54ed5e65ce0438913fa7e9e2265d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cadenciaDisparo: 1
+  proyectilPrefab: {fileID: 0}
+  puntosDeDisparo: []
+  tamanoCaja1: {x: 10, y: 5, z: 10}
+  rotacionCaja1: {x: 0, y: 0, z: 0}
+  tamanoCaja2: {x: 10, y: 5, z: 10}
+  rotacionCaja2: {x: 0, y: 0, z: 0}
+  tagEnemigo: Enemigo
+  materialRequerido: {fileID: 2100000, guid: 1bead1bb0a1f2c248a70faa2bc1bfec5, type: 2}
+  puntosARecuperar: 9

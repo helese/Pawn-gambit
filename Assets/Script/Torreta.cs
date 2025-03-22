@@ -22,6 +22,15 @@ public class Torreta : MonoBehaviour
     private float tiempoUltimoDisparo; // Tiempo del último disparo
     private bool enemigoEnRango = false; // Indica si hay un enemigo dentro del área de detección
 
+    public int puntosARecuperar;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        // Obtener la referencia al GameManager
+        gameManager = FindFirstObjectByType<GameManager>();
+    }
+
     void Update()
     {
         // Verificar si el material de la torreta es el correcto
@@ -131,5 +140,14 @@ public class Torreta : MonoBehaviour
 
         // Restaurar la matriz de transformación original
         Gizmos.matrix = matrizOriginal;
+    }
+
+    private void OnDestroy()
+    {
+        // Verificar si la torreta tiene el material correcto antes de sumar puntos
+        if (TieneMaterialCorrecto())
+        {
+            gameManager.SumarUnidades(puntosARecuperar); // Sumar unidades al slider
+        }
     }
 }
