@@ -8,19 +8,18 @@ public class Torreta : MonoBehaviour
 
     [Header("Puntos de Disparo")]
     public Transform[] puntosDeDisparo; // Lista de puntos de disparo (direcciones y posiciones)
-
-    [Header("Áreas de Detección")]
-    public Vector3 tamanoCaja1 = new Vector3(10f, 5f, 10f); // Tamaño de la primera caja
-    public Vector3 rotacionCaja1 = Vector3.zero; // Rotación de la primera caja
-    public Vector3 tamanoCaja2 = new Vector3(10f, 5f, 10f); // Tamaño de la segunda caja
-    public Vector3 rotacionCaja2 = Vector3.zero; // Rotación de la segunda caja
-    public string tagEnemigo = "Enemigo"; // Tag del enemigo
+    public Vector3[] desplazamientosCajas; // Desplazamientos de las cajas de colisión respecto a los puntos de disparo
+    public Vector3[] tamanosCajas; // Tamaños de las cajas de colisión para cada punto de disparo
+    public Vector3[] rotacionesCajas; // Rotaciones de las cajas de colisión para cada punto de disparo
 
     [Header("Material Requerido")]
     public Material materialRequerido; // Material que debe tener la torreta para disparar
 
+    [Header("Objetos a Encender/Apagar")]
+    public GameObject[] objetosMaterialIncorrecto; // Objetos que se encienden si la torreta no tiene el material correcto
+
     private float tiempoUltimoDisparo; // Tiempo del último disparo
-    private bool enemigoEnRango = false; // Indica si hay un enemigo dentro del área de detección
+    private bool[] enemigosEnRango; // Indica si hay un enemigo dentro de cada área de detección
 
     public int puntosARecuperar;
     private GameManager gameManager;
@@ -29,6 +28,12 @@ public class Torreta : MonoBehaviour
     {
         // Obtener la referencia al GameManager
         gameManager = FindFirstObjectByType<GameManager>();
+
+        // Inicializar el array de detección de enemigos
+        enemigosEnRango = new bool[puntosDeDisparo.Length];
+
+        // Verificar el material al inicio
+        VerificarMaterial();
     }
 
     void Update()
@@ -40,7 +45,7 @@ public class Torreta : MonoBehaviour
             VerificarEnemigosEnRango();
 
             // Disparar solo si hay un enemigo en rango y es momento de disparar
-            if (enemigoEnRango && Time.time >= tiempoUltimoDisparo + cadenciaDisparo)
+            if (Time.time >= tiempoUltimoDisparo + cadenciaDisparo)
             {
                 Disparar();
                 tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
@@ -58,23 +63,42 @@ public class Torreta : MonoBehaviour
         return false;
     }
 
+    private void VerificarMaterial()
+    {
+        bool materialCorrecto = TieneMaterialCorrecto();
+
+        // Activar o desactivar los objetos según el material
+        foreach (GameObject obj in objetosMaterialIncorrecto)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(!materialCorrecto);
+            }
+        }
+    }
+
     private void VerificarEnemigosEnRango()
     {
         // Buscar todos los objetos con el tag "Enemigo" en la escena
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag(tagEnemigo);
+        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
 
-        // Inicialmente asumir que no hay enemigos en rango
-        enemigoEnRango = false;
+        // Inicialmente asumir que no hay enemigos en rango en ninguna dirección
+        for (int i = 0; i < enemigosEnRango.Length; i++)
+        {
+            enemigosEnRango[i] = false;
+        }
 
         // Recorrer todos los enemigos
         foreach (GameObject enemigo in enemigos)
         {
             // Verificar si el enemigo está dentro de alguna de las cajas
-            if (EstaEnCaja(enemigo.transform.position, transform.position, tamanoCaja1, rotacionCaja1) ||
-                EstaEnCaja(enemigo.transform.position, transform.position, tamanoCaja2, rotacionCaja2))
+            for (int i = 0; i < puntosDeDisparo.Length; i++)
             {
-                enemigoEnRango = true;
-                break; // Salir del bucle si se encuentra al menos un enemigo en rango
+                Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
+                if (EstaEnCaja(enemigo.transform.position, centroCaja, tamanosCajas[i], rotacionesCajas[i]))
+                {
+                    enemigosEnRango[i] = true;
+                }
             }
         }
     }
@@ -100,31 +124,36 @@ public class Torreta : MonoBehaviour
     private void Disparar()
     {
         // Recorrer todos los puntos de disparo
-        foreach (Transform punto in puntosDeDisparo)
+        for (int i = 0; i < puntosDeDisparo.Length; i++)
         {
-            // Instanciar el proyectil en la posición y rotación del punto de disparo
-            GameObject proyectil = Instantiate(proyectilPrefab, punto.position, punto.rotation);
-
-            // Obtener el componente Rigidbody del proyectil (si lo tiene)
-            Rigidbody rb = proyectil.GetComponent<Rigidbody>();
-            if (rb != null)
+            // Disparar solo si hay un enemigo en la caja de colisión correspondiente
+            if (enemigosEnRango[i])
             {
-                // Aplicar fuerza al proyectil en la dirección hacia adelante del punto de disparo
-                rb.linearVelocity = punto.forward * 10f; // Ajusta la velocidad según sea necesario
+                // Instanciar el proyectil en la posición y rotación del punto de disparo
+                GameObject proyectil = Instantiate(proyectilPrefab, puntosDeDisparo[i].position, puntosDeDisparo[i].rotation);
+
+                // Obtener el componente Rigidbody del proyectil (si lo tiene)
+                Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    // Aplicar fuerza al proyectil en la dirección hacia adelante del punto de disparo
+                    rb.linearVelocity = puntosDeDisparo[i].forward * 10f; // Ajusta la velocidad según sea necesario
+                }
             }
         }
     }
 
-    // Dibujar las áreas de detección en el Editor
-    private void OnDrawGizmosSelected()
+    // Dibujar las áreas de detección en el Viewport
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
 
-        // Dibujar la primera caja con rotación
-        DibujarCajaGizmo(transform.position, tamanoCaja1, rotacionCaja1);
-
-        // Dibujar la segunda caja con rotación
-        DibujarCajaGizmo(transform.position, tamanoCaja2, rotacionCaja2);
+        // Dibujar las cajas de colisión para cada punto de disparo
+        for (int i = 0; i < puntosDeDisparo.Length; i++)
+        {
+            Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
+            DibujarCajaGizmo(centroCaja, tamanosCajas[i], rotacionesCajas[i]);
+        }
     }
 
     private void DibujarCajaGizmo(Vector3 centro, Vector3 tamano, Vector3 rotacion)

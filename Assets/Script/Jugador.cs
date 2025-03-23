@@ -263,7 +263,7 @@ public class Jugador : MonoBehaviour
             // Aplicar materiales originales
             ResetMaterials(construccion, prefabsConstruccion[index]);
 
-            Destroy(previewActual);
+            DestruirPreview(); // Destruir la previsualización
             DesactivarCanvas();
         }
     }
@@ -274,6 +274,7 @@ public class Jugador : MonoBehaviour
         {
             canvasConstruccion.SetActive(false);
             canvasActivo = false; // Marcar el canvas como inactivo
+            DestruirPreview(); // Destruir la previsualización al desactivar el canvas
             objetoInteractuableActual = null; // Limpiar la referencia al objeto interactuable
         }
     }
@@ -342,6 +343,15 @@ public class Jugador : MonoBehaviour
         trigger.triggers.Add(entryExit);
     }
 
+    private void DestruirPreview()
+    {
+        if (previewActual != null)
+        {
+            Destroy(previewActual);
+            previewActual = null;
+        }
+    }
+
     // Cuando el puntero entra en el botón
     private void OnBotonHover(Button botonHover)
     {
@@ -349,7 +359,7 @@ public class Jugador : MonoBehaviour
         if (index != -1 && index < prefabsConstruccion.Length)
         {
             // Destruir preview anterior
-            if (previewActual != null) Destroy(previewActual);
+            DestruirPreview();
 
             // Instanciar preview
             previewActual = Instantiate(

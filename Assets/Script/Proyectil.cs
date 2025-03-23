@@ -40,8 +40,5 @@ public class Proyectil : MonoBehaviour
             // Destruir el proyectil al colisionar con un objeto
             Destroy(gameObject);
         }
-
-        // Aquí puedes añadir lógica adicional, como dañar al objeto con el que colisiona
-        // Ejemplo: other.GetComponent<Salud>()?.RecibirDaño(damage);
     }
 }
