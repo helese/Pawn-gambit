@@ -1058,6 +1058,18 @@ MonoBehaviour:
           m_StringArgument: TablaDePuntos
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1146235162}
+        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
+        m_MethodName: CambiarNivel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TablaDePuntos
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &281081122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,7 +1560,7 @@ MonoBehaviour:
   juegoActivo: 1
   sliderOleada: {fileID: 246142963}
   textoContador: {fileID: 1565888751}
-  tiempoLlenadoSlider: 10
+  tiempoLlenadoSlider: 6
   valorMaximoPorOleada: 5
   valorInicial: 9
   valorActual: 0
@@ -2711,8 +2723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18a1692a64268c45b4b6c0dae7b2a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   panel: {fileID: 0}
+  fadeDuration: 1
 --- !u!1 &625833176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,8 +2757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18a1692a64268c45b4b6c0dae7b2a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   panel: {fileID: 0}
+  fadeDuration: 1
 --- !u!114 &625833178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3517,7 +3529,7 @@ GameObject:
   - component: {fileID: 767137864}
   - component: {fileID: 767137863}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: FadeOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5069,8 +5081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18a1692a64268c45b4b6c0dae7b2a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 767137863}
   panel: {fileID: 767137861}
+  fadeDuration: 1
 --- !u!114 &1146235163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7191,6 +7203,7 @@ GameObject:
   - component: {fileID: 1695807779}
   - component: {fileID: 1695807778}
   - component: {fileID: 1695807777}
+  - component: {fileID: 1695807780}
   m_Layer: 5
   m_Name: FadeIn
   m_TagString: Untagged
@@ -7277,6 +7290,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695807775}
   m_CullTransparentMesh: 1
+--- !u!114 &1695807780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695807775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01dd266256b4dc4aaab0472cd3dbcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700436275
 GameObject:
   m_ObjectHideFlags: 0
@@ -7852,7 +7877,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -6
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1821441154
 RectTransform:

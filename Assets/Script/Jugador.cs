@@ -112,7 +112,7 @@ public class Jugador : MonoBehaviour
             direccionMovimiento.y = 0; // Ignorar la componente Y para evitar movimientos verticales
 
             // Verificar si el jugador presiona Shift y puede hacer dash
-            if (Input.GetMouseButtonDown(1) && puedeDash)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && puedeDash)
             {
                 StartCoroutine(Dash());
             }
@@ -124,6 +124,17 @@ public class Jugador : MonoBehaviour
                 {
                     VerificarInteraccion(); // Verificar interacción solo si el canvas no está activo
                     VerificarInteraccionTorre();
+                }
+                //else
+                //{
+                //    DesactivarCanvas(); // Desactivar el canvas si ya está activo
+                //}
+            }
+            if (Input.GetMouseButtonUp(2))
+            {
+                if (!canvasActivo && !canvasDestruccion.activeSelf)
+                {
+                    DesactivarCanvas(); // Desactivar el canvas si ya está activo
                 }
                 //else
                 //{

@@ -1,24 +1,21 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
-using UnityEngine.UI;
-using System.Collections;
-using System.Drawing;
+using UnityEngine.SceneManagement;
 
 public class CambiarEscena : MonoBehaviour
 {
-    public GameObject panel;
-    public float delaySeconds = 1f;
+    public GameObject panel; // Asegúrate de que está desactivado inicialmente
+    public float fadeDuration = 1f;
+    private string escenaACargar;
+
     public void CambiarNivel(string nombreEscena)
     {
-        StartCoroutine(CambioEscena(nombreEscena));
+        escenaACargar = nombreEscena; // Guarda el nombre
+        panel.SetActive(true); // Activa el panel (FadeIn)
+        Invoke("CargarEscena", fadeDuration); // Retraso
     }
-    public void FadeIn()
+
+    private void CargarEscena()
     {
-        panel.SetActive(true);
-    }
-    IEnumerator CambioEscena(string nombre)
-    {
-        SceneManager.LoadScene(nombre);
-        yield return new WaitForSeconds(delaySeconds);
+        SceneManager.LoadScene(escenaACargar);
     }
 }

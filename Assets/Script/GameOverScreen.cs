@@ -37,8 +37,5 @@ public class GameOverScreen : MonoBehaviour
         {
             Debug.LogError("ScoreManager no está inicializado.");
         }
-
-        // Cargar la escena de la tabla de puntuación
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TablaDePuntos");
     }
 }

@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public delegate void TorreReyDestruidaHandler();
     public static event TorreReyDestruidaHandler OnTorreReyDestruida;
 
-    [Header("Sistema de Slider y TMP")]
+    [Header("Sistema de Economia")]
     public Slider sliderOleada; // Slider que se llenará durante la oleada
     public TMP_Text textoContador; // Texto que muestra el valor actual
     public float tiempoLlenadoSlider = 10f; // Tiempo en segundos para llenar el slider
@@ -91,15 +91,13 @@ public class GameManager : MonoBehaviour
         {
             float tiempoTranscurrido = Time.time - tiempoInicioLlenado;
             float progreso = Mathf.Clamp01(tiempoTranscurrido / tiempoLlenadoSlider);
-
-            // Actualizar el valor del slider
             sliderOleada.value = progreso;
 
-            // Si el slider llega al máximo, incrementar el contador
-            if (progreso >= 1f)
+            // Si alcanza 1 punto DENTRO de la oleada actual (no el total)
+            if (progreso >= 1f && (valorActual % valorMaximoPorOleada) < valorMaximoPorOleada)
             {
                 IncrementarContador();
-                tiempoInicioLlenado = Time.time; // Reiniciar el tiempo de llenado
+                tiempoInicioLlenado = Time.time;
             }
         }
     }
@@ -170,15 +168,42 @@ public class GameManager : MonoBehaviour
         tiempoInicioLlenado = Time.time;
     }
 
+
+
     // Método para incrementar el contador
     private void IncrementarContador()
     {
-        valorActual++; // Aumentar el contador indefinidamente
+        valorActual++; // Siempre suma 1, sin límite por oleada
         textoContador.text = valorActual.ToString();
 
-        // Reiniciar el Slider para que siga llenándose
+        // Solo reinicia el slider si no hemos alcanzado el máximo DE ESTA OLEADA
+        if ((valorActual % valorMaximoPorOleada) != 0)
+        {
+            sliderOleada.value = 0f;
+            tiempoInicioLlenado = Time.time;
+        }
+        else
+        {
+            // Cuando se completa una oleada (5 puntos), el slider se queda lleno
+            sliderOleada.value = 1f;
+            llenandoSlider = false;
+        }
+    }
+
+    private void CompletarContadorAlFinalizarOleada()
+    {
+        if (valorActual < valorMaximoPorOleada)
+        {
+            int diferencia = valorMaximoPorOleada - valorActual;
+            valorActual = valorMaximoPorOleada; // Completa el valor
+            textoContador.text = valorActual.ToString();
+
+            Debug.Log($"Se completaron {diferencia} unidades al finalizar la oleada");
+        }
+
+        // Resetear el slider
         sliderOleada.value = 0f;
-        tiempoInicioLlenado = Time.time;
+        llenandoSlider = false;
     }
 
     // Método público para restar unidades al contador
@@ -346,22 +371,27 @@ public class GameManager : MonoBehaviour
     // Método para finalizar la oleada
     private void FinalizarOleada()
     {
-        oleadaEnCurso = false; // Marcar que la oleada ha terminado
+        oleadaEnCurso = false;
 
-        // Verificar si es el momento de recuperar la vida de la TorreRey
+        // Si hay progreso parcial en el slider, súmalo al contador
+        if (sliderOleada.value > 0 && sliderOleada.value < 1f)
+        {
+            // Calcula puntos pendientes proporcionales (ej: si el slider está al 50%, suma 0.5 puntos)
+            float puntosPendientes = sliderOleada.value * valorMaximoPorOleada;
+            valorActual += Mathf.RoundToInt(puntosPendientes);
+            textoContador.text = valorActual.ToString();
+        }
+
+        // Resetear el slider para la próxima oleada
+        sliderOleada.value = 0f;
+        llenandoSlider = false;
+
+        // Resto de tu lógica...
         if (oleadaActual % curarRey == 0)
         {
             RecuperarVidaTorreRey();
         }
-
-        // Activar la advertencia de jefe en el portal que spawneará el jefe en la siguiente oleada
-        if ((oleadaActual + 1) % oleadasParaJefe == 0)
-        {
-            SeleccionarPortalParaJefe();
-        }
-
-        oleadaActual++; // Pasar a la siguiente oleada
-        Debug.Log($"Oleada {oleadaActual - 1} completada. Preparándose para la oleada {oleadaActual}.");
+        oleadaActual++;
     }
 
     // Método para recuperar la vida de la TorreRey
