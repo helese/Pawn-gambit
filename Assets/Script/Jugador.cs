@@ -130,7 +130,7 @@ public class Jugador : MonoBehaviour
                 //    DesactivarCanvas(); // Desactivar el canvas si ya está activo
                 //}
             }
-            if (Input.GetMouseButtonUp(2))
+            if (Input.GetMouseButtonUp(1))
             {
                 if (!canvasActivo && !canvasDestruccion.activeSelf)
                 {
