@@ -7,29 +7,29 @@ public class GameManager : MonoBehaviour
 {
 
     [Header("Oleadas y Torre ")]
-    public List<PortalEnemigo> portalesEnemigos; 
-    public int oleadaActual = 1; 
-    public int activarPortal = 5; 
-    public int curarRey = 3; 
-    public int oleadasParaJefe = 5; 
+    public List<PortalEnemigo> portalesEnemigos;
+    public int oleadaActual = 1;
+    public int activarPortal = 5;
+    public int curarRey = 3;
+    public int oleadasParaJefe = 5;
 
-    private bool oleadaEnCurso = false; 
-    private TorreRey torreRey; 
+    private bool oleadaEnCurso = false;
+    private TorreRey torreRey;
 
 
     [Header("Enemigos y Jefes")]
-    public float tiempoMin = 1.0f; 
-    public float tiempoMax = 3.0f; 
+    public float tiempoMin = 1.0f;
+    public float tiempoMax = 3.0f;
 
-    private float tiempoEntreEnemigos; 
-    private int jefesVivos = 0; 
+    private float tiempoEntreEnemigos;
+    private int jefesVivos = 0;
     private int enemigosGenerados = 0;
-    private int enemigosDestruidos = 0; 
+    private int enemigosDestruidos = 0;
 
-    private PortalEnemigo portalConJefe; 
+    private PortalEnemigo portalConJefe;
 
     [Header("Game Over")]
-    public GameObject panelGameOver; 
+    public GameObject panelGameOver;
     public MoverCamara moverCamara;
     public float retrasoCanvas = 3f;
     public CambiarTransparenciaImagen cambiarTransparencia1;
@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text textoContador; // Texto que muestra el valor actual
     public float tiempoLlenadoSlider = 10f; // Tiempo en segundos para llenar el slider
     public int valorMaximoPorOleada = 5; // Valor máximo que puede alcanzar el contador por oleada
+    private int incrementosRestantes;
+    private int valorRestante;
 
     public int valorInicial = 9; // Valor inicial del contador al comenzar la oleada
 
@@ -58,14 +60,14 @@ public class GameManager : MonoBehaviour
         // Activar el primer portal al inicio
         if (portalesEnemigos.Count > 0)
         {
-            portalesEnemigos[0].ActivarPortal(true); 
-            portalesEnemigos[0].InstanciarCaminoAleatorio(); 
+            portalesEnemigos[0].ActivarPortal(true);
+            portalesEnemigos[0].InstanciarCaminoAleatorio();
         }
 
         // Desactivar los demás portales al inicio
         for (int i = 1; i < portalesEnemigos.Count; i++)
         {
-            portalesEnemigos[i].ActivarPortal(false); 
+            portalesEnemigos[i].ActivarPortal(false);
         }
 
         // Desactivar el panel de Game Over al inicio
@@ -87,17 +89,19 @@ public class GameManager : MonoBehaviour
         }
 
         // Llenar el slider si está en proceso
-        if (llenandoSlider && oleadaEnCurso)
+        if (llenandoSlider && oleadaEnCurso && incrementosRestantes < valorMaximoPorOleada)
         {
             float tiempoTranscurrido = Time.time - tiempoInicioLlenado;
             float progreso = Mathf.Clamp01(tiempoTranscurrido / tiempoLlenadoSlider);
+
+            // Actualizar el valor del slider
             sliderOleada.value = progreso;
 
-            // Si alcanza 1 punto DENTRO de la oleada actual (no el total)
-            if (progreso >= 1f && (valorActual % valorMaximoPorOleada) < valorMaximoPorOleada)
+            // Si el slider llega al máximo, incrementar el contador
+            if (progreso >= 1f)
             {
                 IncrementarContador();
-                tiempoInicioLlenado = Time.time;
+                tiempoInicioLlenado = Time.time; // Reiniciar el tiempo de llenado
             }
         }
     }
@@ -114,7 +118,7 @@ public class GameManager : MonoBehaviour
         enemigosGenerados = Mathf.CeilToInt(2 * Mathf.Pow(1.3f, oleadaActual - 1)) + 4;
 
         // Reiniciar el contador de enemigos destruidos
-        enemigosDestruidos = 0; 
+        enemigosDestruidos = 0;
 
         oleadaEnCurso = true;
 
@@ -168,42 +172,16 @@ public class GameManager : MonoBehaviour
         tiempoInicioLlenado = Time.time;
     }
 
-
-
     // Método para incrementar el contador
     private void IncrementarContador()
     {
-        valorActual++; // Siempre suma 1, sin límite por oleada
-        textoContador.text = valorActual.ToString();
-
-        // Solo reinicia el slider si no hemos alcanzado el máximo DE ESTA OLEADA
-        if ((valorActual % valorMaximoPorOleada) != 0)
+        if (incrementosRestantes < valorMaximoPorOleada)
         {
-            sliderOleada.value = 0f;
-            tiempoInicioLlenado = Time.time;
-        }
-        else
-        {
-            // Cuando se completa una oleada (5 puntos), el slider se queda lleno
-            sliderOleada.value = 1f;
-            llenandoSlider = false;
-        }
-    }
-
-    private void CompletarContadorAlFinalizarOleada()
-    {
-        if (valorActual < valorMaximoPorOleada)
-        {
-            int diferencia = valorMaximoPorOleada - valorActual;
-            valorActual = valorMaximoPorOleada; // Completa el valor
+            valorActual++;
             textoContador.text = valorActual.ToString();
-
-            Debug.Log($"Se completaron {diferencia} unidades al finalizar la oleada");
+            incrementosRestantes += 1;
         }
 
-        // Resetear el slider
-        sliderOleada.value = 0f;
-        llenandoSlider = false;
     }
 
     // Método público para restar unidades al contador
@@ -212,26 +190,26 @@ public class GameManager : MonoBehaviour
         valorActual = valorActual - cantidad; // Asegurarse de que no sea negativo
         textoContador.text = valorActual.ToString();
 
-        // Si el contador es menor que el máximo, reanudar el llenado del slider
-        if (valorActual < valorMaximoPorOleada && !llenandoSlider)
-        {
-            llenandoSlider = true;
-            tiempoInicioLlenado = Time.time;
-        }
-    }
+        //// Si el contador es menor que el máximo, reanudar el llenado del slider
+        //if (valorActual < valorMaximoPorOleada && !llenandoSlider)
+        //{
+        //    llenandoSlider = true;
+        //    tiempoInicioLlenado = Time.time;
+        //}
+    }   
 
     // Método público para sumar unidades al contador
     public void SumarUnidades(int cantidad)
     {
-        valorActual = valorActual + cantidad; 
+        valorActual = valorActual + cantidad;
         textoContador.text = valorActual.ToString();
 
-        // Si el contador es menor que el máximo, reanudar el llenado del slider
-        if (valorActual < valorMaximoPorOleada && !llenandoSlider)
-        {
-            llenandoSlider = true;
-            tiempoInicioLlenado = Time.time;
-        }
+        //// Si el contador es menor que el máximo, reanudar el llenado del slider
+        //if (valorActual < valorMaximoPorOleada && !llenandoSlider)
+        //{
+        //    llenandoSlider = true;
+        //    tiempoInicioLlenado = Time.time;
+        //}
     }
 
     public int ObtenerValorSlider()
@@ -371,27 +349,34 @@ public class GameManager : MonoBehaviour
     // Método para finalizar la oleada
     private void FinalizarOleada()
     {
-        oleadaEnCurso = false;
+        oleadaEnCurso = false; // Marcar que la oleada ha terminado
 
-        // Si hay progreso parcial en el slider, súmalo al contador
-        if (sliderOleada.value > 0 && sliderOleada.value < 1f)
+        if (incrementosRestantes < valorMaximoPorOleada)
         {
-            // Calcula puntos pendientes proporcionales (ej: si el slider está al 50%, suma 0.5 puntos)
-            float puntosPendientes = sliderOleada.value * valorMaximoPorOleada;
-            valorActual += Mathf.RoundToInt(puntosPendientes);
+            valorRestante = valorMaximoPorOleada - incrementosRestantes;
+            valorActual += valorRestante;
             textoContador.text = valorActual.ToString();
+            valorRestante = 0;
+            sliderOleada.value = 0;
+
         }
 
-        // Resetear el slider para la próxima oleada
-        sliderOleada.value = 0f;
-        llenandoSlider = false;
+        incrementosRestantes = 0;
 
-        // Resto de tu lógica...
+        // Verificar si es el momento de recuperar la vida de la TorreRey
         if (oleadaActual % curarRey == 0)
         {
             RecuperarVidaTorreRey();
         }
-        oleadaActual++;
+
+        // Activar la advertencia de jefe en el portal que spawneará el jefe en la siguiente oleada
+        if ((oleadaActual + 1) % oleadasParaJefe == 0)
+        {
+            SeleccionarPortalParaJefe();
+        }
+
+        oleadaActual++; // Pasar a la siguiente oleada
+        Debug.Log($"Oleada {oleadaActual - 1} completada. Preparándose para la oleada {oleadaActual}.");
     }
 
     // Método para recuperar la vida de la TorreRey

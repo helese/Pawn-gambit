@@ -90,7 +90,6 @@ public class TorreRey : MonoBehaviour
 
         // Destruir la TorreRey
         Destroy(gameObject);
-        Debug.Log("¡La TorreRey ha sido destruida!");
     }
 
     // Método para destruir todos los objetos con el tag "Enemigo"
@@ -118,7 +117,5 @@ public class TorreRey : MonoBehaviour
         {
             sliderVida.value = vidaActual;
         }
-
-        Debug.Log("Vida de la TorreRey recuperada al 100%.");
     }
 }

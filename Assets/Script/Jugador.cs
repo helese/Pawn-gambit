@@ -5,89 +5,74 @@ using UnityEngine.EventSystems;
 
 public class Jugador : MonoBehaviour
 {
-    [Header("Movimiento")]
-    public float velocidadMovimiento = 5f; // Velocidad de movimiento normal
-    public float velocidadDash = 15f; // Velocidad del dash
-    public float duracionDash = 0.2f; // Duración del dash
-    public float cooldownDash = 1f; // Tiempo de espera entre dashes
-    public float velocidadRotacion = 10f; // Velocidad de rotación del jugador
+    [Header("Movimiento Ajedrez")]
+    public float velocidadMovimiento = 5f;
+    public float tiempoEntreMovimientos = 0.2f;
+    private bool seEstaMoviendo = false;
+    private Vector3 posicionObjetivo;
+    private Transform camara;
+
 
     [Header("Interacción")]
-    public float radioInteraccion = 3f; // Radio de detección de objetos interactuables
-
+    public float radioInteraccion = 3f;
+    private bool puedeMoverse = true;
+    private GameObject canvasConstruccion;
+    private bool canvasActivo = false;
+    public Button[] botonesConstruccion;
+    public GameObject[] prefabsConstruccion;
+    private Vector3 posicionCasillaSeleccionada;
     private Rigidbody rb; // Referencia al Rigidbody
-    private Vector3 direccionMovimiento; // Dirección de movimiento
-    private bool puedeDash = true; // Indica si el jugador puede hacer dash
-    private bool estaDashing = false; // Indica si el jugador está haciendo dash
-    private Transform camara; // Referencia a la cámara
-    private bool puedeMoverse = true; // Indica si el jugador puede moverse
-    private GameObject canvasConstruccion; // Referencia al canvas de construcción
-    private bool canvasActivo = false; // Indica si el canvas está activo
-
-    public Button[] botonesConstruccion; // Array de botones del panel
-    public GameObject[] prefabsConstruccion; // Array de prefabs para instanciar
-
-    private Vector3 posicionCasillaSeleccionada; // Posición de la casilla seleccionada
 
     [Header("Destrucción de Torres")]
-    public GameObject canvasDestruccion; // Referencia al canvas de destrucción
-    private GameObject torreSeleccionada; // Referencia a la torre seleccionada
+    public GameObject canvasDestruccion;
+    private GameObject torreSeleccionada;
 
     [Header("Previsualización")]
-    public Material materialPreview; // Material semitransparente para la previsualización
-    private GameObject previewActual; // Objeto de previsualización actual
+    public Material materialPreview;
+    private GameObject previewActual;
+    private GameObject objetoInteractuableActual;
 
+    [Header("Detección de Enemigos")]
+    public GameObject colliderFrontal;    // Arrastra desde el Editor
+    public GameObject colliderTrasero;    // Arrastra desde el Editor
+    public GameObject colliderIzquierdo;  // Arrastra desde el Editor
+    public GameObject colliderDerecho;    // Arrastra desde el Editor
+
+    private bool enemigoEnFrente;
+    private bool enemigoAtras;
+    private bool enemigoIzquierda;
+    private bool enemigoDerecha;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // Obtener el componente Rigidbody
-        camara = Camera.main.transform; // Obtener la referencia a la cámara principal
 
-        // Buscar el canvas de construcción por tag
+        // Configura los colliders como triggers (si no lo están)
+        colliderFrontal.GetComponent<Collider>().isTrigger = true;
+        colliderTrasero.GetComponent<Collider>().isTrigger = true;
+        colliderIzquierdo.GetComponent<Collider>().isTrigger = true;
+        colliderDerecho.GetComponent<Collider>().isTrigger = true;
+
+
+        posicionObjetivo = transform.position;
+        camara = Camera.main.transform;
+        rb = GetComponent<Rigidbody>();
+
+        // Inicialización de UI (mantener tu código existente)
         canvasConstruccion = GameObject.FindGameObjectWithTag("CanvasConstruccion");
-        if (canvasConstruccion != null)
-        {
-            canvasConstruccion.SetActive(false); // Desactivar el canvas al inicio
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró un objeto con el tag 'CanvasConstruccion'.");
-        }
+        if (canvasConstruccion != null) canvasConstruccion.SetActive(false);
 
-        // Buscar el canvas de destrucción por tag
         canvasDestruccion = GameObject.FindGameObjectWithTag("CanvasDestruccion");
-        if (canvasDestruccion != null)
-        {
-            canvasDestruccion.SetActive(false); // Desactivar el canvas al inicio
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró un objeto con el tag 'CanvasDestruccion'.");
-        }
+        if (canvasDestruccion != null) canvasDestruccion.SetActive(false);
 
-                // Asignar evento al botón de destrucción
         Button botonDestruir = canvasDestruccion.GetComponentInChildren<Button>();
-        if (botonDestruir != null)
-        {
-            botonDestruir.onClick.AddListener(DestruirTorre);
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró un botón en el canvas de destrucción.");
-        }
+        if (botonDestruir != null) botonDestruir.onClick.AddListener(DestruirTorre);
 
-        // Suscribirse al evento de destrucción de la TorreRey
         GameManager gameManager = FindFirstObjectByType<GameManager>();
-        if (gameManager != null)
-        {
-            GameManager.OnTorreReyDestruida += DesactivarMovimiento;
-        }
+        if (gameManager != null) GameManager.OnTorreReyDestruida += DesactivarMovimiento;
 
-
-        // Asignar eventos a los botones
         for (int i = 0; i < botonesConstruccion.Length; i++)
         {
-            int index = i; // Capturar el índice para el evento
+            int index = i;
             botonesConstruccion[i].onClick.AddListener(() => OnBotonConstruccionClic(index));
         }
 
@@ -96,109 +81,105 @@ public class Jugador : MonoBehaviour
             AddHoverEvents(boton);
         }
     }
-    private GameObject objetoInteractuableActual; // Referencia al objeto interactuable actual
 
     void Update()
     {
-        // Solo procesar la entrada si el jugador puede moverse
-        if (puedeMoverse)
+        if (puedeMoverse && !seEstaMoviendo && !canvasActivo && !canvasDestruccion.activeSelf)
         {
-            // Obtener la entrada del jugador (WASD o flechas)
-            float movimientoHorizontal = Input.GetAxisRaw("Horizontal");
-            float movimientoVertical = Input.GetAxisRaw("Vertical");
+            ProcesarMovimiento();
+        }
 
-            // Calcular la dirección de movimiento en relación con la cámara
-            direccionMovimiento = (camara.forward * movimientoVertical + camara.right * movimientoHorizontal).normalized;
-            direccionMovimiento.y = 0; // Ignorar la componente Y para evitar movimientos verticales
-
-            // Verificar si el jugador presiona Shift y puede hacer dash
-            if (Input.GetKeyDown(KeyCode.LeftShift) && puedeDash)
+        // Mantener tu lógica existente para interacción
+        if (Input.GetMouseButtonUp(0) && puedeMoverse)
+        {
+            if (!canvasActivo && !canvasDestruccion.activeSelf)
             {
-                StartCoroutine(Dash());
+                VerificarInteraccion();
+                VerificarInteraccionTorre();
+            }
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            if (canvasActivo && objetoInteractuableActual != null) DesactivarCanvas();
+            if (canvasDestruccion != null) canvasDestruccion.SetActive(false);
+        }
+    }
+
+    private void ProcesarMovimiento()
+    {
+        float movimientoHorizontal = Input.GetAxisRaw("Horizontal");
+        float movimientoVertical = Input.GetAxisRaw("Vertical");
+
+        if (movimientoHorizontal != 0 || movimientoVertical != 0)
+        {
+            Vector3 direccion = (camara.forward * movimientoVertical + camara.right * movimientoHorizontal).normalized;
+            direccion.y = 0;
+
+            // Determinar dirección primaria
+            Vector3 direccionLateral = Vector3.zero;
+            Vector3 direccionFrontal = Vector3.zero;
+
+            if (Mathf.Abs(direccion.x) > Mathf.Abs(direccion.z))
+            {
+                direccionLateral = new Vector3(Mathf.Sign(direccion.x), 0, 0);
+            }
+            else
+            {
+                direccionFrontal = new Vector3(0, 0, Mathf.Sign(direccion.z));
             }
 
-            // Verificar si el jugador hace clic izquierdo
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (!canvasActivo && !canvasDestruccion.activeSelf)
-                {
-                    VerificarInteraccion(); // Verificar interacción solo si el canvas no está activo
-                    VerificarInteraccionTorre();
-                }
-                //else
-                //{
-                //    DesactivarCanvas(); // Desactivar el canvas si ya está activo
-                //}
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                if (!canvasActivo && !canvasDestruccion.activeSelf)
-                {
-                    DesactivarCanvas(); // Desactivar el canvas si ya está activo
-                }
-                //else
-                //{
-                //    DesactivarCanvas(); // Desactivar el canvas si ya está activo
-                //}
-            }
+            // Verificar colisiones
+            bool bloqueoLateral = (direccionLateral.x > 0 && enemigoDerecha) || (direccionLateral.x < 0 && enemigoIzquierda);
+            bool bloqueoFrontal = (direccionFrontal.z > 0 && enemigoEnFrente) || (direccionFrontal.z < 0 && enemigoAtras);
 
-            // Verificar si el objeto interactuable actual está fuera del radio de interacción
-            if (canvasActivo && objetoInteractuableActual != null)
+            if (!bloqueoLateral && !bloqueoFrontal)
             {
-                float distancia = Vector3.Distance(transform.position, objetoInteractuableActual.transform.position);
-                if (distancia > radioInteraccion)
-                {
-                    DesactivarCanvas(); // Desactivar el canvas si el objeto está fuera del radio
-                }
+                posicionObjetivo = transform.position + direccionLateral + direccionFrontal;
+                StartCoroutine(MoverACasilla(posicionObjetivo));
             }
         }
     }
 
-    void FixedUpdate()
+    // Métodos para detectar enemigos (llamados desde los colliders hijos)
+    public void EnemigoEntro(string direccion)
     {
-        // Mover al jugador solo si no está haciendo dash y puede moverse
-        if (!estaDashing && puedeMoverse)
+        switch (direccion)
         {
-            rb.linearVelocity = direccionMovimiento * velocidadMovimiento;
-
-            // Rotar el jugador hacia la dirección del movimiento
-            if (direccionMovimiento != Vector3.zero)
-            {
-                RotarHaciaDireccion(direccionMovimiento);
-            }
+            case "Frontal": enemigoEnFrente = true; break;
+            case "Trasero": enemigoAtras = true; break;
+            case "Izquierdo": enemigoIzquierda = true; break;
+            case "Derecho": enemigoDerecha = true; break;
         }
     }
 
-    // Método para rotar el jugador hacia la dirección del movimiento
-    private void RotarHaciaDireccion(Vector3 direccion)
+    public void EnemigoSalio(string direccion)
     {
-        // Calcular la rotación deseada
-        Quaternion rotacionDeseada = Quaternion.LookRotation(direccion);
-
-        // Suavizar la rotación hacia la dirección deseada
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotacionDeseada, velocidadRotacion * Time.deltaTime);
+        switch (direccion)
+        {
+            case "Frontal": enemigoEnFrente = false; break;
+            case "Trasero": enemigoAtras = false; break;
+            case "Izquierdo": enemigoIzquierda = false; break;
+            case "Derecho": enemigoDerecha = false; break;
+        }
     }
 
-    // Corrutina para realizar el dash
-    private IEnumerator Dash()
+
+    IEnumerator MoverACasilla(Vector3 objetivo)
     {
-        puedeDash = false; // Desactivar el dash
-        estaDashing = true; // Indicar que el jugador está haciendo dash
+        seEstaMoviendo = true;
 
-        // Aplicar la velocidad del dash en la dirección actual
-        rb.linearVelocity = direccionMovimiento * velocidadDash;
+        while (Vector3.Distance(transform.position, objetivo) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, objetivo, velocidadMovimiento * Time.deltaTime);
+            yield return null;
+        }
 
-        // Esperar la duración del dash
-        yield return new WaitForSeconds(duracionDash);
-
-        // Detener el dash y restaurar la velocidad normal
-        rb.linearVelocity = Vector3.zero;
-        estaDashing = false;
-
-        // Esperar el cooldown antes de permitir otro dash
-        yield return new WaitForSeconds(cooldownDash);
-        puedeDash = true; // Reactivar el dash
+        transform.position = objetivo;
+        yield return new WaitForSeconds(tiempoEntreMovimientos);
+        seEstaMoviendo = false;
     }
+
 
     // Método para desactivar el movimiento del jugador
     public void DesactivarMovimiento()
