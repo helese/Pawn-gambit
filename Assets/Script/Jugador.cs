@@ -107,6 +107,25 @@ public class Jugador : MonoBehaviour
         }
     }
 
+    void LateUpdate()
+    {
+        if (!seEstaMoviendo && puedeMoverse)
+        {
+            // Mantiene al jugador alineado incluso cuando no se mueve
+            Vector3 posicionAlineada = new Vector3(
+                Mathf.Round(transform.position.x),
+                Mathf.Round(transform.position.y),
+                Mathf.Round(transform.position.z)
+            );
+
+            if (transform.position != posicionAlineada)
+            {
+                transform.position = posicionAlineada;
+                if (rb != null) rb.position = posicionAlineada;
+            }
+        }
+    }
+
     private void ProcesarMovimiento()
     {
         float movimientoHorizontal = Input.GetAxisRaw("Horizontal");
@@ -170,13 +189,37 @@ public class Jugador : MonoBehaviour
     {
         seEstaMoviendo = true;
 
+        Vector3 posicionInicial = transform.position;
+        float tiempoTranscurrido = 0f;
+
+        // Mueve suavemente al jugador
         while (Vector3.Distance(transform.position, objetivo) > 0.01f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, objetivo, velocidadMovimiento * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                objetivo,
+                velocidadMovimiento * Time.deltaTime
+            );
+            tiempoTranscurrido += Time.deltaTime;
             yield return null;
         }
 
-        transform.position = objetivo;
+        // Fuerza la posición final a coordenadas enteras
+        Vector3 posicionFinal = new Vector3(
+            Mathf.Round(objetivo.x),
+            Mathf.Round(objetivo.y),
+            Mathf.Round(objetivo.z)
+        );
+
+        transform.position = posicionFinal;
+
+        // Sincroniza el Rigidbody si existe
+        if (rb != null)
+        {
+            rb.position = posicionFinal;
+            rb.linearVelocity = Vector3.zero;
+        }
+
         yield return new WaitForSeconds(tiempoEntreMovimientos);
         seEstaMoviendo = false;
     }
@@ -199,12 +242,15 @@ public class Jugador : MonoBehaviour
     // Método para verificar la interacción con objetos interactuables
     private void VerificarInteraccion()
     {
+
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = Physics.RaycastAll(rayo)
             .FirstOrDefault(h => !h.collider.CompareTag("TagAIgnorar"));
+        Debug.Log($"Objeto pulsado: {hit.collider.gameObject.name} | Posición: {hit.point}");
 
         if (hit.collider != null && hit.collider.CompareTag("ObjetoInteractuable"))
         {
+
             // Verificar si el objeto golpeado tiene el tag "ObjetoInteractuable"
             if (hit.collider.CompareTag("ObjetoInteractuable"))
             {
