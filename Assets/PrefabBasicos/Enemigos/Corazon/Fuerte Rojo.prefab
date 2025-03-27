@@ -281,8 +281,8 @@ MonoBehaviour:
   CasillaASeguir: CasillaRoja
   esJefe: 0
   vidaExtraJefe: 200
-  puntuacionMinima: 50
-  puntuacionMaxima: 70
+  puntuacionMinima: 3
+  puntuacionMaxima: 12
   regeneraVida: 1
   vidaPorSegundo: 5
   "tiempoDeRegeneraci\xF3n": 2

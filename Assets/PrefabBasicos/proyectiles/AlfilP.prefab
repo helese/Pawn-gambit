@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2582919939156915607}
   - component: {fileID: -575466255114821391}
   m_Layer: 7
-  m_Name: Sphere
+  m_Name: AlfilP
   m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bd3c8ebd840ad469590901f217760f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 10
-  tiempoVida: 3
+  velocidad: 20
+  tiempoVida: 2
   puedeAtravesarObjetos: 0
 --- !u!54 &2582919939156915607
 Rigidbody:
@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0db94b25e2c1f4d8923a112d807be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 10
+  "da\xF1o": 15

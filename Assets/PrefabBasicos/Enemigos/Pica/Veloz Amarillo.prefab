@@ -122,8 +122,8 @@ GameObject:
   - component: {fileID: 1915130549026824427}
   - component: {fileID: 2753868103985008103}
   - component: {fileID: 3823707408986922640}
-  - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
+  - component: {fileID: -9218074074684554069}
   m_Layer: 0
   m_Name: Veloz Amarillo
   m_TagString: Enemigo
@@ -200,27 +200,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3944699699107160444
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2431344980631736960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4528062093384414517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,8 +221,8 @@ MonoBehaviour:
   CasillaASeguir: CasillaAmarilla
   esJefe: 0
   vidaExtraJefe: 200
-  puntuacionMinima: 50
-  puntuacionMaxima: 70
+  puntuacionMinima: 4
+  puntuacionMaxima: 10
   regeneraVida: 1
   vidaPorSegundo: 3
   "tiempoDeRegeneraci\xF3n": 3
@@ -262,6 +241,27 @@ MonoBehaviour:
   rangoCuracion: 5
   curacion: 100
   idEnemigo: AmarilloVeloz
+--- !u!65 &-9218074074684554069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431344980631736960}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4197034270054291612
 GameObject:
   m_ObjectHideFlags: 0

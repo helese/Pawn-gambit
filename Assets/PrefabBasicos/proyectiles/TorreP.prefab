@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 868460529008792344}
   - component: {fileID: 2429633044832557607}
   - component: {fileID: 5512476300227062246}
+  - component: {fileID: -2762296444688786547}
   - component: {fileID: 2582919939156915607}
   - component: {fileID: -575466255114821391}
-  - component: {fileID: -4410928792020628311}
   m_Layer: 7
-  m_Name: ProyeMortero
+  m_Name: TorreP
   m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,8 +109,23 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2762296444688786547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838538665647916640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31bd3c8ebd840ad469590901f217760f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 7
+  tiempoVida: 5
+  puedeAtravesarObjetos: 1
 --- !u!54 &2582919939156915607
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,16 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0db94b25e2c1f4d8923a112d807be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 10
---- !u!114 &-4410928792020628311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838538665647916640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798f9a59b68eae64db37b3a18cfe6f9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  "da\xF1o": 15

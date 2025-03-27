@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c728e88b921ae4c8c327be4dadc703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenciaDisparo: 2
+  cadenciaDisparo: 5
   proyectilPrefab: {fileID: 1838538665647916640, guid: ea000bca80a9bd442836462180dccaed, type: 3}
   alturaMaxima: 5
   gravedad: -30

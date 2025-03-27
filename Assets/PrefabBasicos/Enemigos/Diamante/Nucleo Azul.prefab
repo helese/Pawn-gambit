@@ -322,11 +322,12 @@ MonoBehaviour:
   CasillaASeguir: CasillaAzul
   esJefe: 0
   vidaExtraJefe: 200
-  puntuacionMinima: 100
-  puntuacionMaxima: 150
+  puntuacionMinima: 10
+  puntuacionMaxima: 15
   regeneraVida: 1
   vidaPorSegundo: 5
   "tiempoDeRegeneraci\xF3n": 2
+  aumentoDeRegeneracionPorOleada: 2
   invencible: 1
   tiempoInvencibilidad: 4
   cooldownInvencibilidad: 10

@@ -4236,7 +4236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401b54ed5e65ce0438913fa7e9e2265d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenciaDisparo: 1
+  cadenciaDisparo: 2
   proyectilPrefab: {fileID: 1838538665647916640, guid: 3b290fda137426f44a9dfddf8bede47c, type: 3}
   puntosDeDisparo:
   - {fileID: 2799612156788039302}
