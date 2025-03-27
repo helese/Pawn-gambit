@@ -7,7 +7,7 @@ public class DetectorDireccion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemigo"))
+        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta"))
         {
             jugador.EnemigoEntro(direccion);
         }
@@ -15,7 +15,7 @@ public class DetectorDireccion : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemigo"))
+        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta"))
         {
             jugador.EnemigoSalio(direccion);
         }

@@ -19,6 +19,7 @@ TagManager:
   - Torreta
   - CanvasDestruccion
   - Proyectil
+  - TagAIgnorar
   layers:
   - Default
   - TransparentFX

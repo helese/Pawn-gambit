@@ -4032,8 +4032,8 @@ GameObject:
   - component: {fileID: 7940955029035306963}
   - component: {fileID: 8649727403243964128}
   - component: {fileID: 5447076177397700250}
-  - component: {fileID: 4819881968046133542}
   - component: {fileID: 1492928044980884209}
+  - component: {fileID: 898128874883230684}
   m_Layer: 0
   m_Name: Dama
   m_TagString: Torreta
@@ -4201,29 +4201,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4819881968046133542
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3642633123974574430}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &1492928044980884209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4361,6 +4338,27 @@ MonoBehaviour:
   - {fileID: 3578339942391371019}
   - {fileID: 4829561180287346438}
   puntosARecuperar: 9
+--- !u!65 &898128874883230684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642633123974574430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.01, y: 2, z: 1.01}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &3731333905109218888
 GameObject:
   m_ObjectHideFlags: 0

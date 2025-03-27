@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class Jugador : MonoBehaviour
 {
@@ -198,12 +199,11 @@ public class Jugador : MonoBehaviour
     // Método para verificar la interacción con objetos interactuables
     private void VerificarInteraccion()
     {
-        // Lanzar un rayo desde la cámara hacia el punto donde el jugador hizo clic
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        RaycastHit hit = Physics.RaycastAll(rayo)
+            .FirstOrDefault(h => !h.collider.CompareTag("TagAIgnorar"));
 
-        // Verificar si el rayo golpea un objeto
-        if (Physics.Raycast(rayo, out hit))
+        if (hit.collider != null && hit.collider.CompareTag("ObjetoInteractuable"))
         {
             // Verificar si el objeto golpeado tiene el tag "ObjetoInteractuable"
             if (hit.collider.CompareTag("ObjetoInteractuable"))
