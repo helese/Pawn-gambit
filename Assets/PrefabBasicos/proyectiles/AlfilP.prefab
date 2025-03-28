@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 20
   tiempoVida: 2
-  puedeAtravesarObjetos: 0
+  puedeAtravesarObjetos: 1
 --- !u!54 &2582919939156915607
 Rigidbody:
   m_ObjectHideFlags: 0

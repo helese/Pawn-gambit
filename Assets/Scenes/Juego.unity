@@ -2301,6 +2301,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537520745}
   m_CullTransparentMesh: 1
+--- !u!1 &551106816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 551106819}
+  - component: {fileID: 551106818}
+  - component: {fileID: 551106817}
+  m_Layer: 0
+  m_Name: Escenarios
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &551106817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551106816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &551106818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551106816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd33156ea0d21fb45b9b9671c4ccb9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderEscenario: {fileID: 551106817}
+  modificadorActual: 0
+  porcentajeVidaExtra: 2
+  porcentajeVelocidadExtra: 2
+  reduccionTiempoEspera: 0.9
+  vidaPorSegundoExtra: 2
+  reduccionCadencia: 0.9
+  aumentoCadencia: 0.1
+--- !u!4 &551106819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551106816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalScale: {x: 76, y: 76, z: 76}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561129041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,6 +5779,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1431097265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1509075686057897573, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+  m_PrefabInstance: {fileID: 8591026565331158111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1431097271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431097265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f281b953b51534fb8e62111ea69bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioInteraccion: 3
+  capaInteractuable:
+    serializedVersion: 2
+    m_Bits: 64
+  colorHighlight: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1453694174
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,6 +7461,7 @@ MonoBehaviour:
   rangoCuracion: 5
   curacion: 100
   idEnemigo: 
+  vidaActual: 0
 --- !u!1001 &1716989756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8794,11 +8891,14 @@ PrefabInstance:
     - target: {fileID: 8975771785961425074, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: ea2c4b2750f09b14ca6deb7a0c5ff6f1, type: 2}
+      objectReference: {fileID: 2100000, guid: e8fb5a1f6ca9fcb4983eaf5d3b8a7c88, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1509075686057897573, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1431097271}
   m_SourcePrefab: {fileID: 100100000, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -8840,3 +8940,4 @@ SceneRoots:
   - {fileID: 304566286}
   - {fileID: 284177242}
   - {fileID: 1127741963}
+  - {fileID: 551106819}

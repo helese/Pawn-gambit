@@ -34,6 +34,8 @@ public class Torreta : MonoBehaviour
 
         // Verificar el material al inicio
         VerificarMaterial();
+
+        NotificarSpawn();
     }
 
     void Update()
@@ -50,6 +52,19 @@ public class Torreta : MonoBehaviour
                 Disparar();
                 tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
             }
+        }
+    }
+
+    void NotificarSpawn()
+    {
+        ControladorEscenario[] controladores = FindObjectsByType<ControladorEscenario>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None
+        );
+
+        foreach (ControladorEscenario controlador in controladores)
+        {
+            controlador.AplicarModificadorANuevoObjeto(this);
         }
     }
 

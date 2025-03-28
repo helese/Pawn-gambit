@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4008275286112445581}
   - component: {fileID: -2011724458740758084}
   - component: {fileID: -74493086861678438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Casilla negra
   m_TagString: ObjetoInteractuable
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5435427112513813151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PuntoDeInstancia
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -59,7 +59,7 @@ public class Enemigo : MonoBehaviour
     [Header("Bestiario")]
     public string idEnemigo; // ID único (ej: "Goblin_01")
 
-    private int vidaActual;
+    public int vidaActual;
     private Transform[] waypoints;
     private int indiceWaypointActual = 0;
 
@@ -108,6 +108,8 @@ public class Enemigo : MonoBehaviour
         {
             StartCoroutine(InvencibilidadAlSpawn());
         }
+
+        NotificarSpawn();
     }
 
     void Update()
@@ -116,6 +118,16 @@ public class Enemigo : MonoBehaviour
         {
             ActualizarAuraVelocidad();
             tiempoParaActualizarAura = Time.time + intervaloActualizacionAura;
+        }
+    }
+
+    void NotificarSpawn()
+    {
+        // Buscar todos los controladores de escenario en la escena
+        ControladorEscenario[] controladores = FindObjectsOfType<ControladorEscenario>();
+        foreach (ControladorEscenario controlador in controladores)
+        {
+            controlador.AplicarModificadorANuevoObjeto(this);
         }
     }
 
