@@ -232,7 +232,7 @@ MonoBehaviour:
   - {fileID: 6660831238304217885}
   - {fileID: 7573134790059794437}
   - {fileID: 8330984446049233075}
-  puntosARecuperar: 3
+  puntosARecuperar: 2
 --- !u!114 &4149588858966601213
 MonoBehaviour:
   m_ObjectHideFlags: 0

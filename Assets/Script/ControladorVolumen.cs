@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControladorVolumen : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class ControladorVolumen : MonoBehaviour
         pitchObjetivoActual = pitchOriginal;
 
         textoVolumen.text = $"{volumenGuardado * 100:F0}%";
+
+        if (SceneManager.GetActiveScene().name == "Inicio")
+        {
+            CambiarModoGrave();
+        }
     }
 
     void Update()

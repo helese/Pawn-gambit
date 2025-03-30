@@ -3679,7 +3679,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (1)
+      value: Casilla roja (01)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7275,7 +7275,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (8)
+      value: Casilla roja (08)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9755,7 +9755,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (4)
+      value: Casilla roja (04)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9817,7 +9817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (7)
+      value: Casilla roja (07)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12917,7 +12917,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (2)
+      value: Casilla roja (02)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14219,7 +14219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (9)
+      value: Casilla roja (09)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14343,7 +14343,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (6)
+      value: Casilla roja (06)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14529,7 +14529,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (5)
+      value: Casilla roja (05)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15335,7 +15335,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586395116993284483, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_Name
-      value: Casilla roja (3)
+      value: Casilla roja (03)
       objectReference: {fileID: 0}
     - target: {fileID: 1088665426825296447, guid: 7005401c215821447bff6d5ec4fb54b4, type: 3}
       propertyPath: m_LocalPosition.x

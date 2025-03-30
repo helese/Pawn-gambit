@@ -7,9 +7,10 @@ using System.Linq;
 public class Jugador : MonoBehaviour
 {
     [Header("Movimiento Ajedrez")]
-    public float velocidadMovimiento = 5f;
+    public float velocidadMovimiento = 10f;
     public float tiempoEntreMovimientos = 0.2f;
     private bool seEstaMoviendo = false;
+    private bool turboActivo = false;
     private Vector3 posicionObjetivo;
     private Transform camara;
 
@@ -34,10 +35,15 @@ public class Jugador : MonoBehaviour
     private GameObject objetoInteractuableActual;
 
     [Header("Detección de Enemigos")]
-    public GameObject colliderFrontal;    // Arrastra desde el Editor
-    public GameObject colliderTrasero;    // Arrastra desde el Editor
-    public GameObject colliderIzquierdo;  // Arrastra desde el Editor
-    public GameObject colliderDerecho;    // Arrastra desde el Editor
+    public GameObject colliderFrontal;
+    public GameObject colliderTrasero;
+    public GameObject colliderIzquierdo;
+    public GameObject colliderDerecho;
+
+    public MoverCamara moverCamara;
+    private bool camavaraSeMovio = false;
+
+    public GameObject panelPausa;
 
     private bool enemigoEnFrente;
     private bool enemigoAtras;
@@ -85,13 +91,40 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!camavaraSeMovio)
+            {
+                moverCamara.IniciarMovimiento1();
+                camavaraSeMovio = true;
+            }
+            else
+            {
+                moverCamara.ReiniciarPosicion();
+                camavaraSeMovio = false;
+            }
+        }
         if (puedeMoverse && !seEstaMoviendo && !canvasActivo && !canvasDestruccion.activeSelf)
         {
             ProcesarMovimiento();
         }
 
-        // Mantener tu lógica existente para interacción
-        if (Input.GetMouseButtonUp(0) && puedeMoverse)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            turboActivo = !turboActivo;
+        }
+
+        if (turboActivo)
+        {
+            velocidadMovimiento = 17f;
+            tiempoEntreMovimientos = 0.1f;
+        }
+        else
+        {
+            velocidadMovimiento = 10f;
+            tiempoEntreMovimientos = 0.2f;
+        }
+        if (Input.GetMouseButtonUp(0) && puedeMoverse && panelPausa != null && !panelPausa.activeSelf)
         {
             if (!canvasActivo && !canvasDestruccion.activeSelf)
             {
@@ -100,7 +133,7 @@ public class Jugador : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(1) && panelPausa != null && !panelPausa.activeSelf)
         {
             if (canvasActivo && objetoInteractuableActual != null) DesactivarCanvas();
             if (canvasDestruccion != null) canvasDestruccion.SetActive(false);
@@ -242,44 +275,46 @@ public class Jugador : MonoBehaviour
     // Método para verificar la interacción con objetos interactuables
     private void VerificarInteraccion()
     {
-
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        // --- Visualización del Raycast (solo en el Editor) ---
+        Debug.DrawRay(rayo.origin, rayo.direction * 100f, Color.green, 1f); // Línea verde durante 1 segundo
+
         RaycastHit hit = Physics.RaycastAll(rayo)
-            .FirstOrDefault(h => !h.collider.CompareTag("TagAIgnorar"));
-        Debug.Log($"Objeto pulsado: {hit.collider.gameObject.name} | Posición: {hit.point}");
+            .Where(h => !h.collider.CompareTag("TagAIgnorar"))
+            .OrderBy(h => h.distance)
+            .FirstOrDefault();
 
-        if (hit.collider != null && hit.collider.CompareTag("ObjetoInteractuable"))
+        if (hit.collider != null)
         {
+            Debug.Log($"Objeto pulsado: {hit.collider.gameObject.name} | Posición: {hit.point}");
 
-            // Verificar si el objeto golpeado tiene el tag "ObjetoInteractuable"
+
             if (hit.collider.CompareTag("ObjetoInteractuable"))
             {
-                // Verificar si el objeto está dentro del radio de interacción
                 float distancia = Vector3.Distance(transform.position, hit.transform.position);
                 if (distancia <= radioInteraccion)
                 {
-                    // Guardar referencia al objeto interactuable actual
                     objetoInteractuableActual = hit.collider.gameObject;
 
-                    // Buscar el objeto hijo "PuntoDeInstancia" en la jerarquía de la casilla
                     Transform puntoDeInstancia = hit.collider.transform.Find("PuntoDeInstancia");
                     if (puntoDeInstancia != null)
                     {
-                        // Guardar la posición del objeto hijo
                         posicionCasillaSeleccionada = puntoDeInstancia.position;
+
+                        // --- Visualización del punto de instancia (opcional) ---
+                        Debug.DrawLine(hit.point, puntoDeInstancia.position, Color.blue, 1f);
                     }
                     else
                     {
-                        // Si no se encuentra el objeto hijo, usar la posición de la casilla
                         Debug.LogWarning("No se encontró el objeto hijo 'PuntoDeInstancia' en la casilla.");
                         posicionCasillaSeleccionada = hit.point;
                     }
 
-                    // Activar el canvas de construcción
                     if (canvasConstruccion != null)
                     {
                         canvasConstruccion.SetActive(true);
-                        canvasActivo = true; // Marcar el canvas como activo
+                        canvasActivo = true;
                     }
                 }
             }

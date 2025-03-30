@@ -13,6 +13,7 @@ public class InteraccionPorRadio : MonoBehaviour
     private GameObject objetoDetectado;
     private Camera camaraPrincipal;
     private bool cursorSobreObjeto = false;
+    public GameObject panelPausa;
 
     void Start()
     {
@@ -22,8 +23,12 @@ public class InteraccionPorRadio : MonoBehaviour
 
     void Update()
     {
-        VerificarInteraccion();
-        ActualizarColor();
+        if (panelPausa != null && !panelPausa.activeSelf)
+        {
+            VerificarInteraccion();
+            ActualizarColor();
+        }
+
     }
 
     void VerificarInteraccion()

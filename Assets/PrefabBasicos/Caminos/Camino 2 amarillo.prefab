@@ -1853,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (2)
+      value: Casilla Amarilla (02)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2471,7 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (4)
+      value: Casilla Amarilla (04)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2743,7 +2743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (8)
+      value: Casilla Amarilla (08)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10285,7 +10285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (9)
+      value: Casilla Amarilla (09)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10627,7 +10627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (3)
+      value: Casilla Amarilla (03)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12983,7 +12983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (1)
+      value: Casilla Amarilla (01)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13667,7 +13667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (7)
+      value: Casilla Amarilla (07)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16295,7 +16295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (6)
+      value: Casilla Amarilla (06)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17127,7 +17127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_Name
-      value: Casilla Amarilla (5)
+      value: Casilla Amarilla (05)
       objectReference: {fileID: 0}
     - target: {fileID: 4770971527740564501, guid: 0a4a972573f6874448681afe53552da8, type: 3}
       propertyPath: m_StaticEditorFlags

@@ -9,7 +9,7 @@ public class DetectorDireccion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta"))
+        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta") || other.CompareTag("TorreDelRey"))
         {
             enemigosEnZona.Add(other.gameObject);
             jugador.EnemigoEntro(direccion);
@@ -18,7 +18,7 @@ public class DetectorDireccion : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta"))
+        if (other.CompareTag("Enemigo") || other.CompareTag("Torreta") || other.CompareTag("TorreDelRey"))
         {
             enemigosEnZona.Remove(other.gameObject);
             jugador.EnemigoSalio(direccion);

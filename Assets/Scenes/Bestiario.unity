@@ -2109,7 +2109,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099583980}
+  m_TargetGraphic: {fileID: 235020723}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4121,6 +4121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retrasoEntreLetras: 0.1
+  pausaAntesDeBorrar: 55555
+  velocidadBorrado: 0.05
+  sonidoEscritura: {fileID: 8300000, guid: 4fe75b24f56df954ea7f99305a7792d6, type: 3}
+  sonidoBorrado: {fileID: 0}
+  pitchEscritura: 1.2
+  pitchBorrado: 0.8
+  volumen: 0.5
   textoUI: {fileID: 424100505}
 --- !u!1 &506620465
 GameObject:
@@ -4726,7 +4733,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099583980}
+  m_TargetGraphic: {fileID: 606758761}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5282,6 +5289,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retrasoEntreLetras: 0.1
+  pausaAntesDeBorrar: 55555
+  velocidadBorrado: 0.05
+  sonidoEscritura: {fileID: 8300000, guid: 4fe75b24f56df954ea7f99305a7792d6, type: 3}
+  sonidoBorrado: {fileID: 0}
+  pitchEscritura: 1.2
+  pitchBorrado: 0.8
+  volumen: 0.5
   textoUI: {fileID: 765553800}
 --- !u!1 &686394249
 GameObject:
@@ -6184,7 +6198,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099583980}
+  m_TargetGraphic: {fileID: 726744192}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -9673,6 +9687,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retrasoEntreLetras: 0.1
+  pausaAntesDeBorrar: 5555
+  velocidadBorrado: 0.05
+  sonidoEscritura: {fileID: 8300000, guid: 4fe75b24f56df954ea7f99305a7792d6, type: 3}
+  sonidoBorrado: {fileID: 0}
+  pitchEscritura: 1.2
+  pitchBorrado: 0.8
+  volumen: 0.5
   textoUI: {fileID: 151081923}
 --- !u!1 &1351990079
 GameObject:
@@ -12567,7 +12588,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30820dfafd55c4458a84003d73c3238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retrasoEntreLetras: 0.1
+  retrasoEntreLetras: 0.08
+  pausaAntesDeBorrar: 555555
+  velocidadBorrado: 0.05
+  sonidoEscritura: {fileID: 8300000, guid: 4fe75b24f56df954ea7f99305a7792d6, type: 3}
+  sonidoBorrado: {fileID: 0}
+  pitchEscritura: 1.2
+  pitchBorrado: 0.8
+  volumen: 0.5
   textoUI: {fileID: 476810531}
 --- !u!1 &1799536882
 GameObject:
@@ -12662,7 +12690,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099583980}
+  m_TargetGraphic: {fileID: 1799536886}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -14470,7 +14498,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2099583980}
+  m_TargetGraphic: {fileID: 2126180120}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

@@ -1384,7 +1384,7 @@ MonoBehaviour:
   - {fileID: 6461011400453881701}
   - {fileID: 3181370910253889605}
   - {fileID: 8029536434711751224}
-  puntosARecuperar: 3
+  puntosARecuperar: 2
 --- !u!65 &2725220724501005707
 BoxCollider:
   m_ObjectHideFlags: 0

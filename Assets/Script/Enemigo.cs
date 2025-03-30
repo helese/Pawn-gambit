@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Enemigo : MonoBehaviour
 {
@@ -172,10 +173,15 @@ public class Enemigo : MonoBehaviour
         }
 
         // Crear el array de waypoints y asignar las posiciones de las casillas
-        waypoints = new Transform[casillas.Length];
-        for (int i = 0; i < casillas.Length; i++)
+        waypoints = casillas
+            .OrderBy(casilla => casilla.name)  // Ordena alfabéticamente por el nombre
+            .Select(casilla => casilla.transform)  // Convierte GameObject[] a Transform[]
+            .ToArray();  // Convierte a array
+
+        // Opcional: Verificar los nombres ordenados en consola
+        foreach (var wp in waypoints)
         {
-            waypoints[i] = casillas[i].transform;
+            Debug.Log(wp.name);
         }
     }
 

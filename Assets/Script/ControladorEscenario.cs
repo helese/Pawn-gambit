@@ -1,5 +1,7 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class ControladorEscenario : MonoBehaviour
 {
@@ -10,8 +12,7 @@ public class ControladorEscenario : MonoBehaviour
         ReducirCoste,
         AumentarVida,
         AumentarVelocidad,
-        ReducirTiempoEspera,
-        ActivarRegeneracion
+        ReducirTiempoEspera
     }
 
     [Header("Configuración General")]
@@ -31,11 +32,36 @@ public class ControladorEscenario : MonoBehaviour
     private List<Enemigo> enemigosAfectados = new List<Enemigo>();
     private List<Torreta> torretasAfectadas = new List<Torreta>();
 
+    [Header("Configuración de Texto")]
+    public TextMeshProUGUI textoEscenario;
+    public float duracionTexto = 3f; // Tiempo que se muestra el texto
+    private Coroutine corutinaTexto;
+
+    [Header("Efecto Máquina de Escribir")]
+    public float velocidadEscritura = 0.05f; // Tiempo entre caracteres
+    public float pausaEntreFrases = 1f; // Tiempo antes de borrar
+    private bool textoEnProgreso = false;
+
+    [Header("Configuración de Sonido")]
+    public AudioClip sonidoTeclado;
+    [Range(0.1f, 3f)] public float pitchEscritura = 1f;
+    [Range(0.1f, 3f)] public float pitchBorrado = 0.7f; // Más grave
+    private AudioSource audioSource;
+
     void Start()
     {
         colliderEscenario.isTrigger = true;
         modificadorActual = (ModificadorEscenario)Random.Range(0, System.Enum.GetValues(typeof(ModificadorEscenario)).Length);
         Debug.Log($"Modificador activado: {modificadorActual}");
+
+        if (sonidoTeclado != null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.clip = sonidoTeclado;
+            audioSource.volume = 0.1f;
+        }
+
+        MostrarTextoModificador();
     }
 
     public void AplicarModificadorANuevoObjeto(Component objeto)
@@ -101,11 +127,6 @@ public class ControladorEscenario : MonoBehaviour
             case ModificadorEscenario.ReducirTiempoEspera:
                 enemigo.tiempoDeEspera *= (1 - reduccionTiempoEspera);
                 break;
-
-            case ModificadorEscenario.ActivarRegeneracion:
-                if (!enemigo.regeneraVida) enemigo.regeneraVida = true;
-                enemigo.vidaPorSegundo += vidaPorSegundoExtra;
-                break;
         }
     }
 
@@ -160,6 +181,75 @@ public class ControladorEscenario : MonoBehaviour
             Gizmos.color = new Color(1, 0, 1, 0.3f);
             Gizmos.matrix = colliderEscenario.transform.localToWorldMatrix;
             Gizmos.DrawCube(Vector3.zero, colliderEscenario.size);
+        }
+    }
+
+    void MostrarTextoModificador()
+    {
+        if (textoEnProgreso) return;
+
+        string mensaje = ObtenerMensajeModificador();
+        StartCoroutine(EfectoMaquinaEscribir(mensaje));
+    }
+    string ObtenerMensajeModificador() // Cambiado de void a string
+    {
+        switch (modificadorActual)
+        {
+            case ModificadorEscenario.AumentarVida:
+                return $"Vida enemigos +{porcentajeVidaExtra * 100:F0}%";
+
+            case ModificadorEscenario.AumentarVelocidad:
+                return $"Velocidad enemigos +{porcentajeVelocidadExtra * 100:F0}%";
+
+            case ModificadorEscenario.ReducirTiempoEspera:
+                return $"Tiempo entre pasos -{reduccionTiempoEspera * 100:F0}%";
+
+            case ModificadorEscenario.AumentarCadencia:
+                return $"Cadencia torretas +{aumentoCadencia * 100:F0}%";
+
+            case ModificadorEscenario.ReducirCadencia:
+                return $"Cadencia torretas -{reduccionCadencia * 100:F0}%";
+
+            case ModificadorEscenario.ReducirCoste:
+                return "Coste torretas -1";
+
+            default:
+                return "Modificador activado";
+        }
+    }
+
+    IEnumerator EfectoMaquinaEscribir(string mensaje)
+    {
+        textoEnProgreso = true;
+        textoEscenario.text = "";
+
+        // ESCRITURA (tono normal)
+        foreach (char letra in mensaje.ToCharArray())
+        {
+            textoEscenario.text += letra;
+            ReproducirSonido(pitchEscritura);
+            yield return new WaitForSeconds(velocidadEscritura);
+        }
+
+        yield return new WaitForSeconds(pausaEntreFrases);
+
+        // BORRADO (tono grave)
+        while (textoEscenario.text.Length > 0)
+        {
+            textoEscenario.text = textoEscenario.text.Substring(0, textoEscenario.text.Length - 1);
+            ReproducirSonido(pitchBorrado);
+            yield return new WaitForSeconds(velocidadEscritura / 2);
+        }
+
+        textoEnProgreso = false;
+    }
+
+    void ReproducirSonido(float pitch)
+    {
+        if (sonidoTeclado != null && audioSource != null)
+        {
+            audioSource.pitch = pitch;
+            audioSource.PlayOneShot(sonidoTeclado);
         }
     }
 }

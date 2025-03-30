@@ -2359,7 +2359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (1)
+      value: Casilla Azul (01)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3537,7 +3537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (8)
+      value: Casilla Azul (08)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4785,7 +4785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (7)
+      value: Casilla Azul (07)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5197,7 +5197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (5)
+      value: Casilla Azul (05)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7961,7 +7961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (9)
+      value: Casilla Azul (09)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9835,7 +9835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (6)
+      value: Casilla Azul (06)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10037,7 +10037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (3)
+      value: Casilla Azul (03)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10733,7 +10733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (4)
+      value: Casilla Azul (04)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15145,7 +15145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_Name
-      value: Casilla Azul (2)
+      value: Casilla Azul (02)
       objectReference: {fileID: 0}
     - target: {fileID: 4432211081304811433, guid: 9301e40112b3643489a92abd4d5103ca, type: 3}
       propertyPath: m_StaticEditorFlags
