@@ -53,6 +53,12 @@ public class GameManager : MonoBehaviour
     private bool llenandoSlider = false; // Indica si el slider se está llenando
     private float tiempoInicioLlenado; // Tiempo en que comenzó a llenarse el slider
 
+    public delegate void OleadaFinalizadaHandler();
+    public event OleadaFinalizadaHandler OnOleadaFinalizada;
+
+    public delegate void OleadaEventHandler();
+    public event OleadaEventHandler OnOleadaIniciada;
+
     void Start()
     {
         torreRey = FindFirstObjectByType<TorreRey>();
@@ -109,6 +115,7 @@ public class GameManager : MonoBehaviour
     // Método para iniciar una nueva oleada
     void IniciarOleada()
     {
+        OnOleadaIniciada?.Invoke();
         // Desactivar la advertencia de jefe en todos los portales al comenzar una nueva oleada
         DesactivarAdvertenciaJefe();
 
@@ -184,32 +191,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Método público para restar unidades al contador
     public void RestarUnidades(int cantidad)
     {
-        valorActual = valorActual - cantidad; // Asegurarse de que no sea negativo
+        valorActual = valorActual - cantidad;
         textoContador.text = valorActual.ToString();
-
-        //// Si el contador es menor que el máximo, reanudar el llenado del slider
-        //if (valorActual < valorMaximoPorOleada && !llenandoSlider)
-        //{
-        //    llenandoSlider = true;
-        //    tiempoInicioLlenado = Time.time;
-        //}
     }   
 
-    // Método público para sumar unidades al contador
     public void SumarUnidades(int cantidad)
     {
         valorActual = valorActual + cantidad;
         textoContador.text = valorActual.ToString();
-
-        //// Si el contador es menor que el máximo, reanudar el llenado del slider
-        //if (valorActual < valorMaximoPorOleada && !llenandoSlider)
-        //{
-        //    llenandoSlider = true;
-        //    tiempoInicioLlenado = Time.time;
-        //}
     }
 
     public int ObtenerValorSlider()
@@ -377,6 +368,8 @@ public class GameManager : MonoBehaviour
 
         oleadaActual++; // Pasar a la siguiente oleada
         Debug.Log($"Oleada {oleadaActual - 1} completada. Preparándose para la oleada {oleadaActual}.");
+        OnOleadaFinalizada?.Invoke();
+
     }
 
     // Método para recuperar la vida de la TorreRey
