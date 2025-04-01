@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Linq;
+using TMPro;
 
 public class Jugador : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Jugador : MonoBehaviour
     [Header("Destrucción de Torres")]
     public GameObject canvasDestruccion;
     private GameObject torreSeleccionada;
+    public TextMeshProUGUI textoPuntosRecuperar;
 
     [Header("Previsualización")]
     public Material materialPreview;
@@ -354,20 +356,25 @@ public class Jugador : MonoBehaviour
 
     private void VerificarInteraccionTorre()
     {
-        // Lanzar un rayo desde la cámara hacia el punto donde el jugador hizo clic
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        // Verificar si el rayo golpea un objeto
         if (Physics.Raycast(rayo, out hit))
         {
-            // Verificar si el objeto golpeado tiene el tag "Torre"
             if (hit.collider.CompareTag("Torreta"))
             {
-                // Guardar referencia a la torre seleccionada
                 torreSeleccionada = hit.collider.gameObject;
 
-                // Activar el canvas de destrucción
+                // Obtener el script Torreta y mostrar los puntos
+                Torreta torreta = torreSeleccionada.GetComponent<Torreta>();
+                if (torreta != null && textoPuntosRecuperar != null)
+                {
+                    textoPuntosRecuperar.text = torreta.puntosARecuperar.ToString();
+
+                    // Opcional: Formatear el texto con estilo
+                    // textoPuntosRecuperar.text = $"Recuperar: <color=green>{torreta.puntosARecuperar}</color> puntos";
+                }
+
                 if (canvasDestruccion != null)
                 {
                     canvasDestruccion.SetActive(true);
@@ -376,8 +383,8 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Método para destruir la torre seleccionada
-    private void DestruirTorre()
+// Método para destruir la torre seleccionada
+private void DestruirTorre()
     {
         if (torreSeleccionada != null)
         {

@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bd3c8ebd840ad469590901f217760f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 7
-  tiempoVida: 5
-  puedeAtravesarObjetos: 1
+  velocidad: 2
+  tiempoVida: 8
+  puedeAtravesarObjetos: 0
 --- !u!54 &2582919939156915607
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0db94b25e2c1f4d8923a112d807be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": 15
+  "da\xF1o": 20

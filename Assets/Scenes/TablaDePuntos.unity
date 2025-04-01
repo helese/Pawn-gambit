@@ -3258,7 +3258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18a1692a64268c45b4b6c0dae7b2a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1384169612}
+  fadeOut: {fileID: 1384169612}
+  panelAviso: {fileID: 0}
   fadeDuration: 1
 --- !u!114 &1670820114
 MonoBehaviour:

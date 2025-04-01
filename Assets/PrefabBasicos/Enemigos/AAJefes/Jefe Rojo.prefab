@@ -275,12 +275,12 @@ MonoBehaviour:
   velocidad: 2
   tiempoDeEspera: 1.2
   vidaMaxima: 0
-  incrementoVidaPorOleada: 20
+  incrementoVidaPorOleada: 4
   "da\xF1oATorreRey": 30
   sliderVida: {fileID: 8041023640570981280}
   CasillaASeguir: CasillaRoja
   esJefe: 1
-  vidaExtraJefe: 130
+  vidaExtraJefe: 260
   puntuacionMinima: 90
   puntuacionMaxima: 120
   regeneraVida: 1
@@ -301,6 +301,7 @@ MonoBehaviour:
   rangoCuracion: 5
   curacion: 100
   idEnemigo: RojoJefe
+  vidaActual: 0
 --- !u!1 &2856546673906216131
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ControladorBotones : MonoBehaviour
 {
     [Header("Botones y Costes")]
     public Button[] botones; // Array de botones
     public int[] costes; // Array de costes correspondientes a cada botón
+    public TextMeshProUGUI[] textosCostes; // Array de TextMeshProUGUI para mostrar costes
 
-    private GameManager gameManager; // Referencia al GameManager
+    private GameManager gameManager;
 
     void Start()
     {
@@ -19,42 +21,43 @@ public class ControladorBotones : MonoBehaviour
             return;
         }
 
-        // Verificar que el número de botones y costes coincida
-        if (botones.Length != costes.Length)
+        // Verificar coincidencia de arrays
+        if (botones.Length != costes.Length || botones.Length != textosCostes.Length)
         {
-            Debug.LogError("El número de botones y costes no coincide.");
+            Debug.LogError("El número de botones, costes y textos no coincide.");
             return;
         }
 
-        // Asignar eventos a los botones
+        // Asignar texto de costes y eventos
         for (int i = 0; i < botones.Length; i++)
         {
-            int index = i; // Capturar el índice para el evento
+            // Mostrar el coste en el TextMeshPro correspondiente
+            textosCostes[i].text = costes[i].ToString();
+
+            // Asignar evento al botón
+            int index = i;
             botones[i].onClick.AddListener(() => OnBotonClic(index));
         }
 
-        // Actualizar el estado de los botones al inicio
         ActualizarEstadoBotones();
     }
 
     void Update()
     {
-        // Actualizar el estado de los botones en cada frame
         ActualizarEstadoBotones();
     }
 
-    // Método para manejar el clic en un botón
     private void OnBotonClic(int indiceBoton)
     {
-        // Obtener el coste del botón
         int coste = costes[indiceBoton];
 
-        // Verificar si el coste es menor o igual al valor del Slider en el GameManager
         if (gameManager != null && coste <= gameManager.ObtenerValorSlider())
         {
-            // Restar el coste al valor del Slider
             gameManager.RestarUnidades(coste);
             Debug.Log($"Botón {indiceBoton + 1} pulsado. Coste: {coste}");
+
+            // Actualizar visualización (opcional)
+            textosCostes[indiceBoton].text = coste.ToString();
         }
         else
         {
@@ -62,19 +65,19 @@ public class ControladorBotones : MonoBehaviour
         }
     }
 
-    // Método para actualizar el estado de los botones
     private void ActualizarEstadoBotones()
     {
         if (gameManager == null) return;
 
-        // Obtener el valor actual del Slider del GameManager
         int valorSlider = gameManager.ObtenerValorSlider();
 
-        // Recorrer todos los botones
         for (int i = 0; i < botones.Length; i++)
         {
-            // Deshabilitar el botón si su coste es mayor que el valor del Slider
-            botones[i].interactable = (costes[i] <= valorSlider);
+            bool puedeComprar = costes[i] <= valorSlider;
+            botones[i].interactable = puedeComprar;
+
+            // Cambiar color del texto según disponibilidad (opcional)
+            textosCostes[i].color = puedeComprar ? Color.white : Color.red;
         }
     }
 }

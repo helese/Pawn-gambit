@@ -213,13 +213,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 1.7
   tiempoDeEspera: 0.4
-  vidaMaxima: 50
-  incrementoVidaPorOleada: 18
+  vidaMaxima: 0
+  incrementoVidaPorOleada: 36
   "da\xF1oATorreRey": 20
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
   esJefe: 1
-  vidaExtraJefe: 100
+  vidaExtraJefe: 200
   puntuacionMinima: 90
   puntuacionMaxima: 120
   regeneraVida: 1
@@ -240,6 +240,7 @@ MonoBehaviour:
   rangoCuracion: 9
   curacion: 100
   idEnemigo: VerdeJefe
+  vidaActual: 0
 --- !u!1 &2656925346134091839
 GameObject:
   m_ObjectHideFlags: 0

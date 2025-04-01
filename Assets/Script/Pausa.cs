@@ -4,9 +4,11 @@ public class Pausa : MonoBehaviour
 {
     [Header("Configuración de Pausa")]
     public GameObject panelPausa;
+    public GameObject objetoAdicional; // Nuevo GameObject a controlar
 
     private bool juegoPausado = false;
     private bool seDestruyo = false;
+
     private void Start()
     {
         panelPausa.SetActive(false);
@@ -31,20 +33,21 @@ public class Pausa : MonoBehaviour
 
     void PausarJuego()
     {
-        // Pausar el tiempo del juego
         Time.timeScale = 0f;
-
         panelPausa.SetActive(true);
-
         juegoPausado = true;
     }
 
     void ReanudarJuego()
     {
-        // Reanudar el tiempo del juego
         Time.timeScale = 1f;
-
         panelPausa.SetActive(false);
+
+        // Desactivar el objeto adicional si existe
+        if (objetoAdicional != null)
+        {
+            objetoAdicional.SetActive(false);
+        }
 
         juegoPausado = false;
     }
@@ -56,6 +59,7 @@ public class Pausa : MonoBehaviour
             PausarJuego();
         }
     }
+
     public void Reanudar()
     {
         if (juegoPausado)
@@ -63,8 +67,15 @@ public class Pausa : MonoBehaviour
             ReanudarJuego();
         }
     }
+
     public void TorreDestruida()
     {
         seDestruyo = true;
+
+        // Opcional: Desactivar también el objeto adicional si la torre se destruye
+        if (objetoAdicional != null)
+        {
+            objetoAdicional.SetActive(false);
+        }
     }
 }

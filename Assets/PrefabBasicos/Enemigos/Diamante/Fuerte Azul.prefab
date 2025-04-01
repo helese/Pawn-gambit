@@ -316,8 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 1.8
   tiempoDeEspera: 0.7
-  vidaMaxima: 50
-  incrementoVidaPorOleada: 5
+  vidaMaxima: 100
+  incrementoVidaPorOleada: 15
   "da\xF1oATorreRey": 25
   sliderVida: {fileID: 1677713469168941800}
   CasillaASeguir: CasillaAzul
@@ -343,6 +343,7 @@ MonoBehaviour:
   rangoCuracion: 5
   curacion: 100
   idEnemigo: AzulFuerte
+  vidaActual: 0
 --- !u!1 &4633440367055322758
 GameObject:
   m_ObjectHideFlags: 0

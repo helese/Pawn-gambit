@@ -214,8 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 3.2
   tiempoDeEspera: 0.3
-  vidaMaxima: 12
-  incrementoVidaPorOleada: 1
+  vidaMaxima: 30
+  incrementoVidaPorOleada: 5
   "da\xF1oATorreRey": 70
   sliderVida: {fileID: 8847433779679202692}
   CasillaASeguir: CasillaAmarilla
@@ -241,6 +241,7 @@ MonoBehaviour:
   rangoCuracion: 5
   curacion: 100
   idEnemigo: AmarilloVeloz
+  vidaActual: 0
 --- !u!65 &-9218074074684554069
 BoxCollider:
   m_ObjectHideFlags: 0
