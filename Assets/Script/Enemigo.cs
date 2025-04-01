@@ -178,11 +178,11 @@ public class Enemigo : MonoBehaviour
             .Select(casilla => casilla.transform)  // Convierte GameObject[] a Transform[]
             .ToArray();  // Convierte a array
 
-        // Opcional: Verificar los nombres ordenados en consola
-        foreach (var wp in waypoints)
-        {
-            Debug.Log(wp.name);
-        }
+        //// Opcional: Verificar los nombres ordenados en consola
+        //foreach (var wp in waypoints)
+        //{
+        //    Debug.Log(wp.name);
+        //}
     }
 
     IEnumerator MoverEnemigo()
@@ -399,7 +399,7 @@ public class Enemigo : MonoBehaviour
     }
 
     // Método para manejar la muerte del enemigo
-    private void Morir()
+    public void Morir()
     {
         CurarAliados();
         // Notificar al GameManager que un enemigo ha sido destruido

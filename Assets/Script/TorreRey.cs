@@ -49,7 +49,7 @@ public class TorreRey : MonoBehaviour
             }
 
             // Destruir el enemigo
-            Destroy(collision.gameObject);
+            enemigo.Morir();
         }
     }
 

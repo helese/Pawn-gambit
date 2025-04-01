@@ -115,66 +115,70 @@ public class GameManager : MonoBehaviour
     // Método para iniciar una nueva oleada
     void IniciarOleada()
     {
+        incrementosRestantes = 0;
         OnOleadaIniciada?.Invoke();
-        // Desactivar la advertencia de jefe en todos los portales al comenzar una nueva oleada
         DesactivarAdvertenciaJefe();
 
+        // 1. Configuración base
         tiempoEntreEnemigos = GenerarTiempoDivisiblePor02(tiempoMin, tiempoMax);
-
-        // Calcular la cantidad de enemigos para la oleada actual usando la fórmula
-        enemigosGenerados = Mathf.CeilToInt(2 * Mathf.Pow(1.3f, oleadaActual - 1)) + 4;
-
-        // Reiniciar el contador de enemigos destruidos
         enemigosDestruidos = 0;
-
         oleadaEnCurso = true;
 
-        // Verificar si en la siguiente oleada se activará un nuevo portal
-        if ((oleadaActual + 1) % activarPortal == 0 && (oleadaActual + 1) / activarPortal < portalesEnemigos.Count)
-        {
-            int portalAActivar = (oleadaActual + 1) / activarPortal;
+        // 2. Fórmula exponencial ajustada (base 1.25 en lugar de 1.3)
+        enemigosGenerados = Mathf.CeilToInt(4 * Mathf.Pow(1.3f, oleadaActual));
 
-            // Instancia un camino una ronda antes de activar el portal
-            portalesEnemigos[portalAActivar].InstanciarCaminoAleatorio();
-            Debug.Log($"Camino instanciado para el portal {portalAActivar + 1} en la oleada {oleadaActual}.");
+        // 3. Gestión de portales (cada 'activarPortal' oleadas)
+        int portalIndex = oleadaActual / activarPortal;
+
+        // Preparar portal siguiente (1 oleada antes)
+        if ((oleadaActual + 1) % activarPortal == 0)
+        {
+            int nextPortal = (oleadaActual + 1) / activarPortal;
+            if (nextPortal < portalesEnemigos.Count)
+            {
+                portalesEnemigos[nextPortal].InstanciarCaminoAleatorio();
+                Debug.Log($"Preparando portal {nextPortal + 1} en oleada {oleadaActual}");
+            }
         }
 
-        // Activar un nuevo portal cada X oleadas
-        if (oleadaActual % activarPortal == 0 && oleadaActual / activarPortal < portalesEnemigos.Count)
+        // Activar portal si corresponde
+        if (oleadaActual % activarPortal == 0)
         {
             int portalAActivar = oleadaActual / activarPortal;
-            portalesEnemigos[portalAActivar].ActivarPortal(true);
-            Debug.Log($"Portal {portalAActivar + 1} activado en la oleada {oleadaActual}.");
+            if (portalAActivar < portalesEnemigos.Count)
+            {
+                portalesEnemigos[portalAActivar].ActivarPortal(true);
+            }
         }
 
-        // Spawnear un jefe
+        // 4. Generación de jefe
         if (oleadaActual % oleadasParaJefe == 0)
         {
             SpawnearJefe();
         }
 
-        // Distribuir la generación de enemigos entre los portales activos
+        // 5. Distribución inteligente de enemigos
         List<PortalEnemigo> portalesActivos = ObtenerPortalesActivos();
-        int enemigosPorPortal = enemigosGenerados / portalesActivos.Count;
-        int enemigosRestantes = enemigosGenerados % portalesActivos.Count;
-
-        for (int i = 0; i < portalesActivos.Count; i++)
+        if (portalesActivos.Count > 0)
         {
-            int cantidad = enemigosPorPortal;
-            if (i < enemigosRestantes)
-            {
-                cantidad++; // Asignar un enemigo adicional a los primeros portales
-            }
+            int baseEnemigos = enemigosGenerados / portalesActivos.Count;
+            int resto = enemigosGenerados % portalesActivos.Count;
 
-            // Iniciar la generación de enemigos en el portal actual
-            portalesActivos[i].IniciarInstanciacion(cantidad, tiempoEntreEnemigos);
+            for (int i = 0; i < portalesActivos.Count; i++)
+            {
+                int cantidad = baseEnemigos + (i < resto ? 1 : 0);
+                //// Opcional: Dar bonus solo si queda resto después de distribución equitativa
+                //if (i == 0 && resto == 0) cantidad += 1; // Solo si quieres mantener el bonus
+                //
+                portalesActivos[i].IniciarInstanciacion(cantidad, tiempoEntreEnemigos);
+            }
         }
 
-        Debug.Log($"Iniciando oleada {oleadaActual} con {enemigosGenerados} enemigos y un tiempo entre enemigos de {tiempoEntreEnemigos} segundos.");
+        // 6. Sistema de progresión UI
+        Debug.LogWarning($"Iniciando oleada {oleadaActual}: {enemigosGenerados} enemigos " +
+                        $"({portalesActivos.Count} portales activos)");
 
         sliderOleada.value = 0f;
-
-        // Iniciar el llenado del slider
         llenandoSlider = true;
         tiempoInicioLlenado = Time.time;
     }
@@ -352,7 +356,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        incrementosRestantes = 0;
+        //incrementosRestantes = 0;
 
         // Verificar si es el momento de recuperar la vida de la TorreRey
         if (oleadaActual % curarRey == 0)
@@ -365,8 +369,8 @@ public class GameManager : MonoBehaviour
         {
             SeleccionarPortalParaJefe();
         }
-
         oleadaActual++; // Pasar a la siguiente oleada
+
         Debug.Log($"Oleada {oleadaActual - 1} completada. Preparándose para la oleada {oleadaActual}.");
         OnOleadaFinalizada?.Invoke();
 

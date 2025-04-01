@@ -236,12 +236,12 @@ MonoBehaviour:
   velocidad: 2
   tiempoDeEspera: 0.3
   vidaMaxima: 0
-  incrementoVidaPorOleada: 20
+  incrementoVidaPorOleada: 10
   "da\xF1oATorreRey": 90
   sliderVida: {fileID: 8847433779679202692}
   CasillaASeguir: CasillaAmarilla
   esJefe: 1
-  vidaExtraJefe: 200
+  vidaExtraJefe: 150
   puntuacionMinima: 90
   puntuacionMaxima: 120
   regeneraVida: 1
