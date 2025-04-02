@@ -12,16 +12,18 @@ public class Proyectil : MonoBehaviour
         // Destruir el proyectil después de un tiempo de vida
         Destroy(gameObject, tiempoVida);
 
-        // Ignorar colisiones con el jugador
-        GameObject jugador = GameObject.FindGameObjectWithTag("Player"); // Buscar al jugador por tag
-        if (jugador != null)
+        // Ignorar colisiones con todos los objetos excepto los con tag "Enemigo"
+        Collider colliderProyectil = GetComponent<Collider>();
+        if (colliderProyectil != null)
         {
-            Collider colliderJugador = jugador.GetComponent<Collider>();
-            Collider colliderProyectil = GetComponent<Collider>();
-
-            if (colliderJugador != null && colliderProyectil != null)
+            // Ignorar colisiones con todos los colliders excepto los enemigos
+            Collider[] todosColliders = FindObjectsByType<Collider>(FindObjectsSortMode.None);
+            foreach (Collider collider in todosColliders)
             {
-                Physics.IgnoreCollision(colliderJugador, colliderProyectil);
+                if (collider.gameObject.tag != "Enemigo" && collider != colliderProyectil)
+                {
+                    Physics.IgnoreCollision(colliderProyectil, collider);
+                }
             }
         }
     }
@@ -34,11 +36,31 @@ public class Proyectil : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verificar si el proyectil puede atravesar objetos
-        if (!puedeAtravesarObjetos)
+        // Solo nos interesa colisionar con enemigos
+        if (other.gameObject.tag == "Enemigo")
         {
-            // Destruir el proyectil al colisionar con un objeto
-            Destroy(gameObject);
+
+            // Destruir el proyectil al colisionar con un enemigo (a menos que pueda atravesar)
+            if (!puedeAtravesarObjetos)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Por si decides usar colisiones físicas en lugar de triggers
+        if (collision.gameObject.tag != "Enemigo")
+        {
+            Physics.IgnoreCollision(GetComponent<Collider>(), collision.collider);
+        }
+        else
+        {
+            if (!puedeAtravesarObjetos)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

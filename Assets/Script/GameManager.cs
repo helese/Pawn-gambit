@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
         oleadaEnCurso = true;
 
         // 2. Fórmula exponencial ajustada (base 1.25 en lugar de 1.3)
-        enemigosGenerados = Mathf.CeilToInt(4 * Mathf.Pow(1.3f, oleadaActual));
+        enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.3f, oleadaActual)); 
 
         // 3. Gestión de portales (cada 'activarPortal' oleadas)
         int portalIndex = oleadaActual / activarPortal;
@@ -157,21 +157,26 @@ public class GameManager : MonoBehaviour
             SpawnearJefe();
         }
 
-        // 5. Distribución inteligente de enemigos
+        // 5. Distribución inteligente de enemigos (versión corregida)
         List<PortalEnemigo> portalesActivos = ObtenerPortalesActivos();
         if (portalesActivos.Count > 0)
         {
-            int baseEnemigos = enemigosGenerados / portalesActivos.Count;
-            int resto = enemigosGenerados % portalesActivos.Count;
+            int totalEnemigos = enemigosGenerados;
+            int enemigosPorPortal = totalEnemigos / portalesActivos.Count;
+            int resto = totalEnemigos % portalesActivos.Count;
 
+            // Asegurar distribución exacta
             for (int i = 0; i < portalesActivos.Count; i++)
             {
-                int cantidad = baseEnemigos + (i < resto ? 1 : 0);
-                //// Opcional: Dar bonus solo si queda resto después de distribución equitativa
-                //if (i == 0 && resto == 0) cantidad += 1; // Solo si quieres mantener el bonus
-                //
+                int cantidad = enemigosPorPortal;
+                if (i < resto) cantidad += 1; // Solo añadir 1 al resto
+
                 portalesActivos[i].IniciarInstanciacion(cantidad, tiempoEntreEnemigos);
+                Debug.Log($"Portal {i}: {cantidad} enemigos");
             }
+
+            // Validación crítica
+            Debug.Log($"Total enemigos generados: {totalEnemigos}");
         }
 
         // 6. Sistema de progresión UI

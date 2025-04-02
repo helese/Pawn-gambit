@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 10
-  tiempoVida: 3
+  tiempoVida: 0.6
   puedeAtravesarObjetos: 0
 --- !u!54 &2582919939156915607
 Rigidbody:
