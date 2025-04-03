@@ -316,7 +316,7 @@ MonoBehaviour:
   velocidad: 2
   tiempoDeEspera: 1
   vidaMaxima: 0
-  incrementoVidaPorOleada: 10
+  incrementoVidaPorOleada: 15
   "da\xF1oATorreRey": 10
   sliderVida: {fileID: 1677713469168941800}
   CasillaASeguir: CasillaAzul

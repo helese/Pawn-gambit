@@ -100,8 +100,8 @@ GameObject:
   - component: {fileID: 1915130549026824427}
   - component: {fileID: 2753868103985008103}
   - component: {fileID: 3823707408986922640}
-  - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
+  - component: {fileID: -916577759737625412}
   m_Layer: 0
   m_Name: Nucleo Verde
   m_TagString: Enemigo
@@ -178,27 +178,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3944699699107160444
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2431344980631736960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4528062093384414517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +193,7 @@ MonoBehaviour:
   velocidad: 1.2
   tiempoDeEspera: 0.7
   vidaMaxima: 50
-  incrementoVidaPorOleada: 6
+  incrementoVidaPorOleada: 9
   "da\xF1oATorreRey": 20
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
@@ -241,6 +220,27 @@ MonoBehaviour:
   curacion: 50
   idEnemigo: VerdeNucleo
   vidaActual: 0
+--- !u!65 &-916577759737625412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431344980631736960}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2656925346134091839
 GameObject:
   m_ObjectHideFlags: 0

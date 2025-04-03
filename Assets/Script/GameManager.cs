@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
         oleadaEnCurso = true;
 
         // 2. Fórmula exponencial ajustada
-        enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.2f, oleadaActual)); 
+        enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.15f, oleadaActual)); 
 
         // 3. Gestión de portales (cada 'activarPortal' oleadas)
         int portalIndex = oleadaActual / activarPortal;
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
         // 4. Generación de jefe (si es oleada de jefe)
         if (oleadaActual % oleadasParaJefe == 0)
         {
-            SpawnearJefe(); // <-- Primero spawnea el jefe
+            SpawnearJefe(); 
         }
 
         // 5. Distribución inteligente de enemigos (versión corregida)
@@ -168,20 +168,21 @@ public class GameManager : MonoBehaviour
         if (portalesActivos.Count > 0)
         {
             // Calcular enemigos por portal incluyendo al jefe
-            int enemigosPorPortal = Mathf.CeilToInt(enemigosGenerados / portalesActivos.Count);
-            enemigosTotalesOleada = (enemigosPorPortal * portalesActivos.Count) + jefesVivos; // <-- Sumar jefes
+            // Distribución exacta sin exceder enemigosGenerados
+            int enemigosPorPortal = enemigosGenerados / portalesActivos.Count;
+            int sobrantes = enemigosGenerados % portalesActivos.Count;
 
+            // Asignar sobrantes a los primeros portales
             foreach (PortalEnemigo portal in portalesActivos)
             {
-                portal.IniciarInstanciacion(enemigosPorPortal, tiempoEntreEnemigos);
+                int extra = (sobrantes > 0) ? 1 : 0;
+                portal.IniciarInstanciacion(enemigosPorPortal + extra, tiempoEntreEnemigos);
+                sobrantes--;
             }
+            enemigosTotalesOleada = enemigosGenerados + jefesVivos; // Jefes ya contados
         }
-
-        Debug.LogWarning($"Enemigos totales (incluyendo jefes): {enemigosTotalesOleada}");
-
         // 6. Sistema de progresión UI
-        Debug.LogWarning($"Iniciando oleada {oleadaActual}: {enemigosGenerados} enemigos " +
-                        $"({portalesActivos.Count} portales activos)");
+        Debug.LogWarning($"Iniciando oleada {oleadaActual}: {enemigosGenerados} enemigos " + $"({portalesActivos.Count} portales activos)");
 
         sliderOleada.value = 0f;
         llenandoSlider = true;
@@ -253,7 +254,7 @@ public class GameManager : MonoBehaviour
         {
             portalConJefe.SpawnearJefe();
             jefesVivos++; // Contador de jefes activos
-            enemigosTotalesOleada++; // Añadir al total de la oleada
+            //enemigosTotalesOleada++; // Añadir al total de la oleada
             Debug.Log($"Jefe generado. Jefes vivos: {jefesVivos}, Total enemigos: {enemigosTotalesOleada}");
         }
     }

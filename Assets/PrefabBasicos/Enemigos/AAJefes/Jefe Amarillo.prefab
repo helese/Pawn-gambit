@@ -236,7 +236,7 @@ MonoBehaviour:
   velocidad: 2
   tiempoDeEspera: 0.3
   vidaMaxima: 0
-  incrementoVidaPorOleada: 10
+  incrementoVidaPorOleada: 15
   "da\xF1oATorreRey": 90
   sliderVida: {fileID: 8847433779679202692}
   CasillaASeguir: CasillaAmarilla

@@ -202,8 +202,8 @@ GameObject:
   - component: {fileID: 1915130549026824427}
   - component: {fileID: 2753868103985008103}
   - component: {fileID: 3823707408986922640}
-  - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
+  - component: {fileID: -3451519773646093080}
   m_Layer: 0
   m_Name: Nucleo Azul
   m_TagString: Enemigo
@@ -281,8 +281,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3944699699107160444
-SphereCollider:
+--- !u!114 &4528062093384414517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431344980631736960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 4
+  tiempoDeEspera: 1
+  vidaMaxima: 110
+  incrementoVidaPorOleada: 13
+  "da\xF1oATorreRey": 30
+  sliderVida: {fileID: 1677713469168941800}
+  CasillaASeguir: CasillaAzul
+  esJefe: 0
+  vidaExtraJefe: 200
+  puntuacionMinima: 10
+  puntuacionMaxima: 15
+  regeneraVida: 1
+  vidaPorSegundo: 3
+  "tiempoDeRegeneraci\xF3n": 6
+  aumentoDeRegeneracionPorOleada: 1
+  invencible: 1
+  tiempoInvencibilidad: 4
+  cooldownInvencibilidad: 10
+  invencibleAlSpawn: 1
+  tiempoInvencibilidadSpawn: 5
+  tieneAuraVelocidad: 0
+  radioAura: 5
+  porcentajeBoostVelocidad: 20
+  colorAura: {r: 0, g: 1, b: 0, a: 1}
+  intervaloActualizacionAura: 0.5
+  curarAliadosAlMorir: 0
+  rangoCuracion: 5
+  curacion: 100
+  idEnemigo: AzulNucleo
+  vidaActual: 0
+--- !u!65 &-3451519773646093080
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -300,50 +342,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4528062093384414517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2431344980631736960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 4
-  tiempoDeEspera: 1
-  vidaMaxima: 110
-  incrementoVidaPorOleada: 10
-  "da\xF1oATorreRey": 30
-  sliderVida: {fileID: 1677713469168941800}
-  CasillaASeguir: CasillaAzul
-  esJefe: 0
-  vidaExtraJefe: 200
-  puntuacionMinima: 10
-  puntuacionMaxima: 15
-  regeneraVida: 1
-  vidaPorSegundo: 5
-  "tiempoDeRegeneraci\xF3n": 2
-  aumentoDeRegeneracionPorOleada: 2
-  invencible: 1
-  tiempoInvencibilidad: 4
-  cooldownInvencibilidad: 10
-  invencibleAlSpawn: 1
-  tiempoInvencibilidadSpawn: 5
-  tieneAuraVelocidad: 0
-  radioAura: 5
-  porcentajeBoostVelocidad: 20
-  colorAura: {r: 0, g: 1, b: 0, a: 1}
-  intervaloActualizacionAura: 0.5
-  curarAliadosAlMorir: 0
-  rangoCuracion: 5
-  curacion: 100
-  idEnemigo: AzulNucleo
-  vidaActual: 0
 --- !u!1 &4633440367055322758
 GameObject:
   m_ObjectHideFlags: 0
