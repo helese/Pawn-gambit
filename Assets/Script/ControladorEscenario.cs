@@ -211,7 +211,7 @@ public class ControladorEscenario : MonoBehaviour
                 return $"Cadencia torretas -{reduccionCadencia * 100:F0}%";
 
             case ModificadorEscenario.ReducirCoste:
-                return "Coste torretas -1";
+                return "Destruir las estructuras te da menos materiales";
 
             default:
                 return "Modificador activado";

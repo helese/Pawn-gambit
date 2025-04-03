@@ -4,8 +4,6 @@ using UnityEngine;
 public class BestiarioManager : MonoBehaviour
 {
     public static BestiarioManager Instance;
-
-    // Lista de IDs de enemigos derrotados
     public HashSet<string> enemigosDerrotados = new HashSet<string>();
 
     private void Awake()
@@ -13,7 +11,8 @@ public class BestiarioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persistir entre escenas
+            DontDestroyOnLoad(gameObject);
+            LimitarFPS(); // Aplicar límite de FPS al inicializar
         }
         else
         {
@@ -21,7 +20,13 @@ public class BestiarioManager : MonoBehaviour
         }
     }
 
-    // Método para registrar enemigos derrotados
+    // Método para limitar FPS (60 por defecto)
+    public void LimitarFPS(int fps = 60)
+    {
+        Application.targetFrameRate = fps;
+        Debug.Log($"FPS limitados a {fps}");
+    }
+
     public void RegistrarEnemigoDerrotado(string idEnemigo)
     {
         if (!enemigosDerrotados.Contains(idEnemigo))

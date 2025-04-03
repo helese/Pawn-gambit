@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     [Header("Oleadas y Torre ")]
     public List<PortalEnemigo> portalesEnemigos;
     public int oleadaActual = 1;
-    public int activarPortal = 5;
+    public int activarPortal = 4;
     public int curarRey = 3;
-    public int oleadasParaJefe = 5;
+    public int oleadasParaJefe = 6;
 
     private bool oleadaEnCurso = false;
     private TorreRey torreRey;
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private int jefesVivos = 0;
     private int enemigosGenerados = 0;
     private int enemigosDestruidos = 0;
+    private int enemigosTotalesOleada;
 
     private PortalEnemigo portalConJefe;
 
@@ -40,18 +41,18 @@ public class GameManager : MonoBehaviour
     public static event TorreReyDestruidaHandler OnTorreReyDestruida;
 
     [Header("Sistema de Economia")]
-    public Slider sliderOleada; // Slider que se llenar· durante la oleada
+    public Slider sliderOleada; // Slider que se llenar√° durante la oleada
     public TMP_Text textoContador; // Texto que muestra el valor actual
     public float tiempoLlenadoSlider = 10f; // Tiempo en segundos para llenar el slider
-    public int valorMaximoPorOleada = 5; // Valor m·ximo que puede alcanzar el contador por oleada
+    public int valorMaximoPorOleada = 5; // Valor m√°ximo que puede alcanzar el contador por oleada
     private int incrementosRestantes;
     private int valorRestante;
 
     public int valorInicial = 9; // Valor inicial del contador al comenzar la oleada
 
     public int valorActual = 0; // Valor actual del contador
-    private bool llenandoSlider = false; // Indica si el slider se est· llenando
-    private float tiempoInicioLlenado; // Tiempo en que comenzÛ a llenarse el slider
+    private bool llenandoSlider = false; // Indica si el slider se est√° llenando
+    private float tiempoInicioLlenado; // Tiempo en que comenz√≥ a llenarse el slider
 
     public delegate void OleadaFinalizadaHandler();
     public event OleadaFinalizadaHandler OnOleadaFinalizada;
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
             portalesEnemigos[0].InstanciarCaminoAleatorio();
         }
 
-        // Desactivar los dem·s portales al inicio
+        // Desactivar los dem√°s portales al inicio
         for (int i = 1; i < portalesEnemigos.Count; i++)
         {
             portalesEnemigos[i].ActivarPortal(false);
@@ -88,13 +89,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            valorActual = 99;
+            textoContador.text = valorActual.ToString();
+        }
         // Iniciar oleada si se puede
         if (Input.GetKeyUp(KeyCode.Space) && !oleadaEnCurso && juegoActivo)
         {
             IniciarOleada();
         }
 
-        // Llenar el slider si est· en proceso
+        // Llenar el slider si est√° en proceso
         if (llenandoSlider && oleadaEnCurso && incrementosRestantes < valorMaximoPorOleada)
         {
             float tiempoTranscurrido = Time.time - tiempoInicioLlenado;
@@ -103,7 +109,7 @@ public class GameManager : MonoBehaviour
             // Actualizar el valor del slider
             sliderOleada.value = progreso;
 
-            // Si el slider llega al m·ximo, incrementar el contador
+            // Si el slider llega al m√°ximo, incrementar el contador
             if (progreso >= 1f)
             {
                 IncrementarContador();
@@ -112,22 +118,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // MÈtodo para iniciar una nueva oleada
+    // M√©todo para iniciar una nueva oleada
     void IniciarOleada()
     {
         incrementosRestantes = 0;
         OnOleadaIniciada?.Invoke();
         DesactivarAdvertenciaJefe();
 
-        // 1. ConfiguraciÛn base
+        // 1. Configuraci√≥n base
         tiempoEntreEnemigos = GenerarTiempoDivisiblePor02(tiempoMin, tiempoMax);
         enemigosDestruidos = 0;
         oleadaEnCurso = true;
 
-        // 2. FÛrmula exponencial ajustada (base 1.25 en lugar de 1.3)
-        enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.3f, oleadaActual)); 
+        // 2. F√≥rmula exponencial ajustada
+        enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.2f, oleadaActual)); 
 
-        // 3. GestiÛn de portales (cada 'activarPortal' oleadas)
+        // 3. Gesti√≥n de portales (cada 'activarPortal' oleadas)
         int portalIndex = oleadaActual / activarPortal;
 
         // Preparar portal siguiente (1 oleada antes)
@@ -151,35 +157,29 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // 4. GeneraciÛn de jefe
+        // 4. Generaci√≥n de jefe (si es oleada de jefe)
         if (oleadaActual % oleadasParaJefe == 0)
         {
-            SpawnearJefe();
+            SpawnearJefe(); // <-- Primero spawnea el jefe
         }
 
-        // 5. DistribuciÛn inteligente de enemigos (versiÛn corregida)
+        // 5. Distribuci√≥n inteligente de enemigos (versi√≥n corregida)
         List<PortalEnemigo> portalesActivos = ObtenerPortalesActivos();
         if (portalesActivos.Count > 0)
         {
-            int totalEnemigos = enemigosGenerados;
-            int enemigosPorPortal = totalEnemigos / portalesActivos.Count;
-            int resto = totalEnemigos % portalesActivos.Count;
+            // Calcular enemigos por portal incluyendo al jefe
+            int enemigosPorPortal = Mathf.CeilToInt(enemigosGenerados / portalesActivos.Count);
+            enemigosTotalesOleada = (enemigosPorPortal * portalesActivos.Count) + jefesVivos; // <-- Sumar jefes
 
-            // Asegurar distribuciÛn exacta
-            for (int i = 0; i < portalesActivos.Count; i++)
+            foreach (PortalEnemigo portal in portalesActivos)
             {
-                int cantidad = enemigosPorPortal;
-                if (i < resto) cantidad += 1; // Solo aÒadir 1 al resto
-
-                portalesActivos[i].IniciarInstanciacion(cantidad, tiempoEntreEnemigos);
-                Debug.Log($"Portal {i}: {cantidad} enemigos");
+                portal.IniciarInstanciacion(enemigosPorPortal, tiempoEntreEnemigos);
             }
-
-            // ValidaciÛn crÌtica
-            Debug.Log($"Total enemigos generados: {totalEnemigos}");
         }
 
-        // 6. Sistema de progresiÛn UI
+        Debug.LogWarning($"Enemigos totales (incluyendo jefes): {enemigosTotalesOleada}");
+
+        // 6. Sistema de progresi√≥n UI
         Debug.LogWarning($"Iniciando oleada {oleadaActual}: {enemigosGenerados} enemigos " +
                         $"({portalesActivos.Count} portales activos)");
 
@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
         tiempoInicioLlenado = Time.time;
     }
 
-    // MÈtodo para incrementar el contador
+    // M√©todo para incrementar el contador
     private void IncrementarContador()
     {
         if (incrementosRestantes < valorMaximoPorOleada)
@@ -222,20 +222,20 @@ public class GameManager : MonoBehaviour
         juegoActivo = false;
         oleadaEnCurso = false;
 
-        // Iniciar el movimiento de la c·mara hacia el objetivo
+        // Iniciar el movimiento de la c√°mara hacia el objetivo
         moverCamara.IniciarMovimiento();
         GetComponent<ControladorVolumen>().CambiarModoGrave();
 
-        // Activar el panel de Game Over despuÈs de un retraso
+        // Activar el panel de Game Over despu√©s de un retraso
         if (panelGameOver != null)
         {
-            Invoke("ActivarPanelGameOver", retrasoCanvas); // Aseg˙rate de que el nombre del mÈtodo sea correcto
+            Invoke("ActivarPanelGameOver", retrasoCanvas); // Aseg√∫rate de que el nombre del m√©todo sea correcto
         }
 
         // Notificar a los suscriptores que la TorreRey ha sido destruida
         OnTorreReyDestruida?.Invoke();
 
-        Debug.Log("°Game Over! La TorreRey ha sido destruida.");
+        Debug.Log("¬°Game Over! La TorreRey ha sido destruida.");
     }
     private void ActivarPanelGameOver()
     {
@@ -252,12 +252,9 @@ public class GameManager : MonoBehaviour
         if (portalConJefe != null)
         {
             portalConJefe.SpawnearJefe();
-            jefesVivos++; // Incrementar el contador de jefes vivos
-            Debug.Log($"Jefe spawnedo en el portal {portalesEnemigos.IndexOf(portalConJefe) + 1}. Jefes vivos: {jefesVivos}");
-        }
-        else
-        {
-            Debug.LogWarning("No hay un portal seleccionado para spawnear al jefe.");
+            jefesVivos++; // Contador de jefes activos
+            enemigosTotalesOleada++; // A√±adir al total de la oleada
+            Debug.Log($"Jefe generado. Jefes vivos: {jefesVivos}, Total enemigos: {enemigosTotalesOleada}");
         }
     }
 
@@ -272,7 +269,7 @@ public class GameManager : MonoBehaviour
         return pasosAleatorios * 0.2f;
     }
 
-    // MÈtodo para obtener los portales activos
+    // M√©todo para obtener los portales activos
     private List<PortalEnemigo> ObtenerPortalesActivos()
     {
         List<PortalEnemigo> portalesActivos = new List<PortalEnemigo>();
@@ -286,32 +283,32 @@ public class GameManager : MonoBehaviour
         return portalesActivos;
     }
 
-    // MÈtodo para notificar que un enemigo ha sido destruido
+    // M√©todo para notificar que un enemigo ha sido destruido
     public void NotificarEnemigoDestruido()
     {
-        enemigosDestruidos++; // Incrementar el contador de enemigos destruidos
-        Debug.Log($"Enemigos destruidos: {enemigosDestruidos}/{enemigosGenerados}");
+        enemigosDestruidos++;
+        Debug.Log($"Destruidos: {enemigosDestruidos}/{enemigosTotalesOleada}");
 
-        // Verificar si todos los enemigos han sido destruidos y no hay jefes vivos
-        if (enemigosDestruidos >= enemigosGenerados && jefesVivos == 0)
+        if (enemigosDestruidos >= enemigosTotalesOleada && jefesVivos == 0)
         {
             FinalizarOleada();
         }
     }
 
-    // MÈtodo para notificar que un jefe ha sido destruido
+
+    // M√©todo para notificar que un jefe ha sido destruido
     public void NotificarJefeDestruido()
     {
-        jefesVivos--; // Decrementar el contador de jefes vivos
-        Debug.Log($"Jefe destruido. Jefes vivos: {jefesVivos}");
+        jefesVivos--;
+        enemigosDestruidos++; // Contar como enemigo destruido
+        Debug.Log($"Jefe destruido. Enemigos restantes: {enemigosTotalesOleada - enemigosDestruidos}");
 
-        // Verificar si todos los enemigos han sido destruidos y no hay jefes vivos
-        if (enemigosDestruidos >= enemigosGenerados && jefesVivos == 0)
+        if (enemigosDestruidos >= enemigosTotalesOleada && jefesVivos == 0)
         {
             FinalizarOleada();
         }
     }
-    // MÈtodo para seleccionar el portal que va a spawnear al jefe
+    // M√©todo para seleccionar el portal que va a spawnear al jefe
     private void SeleccionarPortalParaJefe()
     {
         if (portalesEnemigos.Count > 0)
@@ -336,7 +333,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // MÈtodo para desactivar la advertencia de jefe en todos los portales
+    // M√©todo para desactivar la advertencia de jefe en todos los portales
     private void DesactivarAdvertenciaJefe()
     {
         foreach (var portal in portalesEnemigos)
@@ -346,10 +343,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // MÈtodo para finalizar la oleada
+    // M√©todo para finalizar la oleada
     private void FinalizarOleada()
     {
         oleadaEnCurso = false; // Marcar que la oleada ha terminado
+        jefesVivos = 0;
 
         if (incrementosRestantes < valorMaximoPorOleada)
         {
@@ -369,25 +367,25 @@ public class GameManager : MonoBehaviour
             RecuperarVidaTorreRey();
         }
 
-        // Activar la advertencia de jefe en el portal que spawnear· el jefe en la siguiente oleada
+        // Activar la advertencia de jefe en el portal que spawnear√° el jefe en la siguiente oleada
         if ((oleadaActual + 1) % oleadasParaJefe == 0)
         {
             SeleccionarPortalParaJefe();
         }
         oleadaActual++; // Pasar a la siguiente oleada
 
-        Debug.Log($"Oleada {oleadaActual - 1} completada. Prepar·ndose para la oleada {oleadaActual}.");
+        Debug.Log($"Oleada {oleadaActual - 1} completada. Prepar√°ndose para la oleada {oleadaActual}.");
         OnOleadaFinalizada?.Invoke();
 
     }
 
-    // MÈtodo para recuperar la vida de la TorreRey
+    // M√©todo para recuperar la vida de la TorreRey
     private void RecuperarVidaTorreRey()
     {
         if (torreRey != null)
         {
             torreRey.RecuperarVidaCompleta();
-            Debug.Log("°La TorreRey ha recuperado toda su vida!");
+            Debug.Log("¬°La TorreRey ha recuperado toda su vida!");
         }
     }
 }

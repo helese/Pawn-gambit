@@ -20,7 +20,7 @@ public class Jugador : MonoBehaviour
     public float radioInteraccion = 3f;
     private bool puedeMoverse = true;
     private GameObject canvasConstruccion;
-    private bool canvasActivo = false;
+    public bool canvasActivo = false;
     public Button[] botonesConstruccion;
     public GameObject[] prefabsConstruccion;
     private Vector3 posicionCasillaSeleccionada;
@@ -338,20 +338,30 @@ public class Jugador : MonoBehaviour
             // Aplicar materiales originales
             ResetMaterials(construccion, prefabsConstruccion[index]);
 
-            DestruirPreview(); // Destruir la previsualización
+            DestruirPreview();
             DesactivarCanvas();
+
+            // Asegurar desactivación del canvas de destrucción
+            if (canvasDestruccion != null)
+            {
+                canvasDestruccion.SetActive(false);
+            }
         }
     }
 
-    private void DesactivarCanvas()
+    public void DesactivarCanvas()
     {
         if (canvasConstruccion != null)
         {
             canvasConstruccion.SetActive(false);
-            canvasActivo = false; // Marcar el canvas como inactivo
-            DestruirPreview(); // Destruir la previsualización al desactivar el canvas
-            objetoInteractuableActual = null; // Limpiar la referencia al objeto interactuable
         }
+        if (canvasDestruccion != null)
+        {
+            canvasDestruccion.SetActive(false);
+        }
+        canvasActivo = false;
+        DestruirPreview();
+        objetoInteractuableActual = null;
     }
 
     private void VerificarInteraccionTorre()
@@ -383,20 +393,21 @@ public class Jugador : MonoBehaviour
         }
     }
 
-// Método para destruir la torre seleccionada
-private void DestruirTorre()
+    // Método para destruir la torre seleccionada
+    private void DestruirTorre()
     {
         if (torreSeleccionada != null)
         {
-            Destroy(torreSeleccionada); // Destruir la torre
-            torreSeleccionada = null; // Limpiar la referencia
+            Destroy(torreSeleccionada);
+            torreSeleccionada = null;
         }
 
-        // Ocultar el canvas de destrucción
+        // Desactivar ambos canvas
         if (canvasDestruccion != null)
         {
             canvasDestruccion.SetActive(false);
         }
+        DesactivarCanvas(); // Nueva línea añadida
     }
 
     // Dibujar gizmo para visualizar el radio de interacción

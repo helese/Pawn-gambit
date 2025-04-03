@@ -2348,7 +2348,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPausa: {fileID: 685841556}
-  objetoAdicional: {fileID: 1073069231}
+  panelesAdicionales:
+  - {fileID: 618165714}
+  - {fileID: 625833176}
+  jugador: {fileID: 1431097272}
 --- !u!114 &344923169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3869,7 +3872,7 @@ GameObject:
   - component: {fileID: 618165719}
   m_Layer: 5
   m_Name: Canvas Construccion
-  m_TagString: Untagged
+  m_TagString: CanvasConstruccion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3986,7 +3989,7 @@ GameObject:
   - component: {fileID: 625833178}
   m_Layer: 5
   m_Name: Canvas Destruccion
-  m_TagString: Untagged
+  m_TagString: CanvasDestruccion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4092,7 +4095,7 @@ GameObject:
   - component: {fileID: 685841558}
   - component: {fileID: 685841557}
   m_Layer: 5
-  m_Name: Canvaspausa
+  m_Name: Canvas Pausa
   m_TagString: CanvasGameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5585,6 +5588,10 @@ PrefabInstance:
       propertyPath: enemigosConfig.Array.data[4].probabilidad
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8961245693760194501, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2366bda65d3a09144a359694c01d0e24, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6258,6 +6265,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4677867962708774543, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2366bda65d3a09144a359694c01d0e24, type: 2}
     - target: {fileID: 5166149218816458030, guid: 0cccb21e63e6ae847aea04c2f4b3368a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -7388,6 +7399,10 @@ PrefabInstance:
       propertyPath: enemigosConfig.Array.data[4].probabilidad
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7323318409011875857, guid: 1aa67dc9ccc8b5d4db9bba475bc92c2f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2366bda65d3a09144a359694c01d0e24, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7754,6 +7769,17 @@ MonoBehaviour:
     m_Bits: 64
   colorHighlight: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   panelPausa: {fileID: 685841556}
+--- !u!114 &1431097272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+  m_PrefabInstance: {fileID: 8591026565331158111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431097265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a146dad3f2d164f47b390b2c268fa01f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1453694174
 GameObject:
   m_ObjectHideFlags: 0
@@ -9108,7 +9134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Destruir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9117,8 +9143,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279045467
+  m_fontColor: {r: 0.3584906, g: 0.05242079, b: 0.05242079, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9933,6 +9959,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2478303043318159158, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2366bda65d3a09144a359694c01d0e24, type: 2}
     - target: {fileID: 5557965829642773415, guid: 920e774eb232efd47adc59cea81cb803, type: 3}
       propertyPath: m_Name
       value: Portal Verde
@@ -11983,7 +12013,7 @@ PrefabInstance:
     - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
       propertyPath: canvasDestruccion
       value: 
-      objectReference: {fileID: 1910575433}
+      objectReference: {fileID: 625833176}
     - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
       propertyPath: textoPuntosRecuperar
       value: 
