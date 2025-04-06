@@ -1,35 +1,46 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Proyectil : MonoBehaviour
 {
     [Header("Configuración del Proyectil")]
     public float velocidad = 10f; // Velocidad del proyectil
-    public float tiempoVida = 3f; // Tiempo antes de que el proyectil se destruya
+    public float tiempoVida = 3f; // Tiempo antes de que el proyectil se devuelva al pool
     public bool puedeAtravesarObjetos = true; // Si el proyectil puede atravesar objetos
 
-    private void Start()
-    {
-        // Destruir el proyectil después de un tiempo de vida
-        Destroy(gameObject, tiempoVida);
+    // Para Object Pooling
+    private Queue<GameObject> poolOrigen;
+    private float tiempoCreacion;
+    private bool devueltoAlPool = false;
 
-        // Ignorar colisiones con todos los objetos excepto los con tag "Enemigo"
-        Collider colliderProyectil = GetComponent<Collider>();
-        if (colliderProyectil != null)
-        {
-            // Ignorar colisiones con todos los colliders excepto los enemigos
-            Collider[] todosColliders = FindObjectsByType<Collider>(FindObjectsSortMode.None);
-            foreach (Collider collider in todosColliders)
-            {
-                if (collider.gameObject.tag != "Enemigo" && collider != colliderProyectil)
-                {
-                    Physics.IgnoreCollision(colliderProyectil, collider);
-                }
-            }
-        }
+    private void Awake()
+    {
+        // La configuración de capas ahora se hace desde el editor o al crear el proyectil
+        // No intentamos cambiar la capa aquí
+    }
+
+    public void SetPool(Queue<GameObject> pool)
+    {
+        poolOrigen = pool;
+    }
+
+    public void Reiniciar()
+    {
+        // Marcar como activo (no devuelto al pool)
+        devueltoAlPool = false;
+        // Registrar el tiempo de creación para control manual de vida
+        tiempoCreacion = Time.time;
     }
 
     private void Update()
     {
+        // Verificar si ya ha pasado el tiempo de vida
+        if (!devueltoAlPool && Time.time > tiempoCreacion + tiempoVida)
+        {
+            DevolverAlPool();
+            return;
+        }
+
         // Mover el proyectil hacia adelante
         transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
     }
@@ -37,30 +48,43 @@ public class Proyectil : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Solo nos interesa colisionar con enemigos
-        if (other.gameObject.tag == "Enemigo")
+        if (other.CompareTag("Enemigo"))
         {
-
-            // Destruir el proyectil al colisionar con un enemigo (a menos que pueda atravesar)
-            if (!puedeAtravesarObjetos)
+            // Devolver el proyectil al pool al colisionar con un enemigo (a menos que pueda atravesar)
+            if (!puedeAtravesarObjetos && !devueltoAlPool)
             {
-                Destroy(gameObject);
+                DevolverAlPool();
             }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Por si decides usar colisiones físicas en lugar de triggers
-        if (collision.gameObject.tag != "Enemigo")
+        // Solo nos interesa colisionar con enemigos
+        if (collision.gameObject.CompareTag("Enemigo"))
         {
-            Physics.IgnoreCollision(GetComponent<Collider>(), collision.collider);
-        }
-        else
-        {
-            if (!puedeAtravesarObjetos)
+            if (!puedeAtravesarObjetos && !devueltoAlPool)
             {
-                Destroy(gameObject);
+                DevolverAlPool();
             }
+        }
+    }
+
+    private void DevolverAlPool()
+    {
+        // Prevenir múltiples devoluciones al pool
+        if (devueltoAlPool)
+            return;
+
+        devueltoAlPool = true;
+
+        // Restaurar a estado inicial
+        gameObject.SetActive(false);
+
+        // Devolver al pool
+        if (poolOrigen != null)
+        {
+            poolOrigen.Enqueue(gameObject);
         }
     }
 }

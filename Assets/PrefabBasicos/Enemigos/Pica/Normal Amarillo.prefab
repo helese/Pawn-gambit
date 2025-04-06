@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 4528062093384414517}
   - component: {fileID: -8533638707213177203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Normal Amarillo
   m_TagString: Enemigo
   m_Icon: {fileID: 0}

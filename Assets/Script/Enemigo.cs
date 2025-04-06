@@ -125,7 +125,9 @@ public class Enemigo : MonoBehaviour
     void NotificarSpawn()
     {
         // Buscar todos los controladores de escenario en la escena
-        ControladorEscenario[] controladores = FindObjectsOfType<ControladorEscenario>();
+        //ControladorEscenario[] controladores = FindObjectsOfType<ControladorEscenario>();
+
+            ControladorEscenario[] controladores = FindObjectsByType<ControladorEscenario>(FindObjectsInactive.Include,FindObjectsSortMode.None);
         foreach (ControladorEscenario controlador in controladores)
         {
             controlador.AplicarModificadorANuevoObjeto(this);

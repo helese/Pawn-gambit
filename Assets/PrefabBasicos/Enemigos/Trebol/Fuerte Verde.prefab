@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 4528062093384414517}
   - component: {fileID: 4794972775822500034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fuerte Verde
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1
+  velocidad: 1.2
   tiempoDeEspera: 0.5
   vidaMaxima: 44
-  incrementoVidaPorOleada: 12
-  "da\xF1oATorreRey": 20
+  incrementoVidaPorOleada: 14
+  "da\xF1oATorreRey": 15
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
   esJefe: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   puntuacionMaxima: 15
   regeneraVida: 1
   vidaPorSegundo: 2
-  "tiempoDeRegeneraci\xF3n": 5
+  "tiempoDeRegeneraci\xF3n": 7
   aumentoDeRegeneracionPorOleada: 2
   invencible: 0
   tiempoInvencibilidad: 3
@@ -212,7 +212,7 @@ MonoBehaviour:
   tiempoInvencibilidadSpawn: 3
   tieneAuraVelocidad: 1
   radioAura: 7
-  porcentajeBoostVelocidad: 40
+  porcentajeBoostVelocidad: 50
   colorAura: {r: 0, g: 1, b: 0, a: 1}
   intervaloActualizacionAura: 0.5
   curarAliadosAlMorir: 1

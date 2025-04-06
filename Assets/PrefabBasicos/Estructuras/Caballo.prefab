@@ -159,7 +159,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3642633123974574430}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!23 &5447076177397700250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -233,6 +233,10 @@ MonoBehaviour:
   - {fileID: 6660831238304217885}
   - {fileID: 7573134790059794437}
   - {fileID: 8330984446049233075}
+  tamanoPool: 10
+  intervaloDeteccion: 0.2
+  capaProyectil: 8
+  capaEnemigo: 9
   puntosARecuperar: 2
 --- !u!114 &4149588858966601213
 MonoBehaviour:
@@ -298,8 +302,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.01, y: 2, z: 1.01}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 1.01, y: 0.7628566, z: 1.01}
+  m_Center: {x: 0.000000059604645, y: -0.2090022, z: -0.00000011920929}
 --- !u!1 &4034950775865741684
 GameObject:
   m_ObjectHideFlags: 0

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 4528062093384414517}
   - component: {fileID: -6101558090284461510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guardian Amarillo
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   puntuacionMaxima: 22
   regeneraVida: 1
   vidaPorSegundo: 3
-  "tiempoDeRegeneraci\xF3n": 3
+  "tiempoDeRegeneraci\xF3n": 6
   aumentoDeRegeneracionPorOleada: 2
   invencible: 1
   tiempoInvencibilidad: 3

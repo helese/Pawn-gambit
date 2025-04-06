@@ -52,19 +52,38 @@ public class Jugador : MonoBehaviour
     private bool enemigoIzquierda;
     private bool enemigoDerecha;
 
+    // Referencia al componente de física para raycasts
+    private PhysicsRaycaster physicsRaycaster;
+    private bool raycastEnEspera = false;
+    private float tiempoEsperaRaycast = 0.1f;
+
+    // Capa para ignorar raycast
+    private LayerMask capaOriginalUI;
+
     void Start()
     {
-
         // Configura los colliders como triggers (si no lo están)
         colliderFrontal.GetComponent<Collider>().isTrigger = true;
         colliderTrasero.GetComponent<Collider>().isTrigger = true;
         colliderIzquierdo.GetComponent<Collider>().isTrigger = true;
         colliderDerecho.GetComponent<Collider>().isTrigger = true;
 
-
         posicionObjetivo = transform.position;
         camara = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
+
+        // Obtener referencia al PhysicsRaycaster de la cámara principal
+        physicsRaycaster = Camera.main.GetComponent<PhysicsRaycaster>();
+        if (physicsRaycaster == null)
+        {
+            physicsRaycaster = Camera.main.gameObject.AddComponent<PhysicsRaycaster>();
+        }
+
+        // Guardar la configuración original del PhysicsRaycaster
+        if (physicsRaycaster != null)
+        {
+            capaOriginalUI = physicsRaycaster.eventMask;
+        }
 
         // Inicialización de UI (mantener tu código existente)
         canvasConstruccion = GameObject.FindGameObjectWithTag("CanvasConstruccion");
@@ -93,6 +112,9 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
+        // Gestionar el estado de los raycasts según si hay canvas activo
+        GestionarEstadoRaycasts();
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (!camavaraSeMovio)
@@ -128,7 +150,7 @@ public class Jugador : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && puedeMoverse && panelPausa != null && !panelPausa.activeSelf)
         {
-            if (!canvasActivo && !canvasDestruccion.activeSelf)
+            if (!canvasActivo && !canvasDestruccion.activeSelf && !raycastEnEspera)
             {
                 VerificarInteraccion();
                 VerificarInteraccionTorre();
@@ -139,6 +161,30 @@ public class Jugador : MonoBehaviour
         {
             if (canvasActivo && objetoInteractuableActual != null) DesactivarCanvas();
             if (canvasDestruccion != null) canvasDestruccion.SetActive(false);
+        }
+    }
+
+    // Método mejorado para gestionar el estado de los raycasts
+    private void GestionarEstadoRaycasts()
+    {
+        bool hayCanvasActivo = canvasActivo || (canvasDestruccion != null && canvasDestruccion.activeSelf);
+
+        if (physicsRaycaster != null)
+        {
+            // Si hay un canvas activo, desactivar los raycasts
+            physicsRaycaster.enabled = !hayCanvasActivo && !raycastEnEspera;
+            
+            // Alternativa: en lugar de desactivar completamente, configurar para ignorar la capa UI
+            // if (hayCanvasActivo || raycastEnEspera)
+            // {
+            //     // Ignorar la capa UI
+            //     physicsRaycaster.eventMask = Physics.DefaultRaycastLayers & ~LayerMask.GetMask("UI");
+            // }
+            // else
+            // {
+            //     // Restaurar capas originales
+            //     physicsRaycaster.eventMask = capaOriginalUI;
+            // }
         }
     }
 
@@ -277,13 +323,16 @@ public class Jugador : MonoBehaviour
     // Método para verificar la interacción con objetos interactuables
     private void VerificarInteraccion()
     {
+        // No realizar raycast si hay un canvas activo o estamos en espera
+        if (canvasActivo || canvasDestruccion.activeSelf || raycastEnEspera) return;
+
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         // --- Visualización del Raycast (solo en el Editor) ---
         Debug.DrawRay(rayo.origin, rayo.direction * 100f, Color.green, 1f); // Línea verde durante 1 segundo
 
         RaycastHit hit = Physics.RaycastAll(rayo)
-            .Where(h => !h.collider.CompareTag("TagAIgnorar"))
+            .Where(h => !h.collider.CompareTag("TagAIgnorar") && h.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
             .OrderBy(h => h.distance)
             .FirstOrDefault();
 
@@ -317,6 +366,12 @@ public class Jugador : MonoBehaviour
                     {
                         canvasConstruccion.SetActive(true);
                         canvasActivo = true;
+
+                        // Asegurarse de que el canvas de destrucción esté desactivado
+                        if (canvasDestruccion != null)
+                        {
+                            canvasDestruccion.SetActive(false);
+                        }
                     }
                 }
             }
@@ -325,7 +380,7 @@ public class Jugador : MonoBehaviour
 
     private void OnBotonConstruccionClic(int index)
     {
-        if (previewActual != null)
+        if (previewActual != null && index >= 0 && index < prefabsConstruccion.Length)
         {
             // Instanciar versión final
             GameObject construccion = Instantiate(
@@ -339,37 +394,71 @@ public class Jugador : MonoBehaviour
             ResetMaterials(construccion, prefabsConstruccion[index]);
 
             DestruirPreview();
+
+            // Asegurar que los canvas se desactiven
             DesactivarCanvas();
 
-            // Asegurar desactivación del canvas de destrucción
-            if (canvasDestruccion != null)
-            {
-                canvasDestruccion.SetActive(false);
-            }
+            // Log para depuración
+            Debug.Log("Botón de construcción pulsado. Desactivando canvas.");
+        }
+        else
+        {
+            // Desactivar canvas incluso si no hay un preview
+            DesactivarCanvas();
+            Debug.LogWarning("Se intentó construir sin preview o con índice inválido.");
         }
     }
 
     public void DesactivarCanvas()
     {
+        // Desactiva el canvas de construcción
         if (canvasConstruccion != null)
         {
             canvasConstruccion.SetActive(false);
         }
+
+        // Desactiva el canvas de destrucción
         if (canvasDestruccion != null)
         {
             canvasDestruccion.SetActive(false);
         }
+
+        // Actualiza la variable de control
         canvasActivo = false;
+
+        // Elimina cualquier preview que pudiera estar activo
         DestruirPreview();
+
+        // Limpia la referencia al objeto interactuable
         objetoInteractuableActual = null;
+
+        // Activar el período de espera para los raycasts
+        StartCoroutine(ReactivarRaycast());
+
+        // Log para depuración
+        Debug.Log("Canvas desactivados. canvasActivo = " + canvasActivo);
+    }
+
+    // Corrutina para reactivar los raycasts después de un tiempo de espera
+    private IEnumerator ReactivarRaycast()
+    {
+        raycastEnEspera = true;
+        yield return new WaitForSeconds(tiempoEsperaRaycast);
+        raycastEnEspera = false;
     }
 
     private void VerificarInteraccionTorre()
     {
+        // No realizar raycast si hay un canvas activo o estamos en espera
+        if (canvasActivo || canvasDestruccion.activeSelf || raycastEnEspera) return;
+
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(rayo, out hit))
+        // Usar LayerMask para ignorar la capa UI
+        int layerMask = ~LayerMask.GetMask("UI");
+        
+        if (Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
         {
             if (hit.collider.CompareTag("Torreta"))
             {
@@ -387,6 +476,13 @@ public class Jugador : MonoBehaviour
 
                 if (canvasDestruccion != null)
                 {
+                    // Desactivar el canvas de construcción si está activo
+                    if (canvasConstruccion != null && canvasConstruccion.activeSelf)
+                    {
+                        canvasConstruccion.SetActive(false);
+                    }
+
+                    // Activar el canvas de destrucción
                     canvasDestruccion.SetActive(true);
                 }
             }
@@ -398,16 +494,13 @@ public class Jugador : MonoBehaviour
     {
         if (torreSeleccionada != null)
         {
+            Debug.Log("Destruyendo torre: " + torreSeleccionada.name);
             Destroy(torreSeleccionada);
             torreSeleccionada = null;
         }
 
         // Desactivar ambos canvas
-        if (canvasDestruccion != null)
-        {
-            canvasDestruccion.SetActive(false);
-        }
-        DesactivarCanvas(); // Nueva línea añadida
+        DesactivarCanvas();
     }
 
     // Dibujar gizmo para visualizar el radio de interacción
@@ -491,9 +584,6 @@ public class Jugador : MonoBehaviour
             renderer.materials = materials;
         }
     }
-
-    // Método de clic modificado
-
 
     // Restaurar materiales originales
     private void ResetMaterials(GameObject target, GameObject originalPrefab)

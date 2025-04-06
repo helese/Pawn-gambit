@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 4528062093384414517}
   - component: {fileID: 3290150159366852600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Veloz Rojo
   m_TagString: Enemigo
   m_Icon: {fileID: 0}

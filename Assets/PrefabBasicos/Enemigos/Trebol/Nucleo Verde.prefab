@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 4528062093384414517}
   - component: {fileID: -916577759737625412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nucleo Verde
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
@@ -193,8 +193,8 @@ MonoBehaviour:
   velocidad: 1.2
   tiempoDeEspera: 0.7
   vidaMaxima: 50
-  incrementoVidaPorOleada: 9
-  "da\xF1oATorreRey": 20
+  incrementoVidaPorOleada: 10
+  "da\xF1oATorreRey": 7
   sliderVida: {fileID: 6136433699066005926}
   CasillaASeguir: CasillaVerde
   esJefe: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   puntuacionMaxima: 16
   regeneraVida: 1
   vidaPorSegundo: 3
-  "tiempoDeRegeneraci\xF3n": 3
+  "tiempoDeRegeneraci\xF3n": 5
   aumentoDeRegeneracionPorOleada: 2
   invencible: 0
   tiempoInvencibilidad: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
   tiempoInvencibilidadSpawn: 2
   tieneAuraVelocidad: 1
   radioAura: 8
-  porcentajeBoostVelocidad: 15
+  porcentajeBoostVelocidad: 30
   colorAura: {r: 0, g: 1, b: 0, a: 1}
   intervaloActualizacionAura: 0.5
   curarAliadosAlMorir: 1

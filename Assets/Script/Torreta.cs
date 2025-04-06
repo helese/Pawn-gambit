@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Torreta : MonoBehaviour
 {
@@ -18,11 +19,25 @@ public class Torreta : MonoBehaviour
     [Header("Objetos a Encender/Apagar")]
     public GameObject[] objetosMaterialIncorrecto; // Objetos que se encienden si la torreta no tiene el material correcto
 
+    [Header("Optimización")]
+    public int tamanoPool = 10;  // Tamaño del pool para cada punto de disparo
+    public float intervaloDeteccion = 0.2f; // Cada cuántos segundos verificar enemigos
+
+    [Header("Configuración de Capas")]
+    public int capaProyectil = 8; // Capa para los proyectiles (por defecto 8, ajustar según tu proyecto)
+    public int capaEnemigo = 9;   // Capa para los enemigos (por defecto 9, ajustar según tu proyecto)
+
     private float tiempoUltimoDisparo; // Tiempo del último disparo
+    private float tiempoUltimaDeteccion; // Tiempo de la última detección
     private bool[] enemigosEnRango; // Indica si hay un enemigo dentro de cada área de detección
+    private bool materialCorrecto; // Cache para el estado del material
 
     public int puntosARecuperar;
     private GameManager gameManager;
+
+    // Object pooling
+    private List<Queue<GameObject>> poolsProyectiles;
+    private Transform poolContainer;
 
     void Start()
     {
@@ -33,27 +48,122 @@ public class Torreta : MonoBehaviour
         enemigosEnRango = new bool[puntosDeDisparo.Length];
 
         // Verificar el material al inicio
-        VerificarMaterial();
+        materialCorrecto = TieneMaterialCorrecto();
+        ActualizarVisualesSegunMaterial();
 
         NotificarSpawn();
+
+        // Inicializar el object pooling
+        InitializeObjectPool();
+    }
+
+    private void InitializeObjectPool()
+    {
+        // Crear un contenedor para todos los proyectiles del pool
+        poolContainer = new GameObject("ProyectilesPool_" + gameObject.name).transform;
+        poolContainer.SetParent(null); // No quedarse como hijo de la torreta
+
+        // Inicializar una lista de colas (una cola por punto de disparo)
+        poolsProyectiles = new List<Queue<GameObject>>();
+
+        // Crear un pool para cada punto de disparo
+        for (int i = 0; i < puntosDeDisparo.Length; i++)
+        {
+            Queue<GameObject> poolPuntoDisparo = new Queue<GameObject>();
+
+            // Prellenar el pool
+            for (int j = 0; j < tamanoPool; j++)
+            {
+                GameObject proyectil = Instantiate(proyectilPrefab, Vector3.one * 1000, Quaternion.identity);
+                proyectil.transform.SetParent(poolContainer);
+
+                // Asignar la capa directamente (en lugar de usar NameToLayer)
+                proyectil.layer = capaProyectil;
+
+                proyectil.SetActive(false);
+
+                // Configurar el proyectil para que vuelva al pool
+                Proyectil scriptProyectil = proyectil.GetComponent<Proyectil>();
+                if (scriptProyectil != null)
+                {
+                    scriptProyectil.SetPool(poolPuntoDisparo);
+                }
+
+                poolPuntoDisparo.Enqueue(proyectil);
+            }
+
+            poolsProyectiles.Add(poolPuntoDisparo);
+        }
     }
 
     void Update()
     {
-        // Verificar si el material de la torreta es el correcto
-        if (TieneMaterialCorrecto())
+        // Verificar el material solo cada cierto tiempo
+        if (Time.frameCount % 30 == 0)  // Cada 30 frames
         {
-            // Verificar si hay enemigos dentro de las áreas de detección
-            VerificarEnemigosEnRango();
+            materialCorrecto = TieneMaterialCorrecto();
+            ActualizarVisualesSegunMaterial();
+        }
+
+        // Solo procesar el resto si el material es correcto
+        if (materialCorrecto)
+        {
+            // Verificar enemigos en intervalos en lugar de cada frame
+            if (Time.time >= tiempoUltimaDeteccion + intervaloDeteccion)
+            {
+                VerificarEnemigosEnRango();
+                tiempoUltimaDeteccion = Time.time;
+            }
 
             // Disparar solo si hay un enemigo en rango y es momento de disparar
             if (Time.time >= tiempoUltimoDisparo + cadenciaDisparo)
             {
-                Disparar();
-                tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
+                bool disparo = Disparar();
+                if (disparo)
+                {
+                    tiempoUltimoDisparo = Time.time; // Actualizar el tiempo del último disparo
+                }
             }
         }
     }
+
+    // Resto del código permanece igual...
+
+    private void VerificarEnemigosEnRango()
+    {
+        // Usar OverlapBoxNonAlloc en lugar de FindGameObjectsWithTag para mejor rendimiento
+        Collider[] hitColliders = new Collider[10]; // Ajustar según la cantidad máxima esperada
+
+        // Inicialmente asumir que no hay enemigos en rango
+        for (int i = 0; i < enemigosEnRango.Length; i++)
+        {
+            enemigosEnRango[i] = false;
+
+            // Obtener parámetros de la caja
+            Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
+            Quaternion rotacionCaja = Quaternion.Euler(rotacionesCajas[i]);
+
+            // Detectar colisiones usando Physics.OverlapBoxNonAlloc
+            // Podemos usar una máscara de capa para detectar solo enemigos
+            int layerMask = 1 << capaEnemigo; // Máscara para detectar solo la capa de enemigos
+
+            int numColliders = Physics.OverlapBoxNonAlloc(
+                centroCaja,
+                tamanosCajas[i] / 2, // Half extent
+                hitColliders,
+                rotacionCaja,
+                layerMask
+            );
+
+            // Cualquier objeto detectado será un enemigo debido a la máscara de capa
+            if (numColliders > 0)
+            {
+                enemigosEnRango[i] = true;
+            }
+        }
+    }
+
+    // El resto del código permanece igual...
 
     void NotificarSpawn()
     {
@@ -78,10 +188,8 @@ public class Torreta : MonoBehaviour
         return false;
     }
 
-    private void VerificarMaterial()
+    private void ActualizarVisualesSegunMaterial()
     {
-        bool materialCorrecto = TieneMaterialCorrecto();
-
         // Activar o desactivar los objetos según el material
         foreach (GameObject obj in objetosMaterialIncorrecto)
         {
@@ -92,70 +200,54 @@ public class Torreta : MonoBehaviour
         }
     }
 
-    private void VerificarEnemigosEnRango()
+    private bool Disparar()
     {
-        // Buscar todos los objetos con el tag "Enemigo" en la escena
-        GameObject[] enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
+        bool disparo = false;
 
-        // Inicialmente asumir que no hay enemigos en rango en ninguna dirección
-        for (int i = 0; i < enemigosEnRango.Length; i++)
-        {
-            enemigosEnRango[i] = false;
-        }
-
-        // Recorrer todos los enemigos
-        foreach (GameObject enemigo in enemigos)
-        {
-            // Verificar si el enemigo está dentro de alguna de las cajas
-            for (int i = 0; i < puntosDeDisparo.Length; i++)
-            {
-                Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
-                if (EstaEnCaja(enemigo.transform.position, centroCaja, tamanosCajas[i], rotacionesCajas[i]))
-                {
-                    enemigosEnRango[i] = true;
-                }
-            }
-        }
-    }
-
-    private bool EstaEnCaja(Vector3 posicionEnemigo, Vector3 centroCaja, Vector3 tamanoCaja, Vector3 rotacionCaja)
-    {
-        // Crear una matriz de rotación para la caja
-        Quaternion rotacion = Quaternion.Euler(rotacionCaja);
-
-        // Convertir la posición del enemigo al espacio local de la caja
-        Vector3 posicionLocal = Quaternion.Inverse(rotacion) * (posicionEnemigo - centroCaja);
-
-        // Calcular los límites de la caja en su espacio local
-        Vector3 min = -tamanoCaja / 2;
-        Vector3 max = tamanoCaja / 2;
-
-        // Verificar si la posición local del enemigo está dentro de los límites de la caja
-        return posicionLocal.x >= min.x && posicionLocal.x <= max.x &&
-               posicionLocal.y >= min.y && posicionLocal.y <= max.y &&
-               posicionLocal.z >= min.z && posicionLocal.z <= max.z;
-    }
-
-    private void Disparar()
-    {
         // Recorrer todos los puntos de disparo
         for (int i = 0; i < puntosDeDisparo.Length; i++)
         {
             // Disparar solo si hay un enemigo en la caja de colisión correspondiente
             if (enemigosEnRango[i])
             {
-                // Instanciar el proyectil en la posición y rotación del punto de disparo
-                GameObject proyectil = Instantiate(proyectilPrefab, puntosDeDisparo[i].position, puntosDeDisparo[i].rotation);
-
-                // Obtener el componente Rigidbody del proyectil (si lo tiene)
-                Rigidbody rb = proyectil.GetComponent<Rigidbody>();
-                if (rb != null)
+                // Obtener un proyectil del pool
+                if (poolsProyectiles[i].Count > 0)
                 {
-                    // Aplicar fuerza al proyectil en la dirección hacia adelante del punto de disparo
-                    rb.linearVelocity = puntosDeDisparo[i].forward * 10f; // Ajusta la velocidad según sea necesario
+                    GameObject proyectil = poolsProyectiles[i].Dequeue();
+
+                    // Primero configuramos el proyectil mientras está inactivo
+                    proyectil.transform.position = puntosDeDisparo[i].position;
+                    proyectil.transform.rotation = puntosDeDisparo[i].rotation;
+
+                    // Reiniciar el proyectil
+                    Proyectil proyectilScript = proyectil.GetComponent<Proyectil>();
+                    if (proyectilScript != null)
+                    {
+                        proyectilScript.Reiniciar();
+                    }
+
+                    // Configurar la velocidad si tiene Rigidbody
+                    Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+                    if (rb != null)
+                    {
+                        rb.linearVelocity = Vector3.zero; // Resetear velocidad
+                    }
+
+                    // Ahora activamos el proyectil
+                    proyectil.SetActive(true);
+
+                    // Aplicar la velocidad después de activar
+                    if (rb != null)
+                    {
+                        rb.linearVelocity = puntosDeDisparo[i].forward * 10f;
+                    }
+
+                    disparo = true;
                 }
             }
         }
+
+        return disparo;
     }
 
     // Dibujar las áreas de detección en el Viewport
@@ -166,8 +258,11 @@ public class Torreta : MonoBehaviour
         // Dibujar las cajas de colisión para cada punto de disparo
         for (int i = 0; i < puntosDeDisparo.Length; i++)
         {
-            Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
-            DibujarCajaGizmo(centroCaja, tamanosCajas[i], rotacionesCajas[i]);
+            if (puntosDeDisparo[i] != null) // Verificar que el punto de disparo exista
+            {
+                Vector3 centroCaja = puntosDeDisparo[i].position + desplazamientosCajas[i];
+                DibujarCajaGizmo(centroCaja, tamanosCajas[i], rotacionesCajas[i]);
+            }
         }
     }
 
@@ -188,8 +283,14 @@ public class Torreta : MonoBehaviour
 
     private void OnDestroy()
     {
+        // Destruir el contenedor del pool
+        if (poolContainer != null)
+        {
+            Destroy(poolContainer.gameObject);
+        }
+
         // Verificar si la torreta tiene el material correcto antes de sumar puntos
-        if (TieneMaterialCorrecto())
+        if (materialCorrecto && gameManager != null)
         {
             gameManager.SumarUnidades(puntosARecuperar); // Sumar unidades al slider
         }

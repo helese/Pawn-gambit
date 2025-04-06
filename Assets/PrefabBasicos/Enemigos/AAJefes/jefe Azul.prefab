@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 3823707408986922640}
   - component: {fileID: 3944699699107160444}
   - component: {fileID: 4528062093384414517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: jefe Azul
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
