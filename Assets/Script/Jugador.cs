@@ -15,8 +15,14 @@ public class Jugador : MonoBehaviour
     private Vector3 posicionObjetivo;
     private Transform camara;
 
+    [Header("Teleportaciï¿½n")]
+    public Vector3 coordenadaTeleport1;
+    public Vector3 coordenadaTeleport2;
+    public Vector3 coordenadaTeleport3;
+    public Vector3 coordenadaTeleport4;
+    public float tiempoEsperaPostTeleport = 0.5f;
 
-    [Header("Interacción")]
+    [Header("Interacciï¿½n")]
     public float radioInteraccion = 3f;
     private bool puedeMoverse = true;
     private GameObject canvasConstruccion;
@@ -26,17 +32,17 @@ public class Jugador : MonoBehaviour
     private Vector3 posicionCasillaSeleccionada;
     private Rigidbody rb; // Referencia al Rigidbody
 
-    [Header("Destrucción de Torres")]
+    [Header("Destrucciï¿½n de Torres")]
     public GameObject canvasDestruccion;
     private GameObject torreSeleccionada;
     public TextMeshProUGUI textoPuntosRecuperar;
 
-    [Header("Previsualización")]
+    [Header("Previsualizaciï¿½n")]
     public Material materialPreview;
     private GameObject previewActual;
     private GameObject objetoInteractuableActual;
 
-    [Header("Detección de Enemigos")]
+    [Header("Detecciï¿½n de Enemigos")]
     public GameObject colliderFrontal;
     public GameObject colliderTrasero;
     public GameObject colliderIzquierdo;
@@ -52,7 +58,7 @@ public class Jugador : MonoBehaviour
     private bool enemigoIzquierda;
     private bool enemigoDerecha;
 
-    // Referencia al componente de física para raycasts
+    // Referencia al componente de fï¿½sica para raycasts
     private PhysicsRaycaster physicsRaycaster;
     private bool raycastEnEspera = false;
     private float tiempoEsperaRaycast = 0.1f;
@@ -62,7 +68,7 @@ public class Jugador : MonoBehaviour
 
     void Start()
     {
-        // Configura los colliders como triggers (si no lo están)
+        // Configura los colliders como triggers (si no lo estï¿½n)
         colliderFrontal.GetComponent<Collider>().isTrigger = true;
         colliderTrasero.GetComponent<Collider>().isTrigger = true;
         colliderIzquierdo.GetComponent<Collider>().isTrigger = true;
@@ -72,20 +78,20 @@ public class Jugador : MonoBehaviour
         camara = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
 
-        // Obtener referencia al PhysicsRaycaster de la cámara principal
+        // Obtener referencia al PhysicsRaycaster de la cï¿½mara principal
         physicsRaycaster = Camera.main.GetComponent<PhysicsRaycaster>();
         if (physicsRaycaster == null)
         {
             physicsRaycaster = Camera.main.gameObject.AddComponent<PhysicsRaycaster>();
         }
 
-        // Guardar la configuración original del PhysicsRaycaster
+        // Guardar la configuraciï¿½n original del PhysicsRaycaster
         if (physicsRaycaster != null)
         {
             capaOriginalUI = physicsRaycaster.eventMask;
         }
 
-        // Inicialización de UI (mantener tu código existente)
+        // Inicializaciï¿½n de UI (mantener tu cï¿½digo existente)
         canvasConstruccion = GameObject.FindGameObjectWithTag("CanvasConstruccion");
         if (canvasConstruccion != null) canvasConstruccion.SetActive(false);
 
@@ -112,8 +118,30 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
-        // Gestionar el estado de los raycasts según si hay canvas activo
+        // Gestionar el estado de los raycasts segï¿½n si hay canvas activo
         GestionarEstadoRaycasts();
+
+        // Controles de teleportaciï¿½n
+        if (puedeMoverse && !seEstaMoviendo && !canvasActivo && !canvasDestruccion.activeSelf)
+        {
+            // Teleportar con teclas numï¿½ricas
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+            {
+                TeleportarJugador(coordenadaTeleport1);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
+            {
+                TeleportarJugador(coordenadaTeleport2);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
+            {
+                TeleportarJugador(coordenadaTeleport3);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
+            {
+                TeleportarJugador(coordenadaTeleport4);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -164,7 +192,47 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Método mejorado para gestionar el estado de los raycasts
+    // Mï¿½todo para teleportar al jugador a una posiciï¿½n especï¿½fica
+    private void TeleportarJugador(Vector3 destino)
+    {
+        if (seEstaMoviendo) return;
+
+        seEstaMoviendo = true;
+
+        // Redondear a coordenadas enteras para mantener la consistencia
+        Vector3 posicionFinal = new Vector3(
+            Mathf.Round(destino.x),
+            Mathf.Round(destino.y),
+            Mathf.Round(destino.z)
+        );
+
+        // Actualizar la posiciï¿½n del jugador
+        transform.position = posicionFinal;
+
+        // Sincronizar el Rigidbody
+        if (rb != null)
+        {
+            rb.position = posicionFinal;
+            rb.linearVelocity = Vector3.zero;
+        }
+
+        // Actualizar la posiciï¿½n objetivo
+        posicionObjetivo = posicionFinal;
+
+        // Desactivar movimiento temporalmente
+        StartCoroutine(DesactivarMovimientoTemporal());
+
+        Debug.Log($"Teleportado a: {posicionFinal}");
+    }
+
+    // Corrutina para desactivar movimiento brevemente tras teleportaciï¿½n
+    private IEnumerator DesactivarMovimientoTemporal()
+    {
+        yield return new WaitForSeconds(tiempoEsperaPostTeleport);
+        seEstaMoviendo = false;
+    }
+
+    // Mï¿½todo mejorado para gestionar el estado de los raycasts
     private void GestionarEstadoRaycasts()
     {
         bool hayCanvasActivo = canvasActivo || (canvasDestruccion != null && canvasDestruccion.activeSelf);
@@ -173,7 +241,7 @@ public class Jugador : MonoBehaviour
         {
             // Si hay un canvas activo, desactivar los raycasts
             physicsRaycaster.enabled = !hayCanvasActivo && !raycastEnEspera;
-            
+
             // Alternativa: en lugar de desactivar completamente, configurar para ignorar la capa UI
             // if (hayCanvasActivo || raycastEnEspera)
             // {
@@ -217,7 +285,7 @@ public class Jugador : MonoBehaviour
             Vector3 direccion = (camara.forward * movimientoVertical + camara.right * movimientoHorizontal).normalized;
             direccion.y = 0;
 
-            // Determinar dirección primaria
+            // Determinar direcciï¿½n primaria
             Vector3 direccionLateral = Vector3.zero;
             Vector3 direccionFrontal = Vector3.zero;
 
@@ -242,7 +310,7 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Métodos para detectar enemigos (llamados desde los colliders hijos)
+    // Mï¿½todos para detectar enemigos (llamados desde los colliders hijos)
     public void EnemigoEntro(string direccion)
     {
         switch (direccion)
@@ -285,7 +353,7 @@ public class Jugador : MonoBehaviour
             yield return null;
         }
 
-        // Fuerza la posición final a coordenadas enteras
+        // Fuerza la posiciï¿½n final a coordenadas enteras
         Vector3 posicionFinal = new Vector3(
             Mathf.Round(objetivo.x),
             Mathf.Round(objetivo.y),
@@ -306,21 +374,21 @@ public class Jugador : MonoBehaviour
     }
 
 
-    // Método para desactivar el movimiento del jugador
+    // Mï¿½todo para desactivar el movimiento del jugador
     public void DesactivarMovimiento()
     {
         puedeMoverse = false;
 
     }
 
-    // Método para activar el movimiento del jugador
+    // Mï¿½todo para activar el movimiento del jugador
     public void ActivarMovimiento()
     {
 
         puedeMoverse = true;
     }
 
-    // Método para verificar la interacción con objetos interactuables
+    // Mï¿½todo para verificar la interacciï¿½n con objetos interactuables
     private void VerificarInteraccion()
     {
         // No realizar raycast si hay un canvas activo o estamos en espera
@@ -328,8 +396,8 @@ public class Jugador : MonoBehaviour
 
         Ray rayo = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        // --- Visualización del Raycast (solo en el Editor) ---
-        Debug.DrawRay(rayo.origin, rayo.direction * 100f, Color.green, 1f); // Línea verde durante 1 segundo
+        // --- Visualizaciï¿½n del Raycast (solo en el Editor) ---
+        Debug.DrawRay(rayo.origin, rayo.direction * 100f, Color.green, 1f); // Lï¿½nea verde durante 1 segundo
 
         RaycastHit hit = Physics.RaycastAll(rayo)
             .Where(h => !h.collider.CompareTag("TagAIgnorar") && h.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
@@ -338,7 +406,7 @@ public class Jugador : MonoBehaviour
 
         if (hit.collider != null)
         {
-            Debug.Log($"Objeto pulsado: {hit.collider.gameObject.name} | Posición: {hit.point}");
+            Debug.Log($"Objeto pulsado: {hit.collider.gameObject.name} | Posiciï¿½n: {hit.point}");
 
 
             if (hit.collider.CompareTag("ObjetoInteractuable"))
@@ -353,12 +421,12 @@ public class Jugador : MonoBehaviour
                     {
                         posicionCasillaSeleccionada = puntoDeInstancia.position;
 
-                        // --- Visualización del punto de instancia (opcional) ---
+                        // --- Visualizaciï¿½n del punto de instancia (opcional) ---
                         Debug.DrawLine(hit.point, puntoDeInstancia.position, Color.blue, 1f);
                     }
                     else
                     {
-                        Debug.LogWarning("No se encontró el objeto hijo 'PuntoDeInstancia' en la casilla.");
+                        Debug.LogWarning("No se encontrï¿½ el objeto hijo 'PuntoDeInstancia' en la casilla.");
                         posicionCasillaSeleccionada = hit.point;
                     }
 
@@ -367,7 +435,7 @@ public class Jugador : MonoBehaviour
                         canvasConstruccion.SetActive(true);
                         canvasActivo = true;
 
-                        // Asegurarse de que el canvas de destrucción esté desactivado
+                        // Asegurarse de que el canvas de destrucciï¿½n estï¿½ desactivado
                         if (canvasDestruccion != null)
                         {
                             canvasDestruccion.SetActive(false);
@@ -382,7 +450,7 @@ public class Jugador : MonoBehaviour
     {
         if (previewActual != null && index >= 0 && index < prefabsConstruccion.Length)
         {
-            // Instanciar versión final
+            // Instanciar versiï¿½n final
             GameObject construccion = Instantiate(
                 prefabsConstruccion[index],
                 previewActual.transform.position,
@@ -398,26 +466,26 @@ public class Jugador : MonoBehaviour
             // Asegurar que los canvas se desactiven
             DesactivarCanvas();
 
-            // Log para depuración
-            Debug.Log("Botón de construcción pulsado. Desactivando canvas.");
+            // Log para depuraciï¿½n
+            Debug.Log("Botï¿½n de construcciï¿½n pulsado. Desactivando canvas.");
         }
         else
         {
             // Desactivar canvas incluso si no hay un preview
             DesactivarCanvas();
-            Debug.LogWarning("Se intentó construir sin preview o con índice inválido.");
+            Debug.LogWarning("Se intentï¿½ construir sin preview o con ï¿½ndice invï¿½lido.");
         }
     }
 
     public void DesactivarCanvas()
     {
-        // Desactiva el canvas de construcción
+        // Desactiva el canvas de construcciï¿½n
         if (canvasConstruccion != null)
         {
             canvasConstruccion.SetActive(false);
         }
 
-        // Desactiva el canvas de destrucción
+        // Desactiva el canvas de destrucciï¿½n
         if (canvasDestruccion != null)
         {
             canvasDestruccion.SetActive(false);
@@ -432,14 +500,14 @@ public class Jugador : MonoBehaviour
         // Limpia la referencia al objeto interactuable
         objetoInteractuableActual = null;
 
-        // Activar el período de espera para los raycasts
+        // Activar el perï¿½odo de espera para los raycasts
         StartCoroutine(ReactivarRaycast());
 
-        // Log para depuración
+        // Log para depuraciï¿½n
         Debug.Log("Canvas desactivados. canvasActivo = " + canvasActivo);
     }
 
-    // Corrutina para reactivar los raycasts después de un tiempo de espera
+    // Corrutina para reactivar los raycasts despuï¿½s de un tiempo de espera
     private IEnumerator ReactivarRaycast()
     {
         raycastEnEspera = true;
@@ -457,7 +525,7 @@ public class Jugador : MonoBehaviour
 
         // Usar LayerMask para ignorar la capa UI
         int layerMask = ~LayerMask.GetMask("UI");
-        
+
         if (Physics.Raycast(rayo, out hit, Mathf.Infinity, layerMask))
         {
             if (hit.collider.CompareTag("Torreta"))
@@ -476,20 +544,20 @@ public class Jugador : MonoBehaviour
 
                 if (canvasDestruccion != null)
                 {
-                    // Desactivar el canvas de construcción si está activo
+                    // Desactivar el canvas de construcciï¿½n si estï¿½ activo
                     if (canvasConstruccion != null && canvasConstruccion.activeSelf)
                     {
                         canvasConstruccion.SetActive(false);
                     }
 
-                    // Activar el canvas de destrucción
+                    // Activar el canvas de destrucciï¿½n
                     canvasDestruccion.SetActive(true);
                 }
             }
         }
     }
 
-    // Método para destruir la torre seleccionada
+    // Mï¿½todo para destruir la torre seleccionada
     private void DestruirTorre()
     {
         if (torreSeleccionada != null)
@@ -503,12 +571,23 @@ public class Jugador : MonoBehaviour
         DesactivarCanvas();
     }
 
-    // Dibujar gizmo para visualizar el radio de interacción
+    // Dibujar gizmo para visualizar el radio de interacciï¿½n
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, radioInteraccion);
+
+        // Dibujar puntos de teleportaciï¿½n
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(coordenadaTeleport1, 0.5f);
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(coordenadaTeleport2, 0.5f);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(coordenadaTeleport3, 0.5f);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(coordenadaTeleport4, 0.5f);
     }
+
     private void AddHoverEvents(Button boton)
     {
         EventTrigger trigger = boton.gameObject.GetComponent<EventTrigger>();
@@ -536,7 +615,7 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Cuando el puntero entra en el botón
+    // Cuando el puntero entra en el botï¿½n
     private void OnBotonHover(Button botonHover)
     {
         int index = System.Array.IndexOf(botonesConstruccion, botonHover);
@@ -558,7 +637,7 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Cuando el puntero sale del botón
+    // Cuando el puntero sale del botï¿½n
     private void OnBotonHoverExit()
     {
         if (previewActual != null)
@@ -568,7 +647,7 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Aplicar material de previsualización
+    // Aplicar material de previsualizaciï¿½n
     private void SetPreviewMaterial(GameObject preview)
     {
         Renderer[] renderers = preview.GetComponentsInChildren<Renderer>();

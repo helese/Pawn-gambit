@@ -5639,7 +5639,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1311217080814181961, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.999999
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1311217080814181961, guid: 6658928ee1f8d024ba05a2ada196d52a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9945,13 +9945,13 @@ GameObject:
   - component: {fileID: 1700601278}
   - component: {fileID: 1700601277}
   - component: {fileID: 1700601281}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1700601277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12235,11 +12235,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 610961768903613915, guid: f795a5499f1cef649b1a555b085d8c4e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 610961768903613915, guid: f795a5499f1cef649b1a555b085d8c4e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 610961768903613915, guid: f795a5499f1cef649b1a555b085d8c4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12293,6 +12293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torre rey
       objectReference: {fileID: 0}
+    - target: {fileID: 5400958202534330701, guid: f795a5499f1cef649b1a555b085d8c4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3821764
+      objectReference: {fileID: 0}
     - target: {fileID: 8981763543589185948, guid: f795a5499f1cef649b1a555b085d8c4e, type: 3}
       propertyPath: vidaMaxima
       value: 100
@@ -12334,6 +12338,54 @@ PrefabInstance:
       propertyPath: textoPuntosRecuperar
       value: 
       objectReference: {fileID: 1501164799}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport1.x
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport1.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport1.z
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport2.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport2.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport2.z
+      value: -28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport3.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport3.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport3.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport4.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport4.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
+      propertyPath: coordenadaTeleport4.z
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 2118579669516530484, guid: e6093a195c969ca4d97fe5fa457f4223, type: 3}
       propertyPath: 'botonesConstruccion.Array.data[0]'
       value: 
