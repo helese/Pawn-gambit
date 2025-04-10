@@ -279,7 +279,7 @@ MonoBehaviour:
   curarAliadosAlMorir: 1
   rangoCuracion: 5
   curacion: 20
-  idEnemigo: RojoGuardia
+  idEnemigo: RojoGuardian
   vidaActual: 0
 --- !u!65 &-914545143349972578
 BoxCollider:
