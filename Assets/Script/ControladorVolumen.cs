@@ -32,6 +32,10 @@ public class ControladorVolumen : MonoBehaviour
         {
             CambiarModoGrave();
         }
+        if (SceneManager.GetActiveScene().name == "Bestiario")
+        {
+            CambiarModoGrave();
+        }
 
         // Suscribirse al evento de destrucción de la torre del rey
         GameManager.OnTorreReyDestruida += OnTorreReyDestruida;

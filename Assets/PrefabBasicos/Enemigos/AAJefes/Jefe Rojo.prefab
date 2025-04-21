@@ -291,7 +291,7 @@ MonoBehaviour:
   tiempoInvencibilidad: 2
   cooldownInvencibilidad: 10
   invencibleAlSpawn: 1
-  tiempoInvencibilidadSpawn: 2
+  tiempoInvencibilidadSpawn: 5
   tieneAuraVelocidad: 0
   radioAura: 5
   porcentajeBoostVelocidad: 20

@@ -647,18 +647,21 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    // Aplicar material de previsualizaci�n
+    // Aplicar material de previsualizacion
     private void SetPreviewMaterial(GameObject preview)
     {
         Renderer[] renderers = preview.GetComponentsInChildren<Renderer>();
         foreach (Renderer renderer in renderers)
         {
-            // Copiar material y hacerlo semitransparente
-            Material[] materials = renderer.materials;
+            // Crear materiales basados en el material preview, pero mantener su color base
+            Material[] materials = new Material[renderer.materials.Length];
             for (int i = 0; i < materials.Length; i++)
             {
                 materials[i] = new Material(materialPreview);
-                materials[i].color = new Color(1, 1, 1, 0.5f);
+
+                // Mantener el color original del material preview, solo ajustando la transparencia
+                Color materialColor = materialPreview.color;
+                materials[i].color = new Color(materialColor.r, materialColor.g, materialColor.b, 0.5f);
             }
             renderer.materials = materials;
         }

@@ -278,7 +278,7 @@ MonoBehaviour:
   intervaloActualizacionAura: 0.5
   curarAliadosAlMorir: 1
   rangoCuracion: 5
-  curacion: 100
+  curacion: 400
   idEnemigo: RojoNucleo
   vidaActual: 0
 --- !u!65 &8125641705611720799

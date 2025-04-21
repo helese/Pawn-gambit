@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro; // Para usar TextMeshProUGUI
 
 public class EncenderSeñales : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class EncenderSeñales : MonoBehaviour
     public Señal[] señales = new Señal[4];
     public float intervaloBusqueda = 1f; // Intervalo para buscar objetos (optimización)
 
+    [Header("Configuración de Texto")]
+    public TextMeshProUGUI textoBoton; // El texto del botón que cambiará
+    public string textoActivar = "Activar aviso Portales";
+    public string textoDesactivar = "Desactivar aviso Portales";
+
     private bool señalesApagadas = false;
     private float tiempoUltimaBusqueda;
 
@@ -23,6 +29,7 @@ public class EncenderSeñales : MonoBehaviour
     {
         InicializarSeñales();
         BuscarObjetosPorTag(); // Buscar objetos al inicio
+        ActualizarTextoBoton(); // Configurar el texto inicial del botón
     }
 
     private void Update()
@@ -33,7 +40,6 @@ public class EncenderSeñales : MonoBehaviour
             BuscarObjetosPorTag();
             tiempoUltimaBusqueda = Time.time;
         }
-
         ActualizarSeñales();
     }
 
@@ -68,14 +74,11 @@ public class EncenderSeñales : MonoBehaviour
         {
             if (string.IsNullOrEmpty(señal.tagObjeto) || señal.imagenSeñal == null)
                 continue;
-
             bool estadoActual = (señal.objetoEncontrado != null && señal.objetoEncontrado.activeSelf) && !señalesApagadas;
-
             if (estadoActual != señal.estadoAnterior)
             {
                 señal.imagenSeñal.SetActive(estadoActual);
                 señal.estadoAnterior = estadoActual;
-
                 if (!señalesApagadas)
                 {
                     señal.estadoGuardado = estadoActual;
@@ -87,7 +90,6 @@ public class EncenderSeñales : MonoBehaviour
     public void AlternarTodasLasSeñales()
     {
         señalesApagadas = !señalesApagadas;
-
         foreach (var señal in señales)
         {
             if (señal.imagenSeñal != null)
@@ -104,6 +106,19 @@ public class EncenderSeñales : MonoBehaviour
             }
         }
 
+        // Actualizar el texto del botón
+        ActualizarTextoBoton();
+
         Debug.Log($"Señales {(señalesApagadas ? "APAGADAS" : "RESTAURADAS")}");
+    }
+
+    private void ActualizarTextoBoton()
+    {
+        if (textoBoton != null)
+        {
+            // Si las señales están apagadas, mostrar "Activar aviso Portales"
+            // Si las señales están encendidas, mostrar "Desactivar aviso Portales"
+            textoBoton.text = señalesApagadas ? textoActivar : textoDesactivar;
+        }
     }
 }

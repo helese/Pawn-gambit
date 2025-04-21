@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI; // Necesario para manejar componentes de UI como paneles
 
 public class ControladorEscenario : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class ControladorEscenario : MonoBehaviour
     public float duracionTexto = 3f; // Tiempo que se muestra el texto
     private Coroutine corutinaTexto;
 
+    [Header("Configuración de Panel")]
+    public CanvasGroup panelMensaje; // Panel que cambiará de opacidad
+    public float duracionFadeIn = 0.5f; // Duración de la transición de entrada
+    public float duracionFadeOut = 0.5f; // Duración de la transición de salida
+
     [Header("Efecto Máquina de Escribir")]
     public float velocidadEscritura = 0.05f; // Tiempo entre caracteres
     public float pausaEntreFrases = 1f; // Tiempo antes de borrar
@@ -59,6 +65,12 @@ public class ControladorEscenario : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.clip = sonidoTeclado;
             audioSource.volume = 0.1f;
+        }
+
+        // Inicializar el panel con opacidad 0
+        if (panelMensaje != null)
+        {
+            panelMensaje.alpha = 0f;
         }
 
         MostrarTextoModificador();
@@ -191,7 +203,8 @@ public class ControladorEscenario : MonoBehaviour
         string mensaje = ObtenerMensajeModificador();
         StartCoroutine(EfectoMaquinaEscribir(mensaje));
     }
-    string ObtenerMensajeModificador() // Cambiado de void a string
+
+    string ObtenerMensajeModificador()
     {
         switch (modificadorActual)
         {
@@ -211,7 +224,7 @@ public class ControladorEscenario : MonoBehaviour
                 return $"Cadencia torretas -{reduccionCadencia * 100:F0}%";
 
             case ModificadorEscenario.ReducirCoste:
-                return "Destruir las estructuras te da menos materiales";
+                return "Menos materiales al recuperar estructuras";
 
             default:
                 return "Modificador activado";
@@ -222,6 +235,9 @@ public class ControladorEscenario : MonoBehaviour
     {
         textoEnProgreso = true;
         textoEscenario.text = "";
+
+        // Mostrar gradualmente el panel (fade in)
+        yield return StartCoroutine(FadePanel(0f, 1f, duracionFadeIn));
 
         // ESCRITURA (tono normal)
         foreach (char letra in mensaje.ToCharArray())
@@ -241,7 +257,31 @@ public class ControladorEscenario : MonoBehaviour
             yield return new WaitForSeconds(velocidadEscritura / 2);
         }
 
+        // Ocultar gradualmente el panel (fade out)
+        yield return StartCoroutine(FadePanel(1f, 0f, duracionFadeOut));
+
         textoEnProgreso = false;
+    }
+
+    // Corrutina para hacer el fade del panel
+    IEnumerator FadePanel(float inicio, float fin, float duracion)
+    {
+        if (panelMensaje == null)
+            yield break;
+
+        float tiempoInicio = Time.time;
+        float tiempoTranscurrido = 0;
+
+        while (tiempoTranscurrido < duracion)
+        {
+            tiempoTranscurrido = Time.time - tiempoInicio;
+            float t = Mathf.Clamp01(tiempoTranscurrido / duracion);
+            panelMensaje.alpha = Mathf.Lerp(inicio, fin, t);
+            yield return null;
+        }
+
+        // Asegurar que llegue al valor final exacto
+        panelMensaje.alpha = fin;
     }
 
     void ReproducirSonido(float pitch)

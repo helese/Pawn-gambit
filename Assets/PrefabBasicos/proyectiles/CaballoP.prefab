@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2582919939156915607}
   - component: {fileID: -575466255114821391}
   - component: {fileID: -4410928792020628311}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CaballoP
   m_TagString: Proyectil
   m_Icon: {fileID: 0}

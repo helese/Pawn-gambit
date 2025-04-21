@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2762296444688786547}
   - component: {fileID: 2582919939156915607}
   - component: {fileID: -575466255114821391}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: DamaP
   m_TagString: Proyectil
   m_Icon: {fileID: 0}

@@ -321,7 +321,7 @@ MonoBehaviour:
   sliderVida: {fileID: 1677713469168941800}
   CasillaASeguir: CasillaAzul
   esJefe: 1
-  vidaExtraJefe: 100
+  vidaExtraJefe: 150
   puntuacionMinima: 90
   puntuacionMaxima: 120
   regeneraVida: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   "tiempoDeRegeneraci\xF3n": 2
   aumentoDeRegeneracionPorOleada: 2
   invencible: 1
-  tiempoInvencibilidad: 2
+  tiempoInvencibilidad: 2.5
   cooldownInvencibilidad: 8
   invencibleAlSpawn: 1
   tiempoInvencibilidadSpawn: 5

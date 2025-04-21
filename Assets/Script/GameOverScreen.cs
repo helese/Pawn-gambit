@@ -20,7 +20,7 @@ public class GameOverScreen : MonoBehaviour
         // Mostrar la puntuación actual
         if (ScoreManager.Instance != null)
         {
-            scoreText.text = $"PUNTUACIÓN: {ScoreManager.Instance.currentScore}";
+            scoreText.text = $"Puntaje: {ScoreManager.Instance.currentScore}";
         }
         else
         {

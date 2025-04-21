@@ -201,7 +201,7 @@ MonoBehaviour:
   vidaExtraJefe: 200
   puntuacionMinima: 3
   puntuacionMaxima: 9
-  regeneraVida: 0
+  regeneraVida: 1
   vidaPorSegundo: 5
   "tiempoDeRegeneraci\xF3n": 2
   aumentoDeRegeneracionPorOleada: 2
@@ -210,7 +210,7 @@ MonoBehaviour:
   cooldownInvencibilidad: 10
   invencibleAlSpawn: 1
   tiempoInvencibilidadSpawn: 2
-  tieneAuraVelocidad: 1
+  tieneAuraVelocidad: 0
   radioAura: 6
   porcentajeBoostVelocidad: 20
   colorAura: {r: 0, g: 1, b: 0, a: 1}
