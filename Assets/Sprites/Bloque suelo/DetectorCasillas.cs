@@ -41,6 +41,35 @@ public class DetectorCasillas : MonoBehaviour
     public Material texturaEsquinaSE; // Colisión en esquina Sur-Este
     public Material texturaEsquinaSO; // Colisión en esquina Sur-Oeste
 
+    [Header("Nuevas Texturas Combinadas")]
+    public Material textura17; // Norte + Sur-Este
+    public Material textura18; // Norte + Sur-Oeste
+    public Material textura19; // Este + Norte-Oeste
+    public Material textura20; // Este + Sur-Oeste
+    public Material textura21; // Sur + Norte-Oeste
+    public Material textura22; // Sur + Norte-Este
+    public Material textura23; // Oeste + Norte-Este 
+    public Material textura24; // Oeste + Sur-Este
+    public Material textura25; // Norte + SE + SO
+    public Material textura26; // Este + NO + SO
+    public Material textura27; // Oeste + NE + SE
+    public Material textura28; // Sur + NE + NO
+
+    [Header("Texturas 2 esquinas")]
+    public Material este2;
+    public Material norte2;
+    public Material oeste2;
+    public Material sur2;
+    public Material esquinasDerIzq;
+    public Material esquinasIzqDer;
+
+    [Header("Texturas 3 esquinas")]
+    public Material sinNorteOeste3;
+    public Material sinSurEste3;
+    public Material sinSurOeste3;
+    public Material SinNorteEste3;
+    public Material esquinas4;
+
     // Variables para rastrear colisiones
     private bool colisionNorte = false;
     private bool colisionSur = false;
@@ -149,16 +178,6 @@ public class DetectorCasillas : MonoBehaviour
 
     private void ActualizarMaterial()
     {
-        // Verificar estado actual de todas las colisiones
-        Debug.Log("Estado colisiones - Norte: " + colisionNorte +
-                 ", Sur: " + colisionSur +
-                 ", Este: " + colisionEste +
-                 ", Oeste: " + colisionOeste +
-                 ", EsquinaNE: " + colisionEsquinaNE +
-                 ", EsquinaNO: " + colisionEsquinaNO +
-                 ", EsquinaSE: " + colisionEsquinaSE +
-                 ", EsquinaSO: " + colisionEsquinaSO);
-
         // Contar colisiones principales (sin esquinas)
         int contadorColisionesPrincipales = 0;
         if (colisionNorte) contadorColisionesPrincipales++;
@@ -173,128 +192,228 @@ public class DetectorCasillas : MonoBehaviour
             if (colisionEsquinaNE && !colisionEsquinaNO && !colisionEsquinaSE && !colisionEsquinaSO)
             {
                 rend.material = texturaEsquinaNE;
-                Debug.Log("Aplicando texturaEsquinaNE");
                 return;
             }
             else if (!colisionEsquinaNE && colisionEsquinaNO && !colisionEsquinaSE && !colisionEsquinaSO)
             {
                 rend.material = texturaEsquinaNO;
-                Debug.Log("Aplicando texturaEsquinaNO");
                 return;
             }
             else if (!colisionEsquinaNE && !colisionEsquinaNO && colisionEsquinaSE && !colisionEsquinaSO)
             {
                 rend.material = texturaEsquinaSE;
-                Debug.Log("Aplicando texturaEsquinaSE");
                 return;
             }
             else if (!colisionEsquinaNE && !colisionEsquinaNO && !colisionEsquinaSE && colisionEsquinaSO)
             {
                 rend.material = texturaEsquinaSO;
-                Debug.Log("Aplicando texturaEsquinaSO");
+                return;
+            }
+
+
+            else if (colisionEsquinaNE && colisionEsquinaNO && !colisionEsquinaSE && !colisionEsquinaSO)
+            {
+                rend.material = norte2;
+                return;
+            }
+            else if (colisionEsquinaNE && !colisionEsquinaNO && colisionEsquinaSE && !colisionEsquinaSO)
+            {
+                rend.material = este2;
+                return;
+            }
+            else if (!colisionEsquinaNE && colisionEsquinaNO && !colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = oeste2;
+                return;
+            }
+            else if (!colisionEsquinaNE && !colisionEsquinaNO && colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = sur2;
+                return;
+            }
+
+
+            else if (colisionEsquinaNE && !colisionEsquinaNO && !colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = esquinasDerIzq;
+                return;
+            }
+            else if (!colisionEsquinaNE && colisionEsquinaNO && colisionEsquinaSE && !colisionEsquinaSO)
+            {
+                rend.material = esquinasIzqDer;
+                return;
+            }
+
+
+            else if (colisionEsquinaNE && !colisionEsquinaNO && colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = sinNorteOeste3;
+                return;
+            }
+            else if (colisionEsquinaNE && colisionEsquinaNO && !colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = sinSurEste3;
+                return;
+            }
+            else if (colisionEsquinaNE && colisionEsquinaNO && colisionEsquinaSE && !colisionEsquinaSO)
+            {
+                rend.material = sinSurOeste3;
+                return;
+            }
+            else if (!colisionEsquinaNE && colisionEsquinaNO && colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = SinNorteEste3;
+                return;
+            }
+
+            else if (colisionEsquinaNE && colisionEsquinaNO && colisionEsquinaSE && colisionEsquinaSO)
+            {
+                rend.material = esquinas4;
                 return;
             }
         }
+        if (colisionNorte && colisionEsquinaSE && !colisionEsquinaSO && !colisionSur && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura17;
+            return;
+        }
+        if (colisionNorte && colisionEsquinaSO && !colisionEsquinaSE && !colisionSur && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura18;
+            return;
+        }
+        if (colisionEste && colisionEsquinaNO && !colisionEsquinaSO && !colisionNorte && !colisionSur && !colisionOeste)
+        {
+            rend.material = textura19;
+            return;
+        }
+        if (colisionEste && colisionEsquinaSO && !colisionEsquinaNO && !colisionNorte && !colisionSur && !colisionOeste)
+        {
+            rend.material = textura20;
+            return;
+        }
+        if (colisionSur && colisionEsquinaNO && !colisionEsquinaNE && !colisionNorte && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura21;
+            return;
+        }
+        if (colisionSur && colisionEsquinaNE && !colisionEsquinaNO && !colisionNorte && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura22;
+            return;
+        }
+        if (colisionOeste && colisionEsquinaNE && !colisionEsquinaSE && !colisionNorte && !colisionSur && !colisionEste)
+        {
+            rend.material = textura23;
+            return;
+        }
+        if (colisionOeste && colisionEsquinaSE && !colisionEsquinaNE && !colisionNorte && !colisionSur && !colisionEste)
+        {
+            rend.material = textura24;
+            return;
+        }
 
-        // Si no hay solamente una esquina colisionando, continuamos con la lógica original
-        Debug.Log("Total colisiones principales: " + contadorColisionesPrincipales);
+        // Casos con 1 colisión principal + 2 esquinas
+        if (colisionNorte && colisionEsquinaSE && colisionEsquinaSO && !colisionSur && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura25;
+            return;
+        }
+        if (colisionEste && colisionEsquinaNO && colisionEsquinaSO && !colisionNorte && !colisionSur && !colisionOeste)
+        {
+            rend.material = textura26;
+            return;
+        }
+        if (colisionOeste && colisionEsquinaNE && colisionEsquinaSE && !colisionNorte && !colisionSur && !colisionEste)
+        {
+            rend.material = textura27;
+            return;
+        }
+        if (colisionSur && colisionEsquinaNE && colisionEsquinaNO && !colisionNorte && !colisionEste && !colisionOeste)
+        {
+            rend.material = textura28;
+            return;
+        }
 
         // Aplicar material según la combinación de colisiones
         switch (contadorColisionesPrincipales)
         {
             case 0:
                 rend.material = textura1;
-                Debug.Log("Aplicando textura1");
+  
                 break;
             case 1:
                 if (colisionNorte)
                 {
                     rend.material = textura2;
-                    Debug.Log("Aplicando textura2 (Norte)");
                 }
                 else if (colisionEste)
                 {
                     rend.material = textura3;
-                    Debug.Log("Aplicando textura3 (Este)");
                 }
                 else if (colisionSur)
                 {
                     rend.material = textura4;
-                    Debug.Log("Aplicando textura4 (Sur)");
                 }
                 else if (colisionOeste)
                 {
                     rend.material = textura5;
-                    Debug.Log("Aplicando textura5 (Oeste)");
                 }
                 break;
             case 2:
                 if (colisionNorte && colisionEste)
                 {
                     rend.material = textura6;
-                    Debug.Log("Aplicando textura6 (Norte-Este)");
                 }
                 else if (colisionNorte && colisionOeste)
                 {
                     rend.material = textura7;
-                    Debug.Log("Aplicando textura7 (Norte-Oeste)");
                 }
                 else if (colisionSur && colisionEste)
                 {
                     rend.material = textura8;
-                    Debug.Log("Aplicando textura8 (Sur-Este)");
                 }
                 else if (colisionSur && colisionOeste)
                 {
                     rend.material = textura9;
-                    Debug.Log("Aplicando textura9 (Sur-Oeste)");
                 }
                 else if (colisionNorte && colisionSur)
                 {
                     rend.material = textura15;
-                    Debug.Log("Aplicando textura15 (Norte-Sur)");
                 }
                 else if (colisionEste && colisionOeste)
                 {
                     rend.material = textura16;
-                    Debug.Log("Aplicando textura16 (Este-Oeste)");
                 }
                 else
                 {
                     rend.material = textura1;
-                    Debug.Log("Aplicando textura1 (combinación no especificada)");
                 }
                 break;
             case 3:
                 if (colisionNorte && colisionEste && colisionOeste)
                 {
                     rend.material = textura10;
-                    Debug.Log("Aplicando textura10 (Norte-Este-Oeste)");
                 }
                 else if (colisionSur && colisionEste && colisionOeste)
                 {
                     rend.material = textura11;
-                    Debug.Log("Aplicando textura11 (Sur-Este-Oeste)");
                 }
                 else if (colisionNorte && colisionEste && colisionSur)
                 {
                     rend.material = textura13;
-                    Debug.Log("Aplicando textura13 (Norte-Este-Sur)");
                 }
                 else if (colisionNorte && colisionOeste && colisionSur)
                 {
                     rend.material = textura14;
-                    Debug.Log("Aplicando textura14 (Norte-Oeste-Sur)");
                 }
                 else
                 {
                     rend.material = textura1;
-                    Debug.Log("Aplicando textura1 (combinación no especificada)");
                 }
                 break;
             case 4:
                 rend.material = textura12;
-                Debug.Log("Aplicando textura12 (todas)");
                 break;
         }
     }

@@ -4,11 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+
+public class ModificadorVelocidad
+{
+    public string fuente; // Nombre del objeto que aplica el modificador
+    public float factorMultiplicativo; // Factor por el que se multiplica (1.0 = sin cambio)
+    public float factorAditivo; // Valor añadido después de multiplicar (0 = sin cambio)
+    public bool esAuraVelocidad; // Indica si es un buff de velocidad
+    public bool esRalentizacion; // Indica si es una ralentización
+
+    public ModificadorVelocidad(string fuente, float factorMultiplicativo, float factorAditivo, bool esAuraVelocidad = false, bool esRalentizacion = false)
+    {
+        this.fuente = fuente;
+        this.factorMultiplicativo = factorMultiplicativo;
+        this.factorAditivo = factorAditivo;
+        this.esAuraVelocidad = esAuraVelocidad;
+        this.esRalentizacion = esRalentizacion;
+    }
+}
+
 public class Enemigo : MonoBehaviour
 {
     [Header("Configuración básica")]
-    public float velocidad = 2f;
-    public float tiempoDeEspera = 0.4f;
+    //public float velocidad = 2f;
+    //public float tiempoDeEspera = 0.4f;
     public int vidaMaxima = 100;
     public int incrementoVidaPorOleada = 10;
     public int dañoATorreRey = 5;
@@ -66,6 +85,30 @@ public class Enemigo : MonoBehaviour
 
     // Evento para notificar la destrucción del enemigo
     public delegate void EnemigoDestruidoHandler(string idEnemigo);
+
+
+    [Header("Sistema de Modificadores")]
+    [SerializeField] private float velocidadBase = 2f; // Velocidad base, reemplaza el campo público actual
+    [SerializeField] private float tiempoDeEsperaBase = 0.4f; // Tiempo base, reemplaza el campo público actual
+
+    // Lista de modificadores activos
+    private List<ModificadorVelocidad> modificadoresVelocidad = new List<ModificadorVelocidad>();
+    private List<ModificadorVelocidad> modificadoresTiempoEspera = new List<ModificadorVelocidad>();
+
+    // Propiedades que reemplazan las variables públicas
+    public float velocidad
+    {
+        get { return CalcularVelocidadActual(); }
+        set { velocidadBase = value; RecalcularVelocidad(); }
+    }
+
+    public float tiempoDeEspera
+    {
+        get { return CalcularTiempoEsperaActual(); }
+        set { tiempoDeEsperaBase = value; RecalcularTiempoEspera(); }
+    }
+
+
 
     void Start()
     {
@@ -451,4 +494,165 @@ public class Enemigo : MonoBehaviour
     {
         return dañoATorreRey;
     }
+
+
+
+
+
+    public void AgregarModificadorVelocidad(string fuente, float factorMultiplicativo, float factorAditivo = 0f, bool esAuraVelocidad = false, bool esRalentizacion = false)
+    {
+        // Eliminar modificador existente de la misma fuente si existe
+        EliminarModificadorVelocidad(fuente);
+
+        // Añadir el nuevo modificador
+        ModificadorVelocidad mod = new ModificadorVelocidad(fuente, factorMultiplicativo, factorAditivo, esAuraVelocidad, esRalentizacion);
+        modificadoresVelocidad.Add(mod);
+
+        // Recalcular velocidad
+        RecalcularVelocidad();
+
+        Debug.Log($"Modificador de velocidad añadido: {fuente}, factor: {factorMultiplicativo}, nuevo valor: {CalcularVelocidadActual()}");
+    }
+
+    // Método para eliminar un modificador de velocidad
+    public void EliminarModificadorVelocidad(string fuente)
+    {
+        int indice = modificadoresVelocidad.FindIndex(m => m.fuente == fuente);
+        if (indice != -1)
+        {
+            modificadoresVelocidad.RemoveAt(indice);
+            RecalcularVelocidad();
+            Debug.Log($"Modificador de velocidad eliminado: {fuente}, nuevo valor: {CalcularVelocidadActual()}");
+        }
+    }
+
+    // Método para añadir un modificador de tiempo de espera
+    public void AgregarModificadorTiempoEspera(string fuente, float factorMultiplicativo, float factorAditivo = 0f, bool esRalentizacion = false)
+    {
+        // Eliminar modificador existente de la misma fuente si existe
+        EliminarModificadorTiempoEspera(fuente);
+
+        // Añadir el nuevo modificador
+        ModificadorVelocidad mod = new ModificadorVelocidad(fuente, factorMultiplicativo, factorAditivo, false, esRalentizacion);
+        modificadoresTiempoEspera.Add(mod);
+
+        // Recalcular tiempo de espera
+        RecalcularTiempoEspera();
+
+        Debug.Log($"Modificador de tiempo de espera añadido: {fuente}, factor: {factorMultiplicativo}, nuevo valor: {CalcularTiempoEsperaActual()}");
+    }
+
+    // Método para eliminar un modificador de tiempo de espera
+    public void EliminarModificadorTiempoEspera(string fuente)
+    {
+        int indice = modificadoresTiempoEspera.FindIndex(m => m.fuente == fuente);
+        if (indice != -1)
+        {
+            modificadoresTiempoEspera.RemoveAt(indice);
+            RecalcularTiempoEspera();
+            Debug.Log($"Modificador de tiempo de espera eliminado: {fuente}, nuevo valor: {CalcularTiempoEsperaActual()}");
+        }
+    }
+
+    // Calcular la velocidad actual basada en todos los modificadores
+    private float CalcularVelocidadActual()
+    {
+        float velocidadActual = velocidadBase;
+        float modificadorMultiplicativo = 1.0f;
+        float modificadorAditivo = 0.0f;
+
+        // Aplicar primero todos los efectos de ralentización (toman prioridad)
+        bool hayRalentizacion = false;
+        float mejorRalentizacion = 1.0f;
+
+        foreach (var mod in modificadoresVelocidad.Where(m => m.esRalentizacion))
+        {
+            hayRalentizacion = true;
+            if (mod.factorMultiplicativo < mejorRalentizacion)
+                mejorRalentizacion = mod.factorMultiplicativo;
+        }
+
+        if (hayRalentizacion)
+            modificadorMultiplicativo = mejorRalentizacion;
+
+        // Luego aplicar modificadores de aura de velocidad solo si no hay ralentización
+        // o si el aura proporciona un beneficio mayor que la penalización
+        if (!hayRalentizacion)
+        {
+            float mejorAura = 1.0f;
+            foreach (var mod in modificadoresVelocidad.Where(m => m.esAuraVelocidad))
+            {
+                if (mod.factorMultiplicativo > mejorAura)
+                    mejorAura = mod.factorMultiplicativo;
+            }
+
+            if (mejorAura > 1.0f)
+                modificadorMultiplicativo = mejorAura;
+        }
+
+        // Finalmente, aplicar otros modificadores no categorizados
+        foreach (var mod in modificadoresVelocidad.Where(m => !m.esAuraVelocidad && !m.esRalentizacion))
+        {
+            modificadorMultiplicativo *= mod.factorMultiplicativo;
+            modificadorAditivo += mod.factorAditivo;
+        }
+
+        // Aplicar el modificador multiplicativo y luego el aditivo
+        velocidadActual = velocidadActual * modificadorMultiplicativo + modificadorAditivo;
+
+        // Asegurar que la velocidad no sea negativa
+        return Mathf.Max(0.1f, velocidadActual);
+    }
+
+    // Calcular el tiempo de espera actual basado en todos los modificadores
+    private float CalcularTiempoEsperaActual()
+    {
+        float tiempoActual = tiempoDeEsperaBase;
+        float modificadorMultiplicativo = 1.0f;
+        float modificadorAditivo = 0.0f;
+
+        // Priorizar efectos de ralentización
+        bool hayRalentizacion = false;
+        float mejorRalentizacion = 1.0f;
+
+        foreach (var mod in modificadoresTiempoEspera.Where(m => m.esRalentizacion))
+        {
+            hayRalentizacion = true;
+            if (mod.factorMultiplicativo > mejorRalentizacion)
+                mejorRalentizacion = mod.factorMultiplicativo;
+        }
+
+        if (hayRalentizacion)
+            modificadorMultiplicativo = mejorRalentizacion;
+
+        // Aplicar otros modificadores no categorizados
+        foreach (var mod in modificadoresTiempoEspera.Where(m => !m.esRalentizacion))
+        {
+            modificadorMultiplicativo *= mod.factorMultiplicativo;
+            modificadorAditivo += mod.factorAditivo;
+        }
+
+        // Aplicar el modificador multiplicativo y luego el aditivo
+        tiempoActual = tiempoActual * modificadorMultiplicativo + modificadorAditivo;
+
+        // Asegurar que el tiempo de espera no sea negativo
+        return Mathf.Max(0.05f, tiempoActual);
+    }
+
+    // Método para forzar el recálculo de la velocidad
+    private void RecalcularVelocidad()
+    {
+        // Simplemente invocar CalcularVelocidadActual es suficiente
+        // ya que ahora la velocidad es una propiedad calculada
+        float velocidadCalculada = CalcularVelocidadActual();
+    }
+
+    // Método para forzar el recálculo del tiempo de espera
+    private void RecalcularTiempoEspera()
+    {
+        // Simplemente invocar CalcularTiempoEsperaActual es suficiente
+        // ya que ahora el tiempo de espera es una propiedad calculada
+        float tiempoCalculado = CalcularTiempoEsperaActual();
+    }
+
 }

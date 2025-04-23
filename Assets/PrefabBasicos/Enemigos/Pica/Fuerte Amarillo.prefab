@@ -212,8 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1.5
-  tiempoDeEspera: 0.3
   vidaMaxima: 70
   incrementoVidaPorOleada: 16
   "da\xF1oATorreRey": 60
@@ -242,6 +240,8 @@ MonoBehaviour:
   curacion: 100
   idEnemigo: AmarilloFuerte
   vidaActual: 0
+  velocidadBase: 1.2
+  tiempoDeEsperaBase: 0.5
 --- !u!65 &-7877312337640809721
 BoxCollider:
   m_ObjectHideFlags: 0

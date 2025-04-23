@@ -272,15 +272,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd58d7cac2858846a501ace54a98d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1
-  tiempoDeEspera: 1.2
   vidaMaxima: 0
   incrementoVidaPorOleada: 20
   "da\xF1oATorreRey": 30
   sliderVida: {fileID: 8041023640570981280}
   CasillaASeguir: CasillaRoja
   esJefe: 1
-  vidaExtraJefe: 150
+  vidaExtraJefe: 200
   puntuacionMinima: 90
   puntuacionMaxima: 120
   regeneraVida: 1
@@ -302,6 +300,8 @@ MonoBehaviour:
   curacion: 100
   idEnemigo: RojoJefe
   vidaActual: 0
+  velocidadBase: 1
+  tiempoDeEsperaBase: 1.2
 --- !u!1 &2856546673906216131
 GameObject:
   m_ObjectHideFlags: 0

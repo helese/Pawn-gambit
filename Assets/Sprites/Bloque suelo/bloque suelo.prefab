@@ -680,6 +680,29 @@ MonoBehaviour:
   texturaEsquinaNO: {fileID: 2100000, guid: 697f3ecd9230fa14e9c8557549369cbb, type: 2}
   texturaEsquinaSE: {fileID: 2100000, guid: a12fa30fc94e64441a19624a2f06b548, type: 2}
   texturaEsquinaSO: {fileID: 2100000, guid: 04d7572a86ef411439106654db974aa6, type: 2}
+  textura17: {fileID: 2100000, guid: 258e7afa85f72ea42aceb2497a5c8824, type: 2}
+  textura18: {fileID: 2100000, guid: f9f2219be91912849b7109d789db4168, type: 2}
+  textura19: {fileID: 2100000, guid: 9783d92d9d03dfd43a0d7bc63fc02e7e, type: 2}
+  textura20: {fileID: 2100000, guid: 1a35df213b0071e4b9d8ab1d4a6ce625, type: 2}
+  textura21: {fileID: 2100000, guid: 109156ba93a6c334bacb3a0ceb07d347, type: 2}
+  textura22: {fileID: 2100000, guid: f4f032bd0613bad42988ccdad9b4a551, type: 2}
+  textura23: {fileID: 2100000, guid: a695d5726714e42429a17c8b2f1355b9, type: 2}
+  textura24: {fileID: 2100000, guid: f2f44898f197d6e44a04de9471833a4c, type: 2}
+  textura25: {fileID: 2100000, guid: 0646f11fb206e51439a2152368afce26, type: 2}
+  textura26: {fileID: 2100000, guid: ec962e3df15556b4e957207fa20b4299, type: 2}
+  textura27: {fileID: 2100000, guid: ba0ff78199525f644b3af6900b5b09e8, type: 2}
+  textura28: {fileID: 2100000, guid: 78f6b0b4e9255c845a2e865efaebb5d2, type: 2}
+  este2: {fileID: 2100000, guid: 76f30a13c5bd6094fa9ad2d069621e6e, type: 2}
+  norte2: {fileID: 2100000, guid: 129b1f5ed0400564999dec4e4b3ab93e, type: 2}
+  oeste2: {fileID: 2100000, guid: c9f4517369c1eaa498083c5a21fe5317, type: 2}
+  sur2: {fileID: 2100000, guid: 70b9e4c04e2d8d2409c70d8bd3837b90, type: 2}
+  esquinasDerIzq: {fileID: 2100000, guid: 656ac2971ac7aac4592ae6ac3a42bb84, type: 2}
+  esquinasIzqDer: {fileID: 2100000, guid: c88bcaf0b33909143aab79d90b8cadde, type: 2}
+  sinNorteOeste3: {fileID: 2100000, guid: 068e0d78986a3af4a9fece96ab7ba6a1, type: 2}
+  sinSurEste3: {fileID: 2100000, guid: a24aaf809fb4eea42bfd15fee6ae8494, type: 2}
+  sinSurOeste3: {fileID: 2100000, guid: cd0dd293f82ad1144ad8551573c4fe03, type: 2}
+  SinNorteEste3: {fileID: 2100000, guid: ee8300a6ed784fb4c82e128595e0ece9, type: 2}
+  esquinas4: {fileID: 2100000, guid: a580b504bd27b9e448d76dfe6f20af8e, type: 2}
 --- !u!4 &9030075297212087235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1151388028547126963, guid: a596865a9fb50ea45887bdf408bb4abc, type: 3}

@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1509075686057897573}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 1.08, z: 0}
+  m_LocalPosition: {x: -6, y: 1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -155,7 +155,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadMovimiento: 10
   tiempoEntreMovimientos: 0.2
+  coordenadaTeleport1: {x: 0, y: 0, z: 0}
+  coordenadaTeleport2: {x: 0, y: 0, z: 0}
+  coordenadaTeleport3: {x: 0, y: 0, z: 0}
+  coordenadaTeleport4: {x: 0, y: 0, z: 0}
+  tiempoEsperaPostTeleport: 0.5
   radioInteraccion: 3
+  canvasActivo: 0
   botonesConstruccion:
   - {fileID: 0}
   - {fileID: 0}
@@ -167,11 +173,14 @@ MonoBehaviour:
   - {fileID: 3642633123974574430, guid: 85e3b075e53b01b44b16aa5e4d1da134, type: 3}
   - {fileID: 3642633123974574430, guid: 13fa25f5acd9e4b49a307ce4854aa386, type: 3}
   canvasDestruccion: {fileID: 0}
+  textoPuntosRecuperar: {fileID: 0}
   materialPreview: {fileID: 2100000, guid: f3649f05cfeb98b4f8b9ec8b884e6582, type: 2}
   colliderFrontal: {fileID: 3721822426835355259}
   colliderTrasero: {fileID: 7126456730946557119}
   colliderIzquierdo: {fileID: 8340723309244462758}
   colliderDerecho: {fileID: 5697774020797756053}
+  moverCamara: {fileID: 0}
+  panelPausa: {fileID: 0}
 --- !u!1 &3721822426835355259
 GameObject:
   m_ObjectHideFlags: 0
