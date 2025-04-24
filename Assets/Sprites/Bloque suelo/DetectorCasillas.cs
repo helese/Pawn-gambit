@@ -70,6 +70,12 @@ public class DetectorCasillas : MonoBehaviour
     public Material SinNorteEste3;
     public Material esquinas4;
 
+    [Header("Nuevas Texturas Colisiones con Esquinas")]
+    public Material texturaNorteEsteConEsquinaSO; // Colisión Norte y Este, con esquina Sur-Oeste
+    public Material texturaNorteOesteConEsquinaSE; // Colisión Norte y Oeste, con esquina Sur-Este
+    public Material texturaSurOesteConEsquinaNE; // Colisión Sur y Oeste, con esquina Norte-Este
+    public Material texturaSurEsteConEsquinaNO; // Colisión Sur y Este, con esquina Norte-Oeste
+
     // Variables para rastrear colisiones
     private bool colisionNorte = false;
     private bool colisionSur = false;
@@ -184,6 +190,28 @@ public class DetectorCasillas : MonoBehaviour
         if (colisionSur) contadorColisionesPrincipales++;
         if (colisionEste) contadorColisionesPrincipales++;
         if (colisionOeste) contadorColisionesPrincipales++;
+
+        // Verificar las nuevas condiciones añadidas
+        if (colisionNorte && colisionEste && colisionEsquinaSO && !colisionSur && !colisionOeste)
+        {
+            rend.material = texturaNorteEsteConEsquinaSO;
+            return;
+        }
+        if (colisionNorte && colisionOeste && colisionEsquinaSE && !colisionSur && !colisionEste)
+        {
+            rend.material = texturaNorteOesteConEsquinaSE;
+            return;
+        }
+        if (colisionSur && colisionOeste && colisionEsquinaNE && !colisionNorte && !colisionEste)
+        {
+            rend.material = texturaSurOesteConEsquinaNE;
+            return;
+        }
+        if (colisionSur && colisionEste && colisionEsquinaNO && !colisionNorte && !colisionOeste)
+        {
+            rend.material = texturaSurEsteConEsquinaNO;
+            return;
+        }
 
         // Verificar si solo hay una esquina colisionando sin otras colisiones principales
         if (contadorColisionesPrincipales == 0)
@@ -340,7 +368,7 @@ public class DetectorCasillas : MonoBehaviour
         {
             case 0:
                 rend.material = textura1;
-  
+
                 break;
             case 1:
                 if (colisionNorte)

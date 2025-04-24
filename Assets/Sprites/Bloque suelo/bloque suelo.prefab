@@ -703,6 +703,10 @@ MonoBehaviour:
   sinSurOeste3: {fileID: 2100000, guid: cd0dd293f82ad1144ad8551573c4fe03, type: 2}
   SinNorteEste3: {fileID: 2100000, guid: ee8300a6ed784fb4c82e128595e0ece9, type: 2}
   esquinas4: {fileID: 2100000, guid: a580b504bd27b9e448d76dfe6f20af8e, type: 2}
+  texturaNorteEsteConEsquinaSO: {fileID: 2100000, guid: d7193c73c1725d9409370b409bd42774, type: 2}
+  texturaNorteOesteConEsquinaSE: {fileID: 2100000, guid: 9c6ab364186b336458f4fd1e14f6ec3f, type: 2}
+  texturaSurOesteConEsquinaNE: {fileID: 2100000, guid: bfe966446d45b914abc6b48cbf9a3089, type: 2}
+  texturaSurEsteConEsquinaNO: {fileID: 2100000, guid: b8036c0e45d5a4a4b818b8565e4c0c8a, type: 2}
 --- !u!4 &9030075297212087235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1151388028547126963, guid: a596865a9fb50ea45887bdf408bb4abc, type: 3}

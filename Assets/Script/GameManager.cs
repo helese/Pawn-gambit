@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public int curarRey = 3;
     public int oleadasParaJefe = 6;
 
+    // Lista para llevar registro de qué portales ya han sido activados
+    private List<int> indicesPortalesActivados = new List<int>();
+
     private bool oleadaEnCurso = false;
     private TorreRey torreRey;
 
@@ -62,6 +65,9 @@ public class GameManager : MonoBehaviour
     private bool verificandoEnemigos = false;
     private Coroutine verificacionCoroutine;
 
+    // Variable para almacenar el próximo portal a activar
+    private int proximoPortalAleatorio = -1;
+
     public static GameManager Instance { get; private set; }
 
     void Awake()
@@ -76,18 +82,31 @@ public class GameManager : MonoBehaviour
     {
         torreRey = FindFirstObjectByType<TorreRey>();
 
-        // Activar el primer portal al inicio
+        // Activar el primer portal al inicio (ahora aleatorio)
         if (portalesEnemigos.Count > 0)
         {
-            portalesEnemigos[0].ActivarPortal(true);
-            portalesEnemigos[0].InstanciarCaminoAleatorio();
+            // Elegir un portal aleatorio para empezar
+            int primerPortalIndex = Random.Range(0, portalesEnemigos.Count);
+            portalesEnemigos[primerPortalIndex].ActivarPortal(true);
+            portalesEnemigos[primerPortalIndex].InstanciarCaminoAleatorio();
+
+            // Registrar el portal activado
+            indicesPortalesActivados.Add(primerPortalIndex);
+
+            Debug.Log($"Portal inicial activado aleatoriamente: {primerPortalIndex + 1}");
         }
 
-        // Desactivar los demás portales al inicio
-        for (int i = 1; i < portalesEnemigos.Count; i++)
+        // Desactivar todos los demás portales al inicio
+        for (int i = 0; i < portalesEnemigos.Count; i++)
         {
-            portalesEnemigos[i].ActivarPortal(false);
+            if (!indicesPortalesActivados.Contains(i))
+            {
+                portalesEnemigos[i].ActivarPortal(false);
+            }
         }
+
+        // Seleccionar el próximo portal aleatorio que se activará
+        SeleccionarProximoPortalAleatorio();
 
         // Desactivar el panel de Game Over al inicio
         panelGameOver.SetActive(false);
@@ -97,6 +116,35 @@ public class GameManager : MonoBehaviour
         valorActual = valorInicial;
         textoContador.text = valorActual.ToString();
         sliderOleada.value = 0f; // Reiniciar el slider visualmente
+    }
+
+    // Método para seleccionar el próximo portal aleatorio a activar
+    private void SeleccionarProximoPortalAleatorio()
+    {
+        // Solo seleccionamos de los portales que aún no han sido activados
+        List<int> portalesDisponibles = new List<int>();
+
+        for (int i = 0; i < portalesEnemigos.Count; i++)
+        {
+            if (!indicesPortalesActivados.Contains(i))
+            {
+                portalesDisponibles.Add(i);
+            }
+        }
+
+        // Si aún hay portales disponibles, seleccionar uno al azar
+        if (portalesDisponibles.Count > 0)
+        {
+            int indiceAleatorio = Random.Range(0, portalesDisponibles.Count);
+            proximoPortalAleatorio = portalesDisponibles[indiceAleatorio];
+
+            Debug.Log($"Próximo portal seleccionado aleatoriamente: {proximoPortalAleatorio + 1}");
+        }
+        else
+        {
+            proximoPortalAleatorio = -1;
+            Debug.Log("Todos los portales ya han sido activados.");
+        }
     }
 
     void Update()
@@ -229,28 +277,25 @@ public class GameManager : MonoBehaviour
         // 2. Fórmula exponencial ajustada
         enemigosGenerados = Mathf.FloorToInt(4 * Mathf.Pow(1.15f, oleadaActual));
 
-        // 3. Gestión de portales (cada 'activarPortal' oleadas)
-        int portalIndex = oleadaActual / activarPortal;
+        // 3. Gestión de portales
 
-        // Preparar portal siguiente (1 oleada antes)
-        if ((oleadaActual + 1) % activarPortal == 0)
+        // Si estamos en la oleada justa antes de activar un nuevo portal, instanciar el camino
+        if ((oleadaActual + 1) % activarPortal == 0 && proximoPortalAleatorio != -1)
         {
-            int nextPortal = (oleadaActual + 1) / activarPortal;
-            if (nextPortal < portalesEnemigos.Count)
-            {
-                portalesEnemigos[nextPortal].InstanciarCaminoAleatorio();
-                Debug.Log($"Preparando portal {nextPortal + 1} en oleada {oleadaActual}");
-            }
+            portalesEnemigos[proximoPortalAleatorio].InstanciarCaminoAleatorio();
+            Debug.Log($"Preparando camino para portal {proximoPortalAleatorio + 1} que se activará en la próxima oleada");
         }
 
-        // Activar portal si corresponde
-        if (oleadaActual % activarPortal == 0)
+        // Activar el portal aleatorio seleccionado si corresponde a esta oleada
+        if (oleadaActual % activarPortal == 0 && proximoPortalAleatorio != -1)
         {
-            int portalAActivar = oleadaActual / activarPortal;
-            if (portalAActivar < portalesEnemigos.Count)
-            {
-                portalesEnemigos[portalAActivar].ActivarPortal(true);
-            }
+            portalesEnemigos[proximoPortalAleatorio].ActivarPortal(true);
+            indicesPortalesActivados.Add(proximoPortalAleatorio);
+
+            Debug.Log($"Activando portal aleatorio {proximoPortalAleatorio + 1} en oleada {oleadaActual}");
+
+            // Seleccionar el próximo portal aleatorio para la siguiente activación
+            SeleccionarProximoPortalAleatorio();
         }
 
         // 4. Generación de jefe (si es oleada de jefe)
