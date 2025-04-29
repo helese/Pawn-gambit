@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 4034616983712673145}
   - component: {fileID: 2191527608121779293}
   - component: {fileID: 5520784048150947672}
+  - component: {fileID: 1858569621468911944}
   m_Layer: 0
   m_Name: Portal Azul
   m_TagString: Untagged
@@ -245,7 +246,108 @@ MonoBehaviour:
   - {fileID: 6488237413990467670, guid: 02b1d3df8dcae7c44a74ab55ddf44c19, type: 3}
   - {fileID: 629606239543900695, guid: 54d27e66bffa9954d9043b53066844f7, type: 3}
   puntoDeAparicion: {fileID: 8383237097685075633}
+<<<<<<< HEAD
+  advertenciaJefe: {fileID: 1782268116746322862}
+--- !u!82 &1858569621468911944
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674576793064437347}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3234c76b0c11ad447821ba8abb4cf56f, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3234c76b0c11ad447821ba8abb4cf56f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+=======
   advertenciaJefe: {fileID: 73578801451953582}
+>>>>>>> parent of ee12fa2 ([ART]Assets and particles)
 --- !u!1001 &202379429755060792
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,13 @@
+Cuando terminen de jugar, rellenen porfa el cuestionario de abajo, me ayudarían mucho
+
+https://forms.gle/QZ1XahDQkF15tbKT9
+
+||CONTROLES||
+wasd = moverse
+espacio = comenzar oleada
+click izq = construir estructuras
+click derecho = cerrar panel
+tab = mapa
+shift = correr
+
+Si también pueden compartirlo para que mas gente lo pruebe, también me ayudarían un montón :)

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/Chispas 1.mat.meta
+guid: d50cb66624f61784c832f5862c70a1cd
+========
 guid: 9831daf8cb809514f9d5d1e593d45ace
+>>>>>>>> parent of ee12fa2 ([ART]Assets and particles):Assets/Materials/texture.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

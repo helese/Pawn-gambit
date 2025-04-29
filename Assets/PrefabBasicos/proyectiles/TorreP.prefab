@@ -126,6 +126,10 @@ MonoBehaviour:
   velocidad: 2
   tiempoVida: 1.23
   puedeAtravesarObjetos: 1
+<<<<<<< HEAD
+  prefabParticulas: {fileID: 3433346457088588814, guid: f89ae47dc06c578419b493ae9db8586f, type: 3}
+=======
+>>>>>>> parent of ee12fa2 ([ART]Assets and particles)
 --- !u!54 &2582919939156915607
 Rigidbody:
   m_ObjectHideFlags: 0
